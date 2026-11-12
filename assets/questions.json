@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "set": "casos",
+    "title": "Eliminação da superposição de imagens",
+    "question": "Um cão apresenta suspeita de hérnia de disco. O veterinário solicita uma tomografia computadorizada para avaliar melhor a região da coluna vertebral. Qual é a principal vantagem desse exame em relação à radiografia convencional?",
+    "options": [
+      "A TC permite avaliar apenas a superfície dos ossos, enquanto a radiografia permite visualizar os tecidos profundos.",
+      "A TC elimina a superposição das estruturas por meio de cortes seccionais, permitindo localizar e avaliar a extensão das lesões.",
+      "A TC utiliza ondas sonoras para produzir imagens em tempo real, facilitando a identificação de alterações na coluna.",
+      "A TC apresenta imagens planas, mas possui maior capacidade de ampliação das estruturas do que a radiografia.",
+      "A TC avalia somente estruturas ósseas, enquanto a radiografia convencional permite visualizar melhor os tecidos moles."
+    ],
+    "answer": 1,
+    "explanations": [
+      "A tomografia não se limita à superfície dos ossos. Ela permite avaliar estruturas internas, incluindo tecidos moles e órgãos.",
+      "A radiografia projeta diferentes estruturas em uma única imagem, causando sobreposição. A TC produz cortes transversais e permite reconstruções tridimensionais, facilitando a localização das alterações.",
+      "Ondas sonoras são utilizadas na ultrassonografia, não na tomografia computadorizada. A TC utiliza raios X.",
+      "A TC não produz apenas imagens planas. Sua principal vantagem é justamente permitir a avaliação em cortes e diferentes planos.",
+      "A TC também permite avaliar tecidos moles, como músculos, órgãos e estruturas nervosas, não apenas ossos."
+    ]
+  },
+  {
+    "id": 2,
+    "set": "casos",
+    "title": "Escala Hounsfield na prática",
+    "question": "Durante uma tomografia computadorizada do encéfalo de um cão, o radiologista identifica uma região mais escura que o tecido cerebral ao redor. Essa alteração é descrita como hipoatenuante.\n\nConsiderando a escala Hounsfield, qual interpretação é mais adequada?",
+    "options": [
+      "A região apresenta maior atenuação dos raios X, sendo característica de estruturas mineralizadas, como os ossos.",
+      "A região apresenta densidade semelhante à do ar, indicando obrigatoriamente a presença de uma cavidade gasosa.",
+      "A região apresenta menor atenuação dos raios X, podendo estar relacionada a edema, necrose ou acúmulo de fluidos.",
+      "A região apresenta maior concentração de cálcio, sendo considerada uma alteração típica de processos inflamatórios.",
+      "A região apresenta densidade superior à do tecido cerebral normal, sendo classificada como hiperatenuante."
+    ],
+    "answer": 2,
+    "explanations": [
+      "Estruturas mineralizadas geralmente apresentam maior atenuação e aparecem mais claras na imagem.",
+      "Uma região hipoatenuante não significa obrigatoriamente presença de gás. Pode representar diferentes alterações teciduais.",
+      "Uma região hipoatenuante aparece mais escura porque atenua menos os raios X. No encéfalo, pode estar associada a edema, necrose, inflamação ou alterações com acúmulo de líquido.",
+      "O cálcio aumenta a atenuação dos raios X, deixando a região mais clara, e não mais escura.",
+      "Hiperatenuante significa maior atenuação e aparência mais clara, sendo o contrário do que foi observado."
+    ]
+  },
+  {
+    "id": 3,
+    "set": "casos",
+    "title": "Avaliação da obesidade em cães",
+    "question": "Um cão apresenta sobrepeso, mas o veterinário precisa avaliar com maior precisão a distribuição da gordura corporal, principalmente para diferenciar a gordura visceral da subcutânea.\n\nPor que a tomografia computadorizada é uma ferramenta importante nessa avaliação?",
+    "options": [
+      "Porque utiliza exclusivamente o peso corporal para calcular a quantidade de gordura acumulada no animal.",
+      "Porque avalia somente a gordura localizada abaixo da pele, sem conseguir identificar depósitos de gordura próximos aos órgãos.",
+      "Porque substitui completamente a avaliação clínica, tornando desnecessária a análise do escore de condição corporal.",
+      "Porque permite diferenciar os compartimentos de gordura e quantificar sua distribuição, utilizando a altura da quarta vértebra lombar (L4) como referência anatômica.",
+      "Porque identifica a gordura corporal por meio da atividade elétrica dos músculos, sem necessidade de imagens anatômicas."
+    ],
+    "answer": 3,
+    "explanations": [
+      "O peso corporal não permite identificar como a gordura está distribuída no organismo.",
+      "Uma das vantagens da TC é justamente diferenciar gordura visceral e subcutânea.",
+      "A avaliação clínica continua sendo importante. A TC complementa a análise, mas não substitui automaticamente o exame físico e o escore de condição corporal.",
+      "A TC permite visualizar e quantificar diferentes depósitos de gordura, sendo a região da quarta vértebra lombar (L4) um importante ponto anatômico de referência.",
+      "A tomografia utiliza raios X e diferenças de atenuação dos tecidos, não atividade elétrica muscular."
+    ]
+  },
+  {
+    "id": 4,
+    "set": "casos",
+    "title": "Rastreio de metástases pulmonares",
+    "question": "Um cão diagnosticado com neoplasia será submetido a uma cirurgia para retirada do tumor. Antes do procedimento, o veterinário solicita uma tomografia do tórax para investigar possíveis metástases pulmonares.\n\nQual é a principal justificativa para essa escolha?",
+    "options": [
+      "A TC apresenta maior sensibilidade para identificar pequenos nódulos pulmonares, que podem não ser visualizados na radiografia convencional.",
+      "A radiografia convencional identifica metástases menores que a tomografia, pois apresenta maior resolução espacial em todos os casos.",
+      "A TC permite identificar exclusivamente metástases ósseas, enquanto a radiografia é mais indicada para alterações pulmonares.",
+      "A TC consegue determinar com certeza se todos os nódulos encontrados são malignos, dispensando exames complementares.",
+      "A radiografia e a TC apresentam exatamente a mesma capacidade de detecção, sendo a escolha baseada apenas no custo do exame."
+    ],
+    "answer": 0,
+    "explanations": [
+      "A tomografia apresenta maior sensibilidade para detectar pequenos nódulos pulmonares, inclusive lesões que podem passar despercebidas na radiografia. A detecção depende também da técnica e do tamanho da lesão.",
+      "A radiografia convencional apresenta limitações na identificação de pequenos nódulos, principalmente devido à sobreposição das estruturas.",
+      "A TC é muito utilizada na avaliação pulmonar e também permite investigar alterações em diversos outros órgãos e tecidos.",
+      "Encontrar um nódulo não significa confirmar malignidade. A caracterização pode exigir acompanhamento, citologia ou histopatologia.",
+      "Os exames possuem capacidades diagnósticas diferentes. A TC geralmente apresenta maior sensibilidade para pequenos nódulos pulmonares."
+    ]
+  },
+  {
+    "id": 5,
+    "set": "casos",
+    "title": "Angiotomografia na clínica e na perícia",
+    "question": "Um cão apresenta suspeita de shunt portossistêmico. O veterinário solicita uma angiotomografia para investigar possíveis alterações vasculares. Em outro momento, um exame semelhante é realizado em um cadáver durante uma investigação pericial.\n\nQual alternativa descreve corretamente a utilização e a limitação desse exame?",
+    "options": [
+      "A angiotomografia utiliza contraste administrado por via oral e, em cadáveres, apresenta dificuldade pela ausência de movimentos respiratórios.",
+      "A angiotomografia utiliza ultrassom para identificar vasos sanguíneos e não apresenta limitações quando realizada post mortem.",
+      "A angiotomografia permite avaliar apenas vasos superficiais, sendo inadequada para investigar alterações vasculares abdominais.",
+      "A angiotomografia utiliza contraste iodado para avaliar os vasos, mas em cadáveres pode apresentar dificuldades devido a coágulos e extravasamento do contraste.",
+      "A angiotomografia dispensa o uso de contraste, pois a circulação sanguínea é suficiente para diferenciar todos os vasos na imagem."
+    ],
+    "answer": 3,
+    "explanations": [
+      "O contraste utilizado geralmente é iodado e administrado por via intravenosa. A ausência de movimentos respiratórios não é a principal limitação descrita.",
+      "O exame utiliza raios X e contraste, não ultrassom. Além disso, existem limitações importantes nos exames post mortem.",
+      "A angiotomografia permite avaliar vasos profundos, incluindo estruturas vasculares abdominais, como as envolvidas no shunt portossistêmico.",
+      "O contraste iodado permite visualizar o trajeto dos vasos sanguíneos. Em cadáveres, coágulos e extravasamento do contraste podem comprometer a interpretação.",
+      "O contraste é fundamental para destacar a vascularização e permitir uma avaliação mais detalhada dos vasos."
+    ]
+  },
+  {
+    "id": 6,
+    "set": "casos",
+    "title": "Janelamento para diagnóstico nasal",
+    "question": "Um cão apresenta secreção nasal persistente, espirros e dificuldade respiratória. Na tomografia, o veterinário deseja diferenciar um processo inflamatório de uma possível neoplasia na cavidade nasal.\n\nQual recurso da tomografia auxilia nessa investigação?",
+    "options": [
+      "A utilização exclusiva da janela pulmonar, que permite identificar alterações na mucosa nasal e confirmar tumores.",
+      "A alteração da janela de tecidos moles e da janela óssea, permitindo avaliar os tecidos e identificar possíveis áreas de destruição óssea.",
+      "A utilização da janela óssea para avaliar exclusivamente a quantidade de secreção nasal, sem necessidade de analisar as estruturas anatômicas.",
+      "A aplicação da escala Hounsfield para medir a temperatura dos tecidos e diferenciar processos inflamatórios de neoplásicos.",
+      "A utilização da janela de tecidos moles para identificar exclusivamente fraturas e áreas de mineralização dos ossos nasais."
+    ],
+    "answer": 1,
+    "explanations": [
+      "A janela pulmonar é utilizada principalmente para avaliar estruturas pulmonares e não é a principal ferramenta para investigar alterações nasais.",
+      "A janela de tecidos moles permite avaliar a mucosa e os tecidos da cavidade nasal, enquanto a janela óssea facilita a identificação de osteólise, ou seja, destruição óssea. A osteólise pode aumentar a suspeita de uma neoplasia agressiva, embora também possa ocorrer em outras doenças.",
+      "A janela óssea permite avaliar estruturas mineralizadas, como os ossos nasais e o septo, não apenas secreções.",
+      "A escala Hounsfield mede a atenuação dos raios X pelos tecidos, não a temperatura.",
+      "A janela de tecidos moles é mais adequada para avaliar estruturas como mucosas e massas, enquanto a janela óssea destaca melhor alterações ósseas."
+    ]
+  },
+  {
+    "id": 7,
+    "set": "casos",
+    "title": "Necessidade de anestesia e radioproteção",
+    "question": "Um cão muito agitado precisa realizar uma tomografia computadorizada. Durante a preparação do exame, o médico-veterinário explica a necessidade de manter o animal imóvel e os cuidados relacionados à exposição à radiação.\n\nQual alternativa apresenta a justificativa correta?",
+    "options": [
+      "A anestesia é utilizada principalmente para diminuir a densidade dos tecidos, enquanto o princípio ALARA determina o uso da maior dose de radiação possível.",
+      "A anestesia impede a formação de contraste entre os tecidos, enquanto o princípio ALARA permite repetir o exame quantas vezes forem necessárias.",
+      "A anestesia é necessária para aumentar a circulação sanguínea, enquanto o princípio ALARA determina que a radiação seja utilizada sem limites quando há suspeita de doença.",
+      "A anestesia elimina completamente os efeitos biológicos da radiação, enquanto o princípio ALARA determina a utilização de doses fixas em todos os pacientes.",
+      "A anestesia ou sedação permite reduzir movimentos e artefatos na imagem, enquanto o princípio ALARA busca utilizar a menor dose de radiação necessária para obter uma imagem diagnóstica adequada."
+    ],
+    "answer": 4,
+    "explanations": [
+      "A anestesia não altera a densidade dos tecidos dessa maneira. Além disso, o ALARA busca reduzir a exposição à radiação, e não aumentá-la.",
+      "A anestesia não impede o contraste entre os tecidos. O princípio ALARA também não incentiva repetições desnecessárias do exame.",
+      "A principal finalidade da anestesia ou sedação é permitir a imobilidade do paciente. A radiação deve sempre ser utilizada de forma controlada.",
+      "A anestesia não elimina os efeitos biológicos da radiação. O ALARA também não estabelece uma dose fixa para todos os pacientes.",
+      "Qualquer movimento pode produzir artefatos e prejudicar a interpretação das imagens. O princípio ALARA significa As Low As Reasonably Achievable, ou seja, manter a dose de radiação tão baixa quanto razoavelmente possível, sem comprometer a qualidade diagnóstica."
+    ]
+  },
+  {
+    "id": 8,
+    "set": "casos",
+    "title": "Artefato de volume parcial",
+    "question": "Durante a realização de uma tomografia, o técnico percebe que uma determinada região apresenta uma densidade diferente da esperada. Ao analisar a imagem, identifica que tecidos com características distintas estão ocupando o mesmo corte tomográfico.\n\nQual alternativa explica corretamente esse fenômeno e como evitá-lo?",
+    "options": [
+      "Ocorre quando o paciente se movimenta durante o exame, sendo corrigido exclusivamente pelo aumento da dose de radiação.",
+      "Ocorre quando o contraste iodado se acumula nos tecidos, sendo evitado pela retirada do contraste antes da aquisição das imagens.",
+      "Ocorre quando diferentes tecidos ocupam o mesmo voxel, fazendo com que o sistema calcule uma média de suas atenuações. Cortes mais finos ajudam a reduzir esse efeito.",
+      "Ocorre quando o equipamento não consegue identificar estruturas ósseas, sendo corrigido pela substituição da tomografia pela radiografia.",
+      "Ocorre quando o animal apresenta baixa densidade corporal, sendo corrigido pelo aumento do tempo de anestesia."
+    ],
+    "answer": 2,
+    "explanations": [
+      "O movimento pode gerar artefatos de movimentação, mas não caracteriza o volume parcial.",
+      "O acúmulo de contraste não define esse artefato. O problema está na presença de diferentes tecidos dentro de um mesmo elemento de imagem.",
+      "O efeito de volume parcial acontece quando tecidos com diferentes atenuações ocupam o mesmo voxel. O equipamento calcula uma média dessas atenuações, podendo produzir uma representação que não corresponde exatamente à densidade de nenhum dos tecidos isoladamente. Cortes mais finos ajudam a diminuir esse efeito.",
+      "O volume parcial não significa incapacidade de identificar ossos. É um fenômeno relacionado à mistura de diferentes tecidos dentro do mesmo voxel.",
+      "A composição corporal e o tempo de anestesia não são métodos de correção desse artefato."
+    ]
+  },
+  {
+    "id": 9,
+    "set": "casos",
+    "title": "Aplicações forenses e zoonoses (Virtopsia)",
+    "question": "Em uma investigação veterinária, um cadáver de animal apresenta suspeita de ferimentos provocados por arma de fogo e possíveis fraturas. A equipe opta por realizar uma tomografia post mortem antes de iniciar a necropsia.\n\nQual é uma das principais vantagens dessa abordagem?",
+    "options": [
+      "Permite reconstruir em 3D o trajeto de projéteis e identificar fraturas, reduzindo a manipulação direta do cadáver e a exposição ocupacional a agentes infecciosos.",
+      "Permite identificar exclusivamente alterações musculares, sendo incapaz de demonstrar fraturas ou trajetos de projéteis.",
+      "Substitui completamente qualquer investigação pericial, pois consegue determinar sozinha a causa e a circunstância da morte.",
+      "Exige a abertura imediata do cadáver para que os tecidos internos possam ser identificados pelo equipamento.",
+      "Permite eliminar todos os agentes infecciosos presentes no cadáver por meio da exposição aos raios X."
+    ],
+    "answer": 0,
+    "explanations": [
+      "A virtopsia utiliza exames de imagem, como a tomografia, para investigar alterações post mortem. Permite reconstruções tridimensionais, localização de projéteis e identificação de fraturas, além de reduzir a manipulação do cadáver e o risco de exposição a zoonoses.",
+      "A tomografia consegue demonstrar alterações ósseas e identificar a localização e o trajeto de projéteis.",
+      "A tomografia auxilia a investigação, mas não substitui automaticamente a necropsia, os exames laboratoriais e outras análises periciais.",
+      "Uma das principais vantagens da virtopsia é justamente permitir a avaliação não invasiva, sem necessidade de abertura inicial do cadáver.",
+      "Os raios X utilizados na tomografia não esterilizam o cadáver nem eliminam agentes infecciosos."
+    ]
+  },
+  {
+    "id": 10,
+    "set": "casos",
+    "title": "Impacto na prática cirúrgica e diagnóstico precoce",
+    "question": "Um cão apresenta uma massa tumoral próxima a estruturas anatômicas importantes. Antes de realizar a cirurgia, o cirurgião solicita uma tomografia computadorizada para avaliar a localização, as dimensões e a extensão da lesão.\n\nComo essas informações influenciam o planejamento cirúrgico?",
+    "options": [
+      "A TC permite identificar apenas a presença da massa, não sendo possível avaliar sua localização ou relação com estruturas próximas.",
+      "A TC substitui completamente a avaliação cirúrgica, permitindo realizar o procedimento sem necessidade de planejamento ou avaliação clínica.",
+      "A TC fornece imagens exclusivamente superficiais, sendo necessário realizar uma cirurgia exploratória para conhecer a extensão da lesão.",
+      "A TC permite avaliar a localização e a extensão da massa, contribuindo para escolher o acesso cirúrgico, antecipar possíveis complicações e reduzir procedimentos exploratórios desnecessários.",
+      "A TC permite determinar com certeza a natureza histológica do tumor, dispensando a realização de biópsias e exames complementares."
+    ],
+    "answer": 3,
+    "explanations": [
+      "A TC permite avaliar a localização, as dimensões e a relação da massa com estruturas anatômicas próximas.",
+      "O exame auxilia o planejamento, mas não substitui a avaliação clínica, a experiência do cirurgião ou a tomada de decisões durante o procedimento.",
+      "A tomografia produz imagens seccionais de estruturas internas, permitindo avaliar a extensão da lesão antes da cirurgia.",
+      "As informações topográficas e as reconstruções tridimensionais permitem ao cirurgião planejar o melhor acesso, avaliar estruturas que podem estar comprometidas e antecipar dificuldades, tornando o procedimento mais seguro.",
+      "A TC demonstra características anatômicas da massa, mas não confirma sozinha sua natureza histológica. A confirmação pode exigir citologia ou histopatologia."
+    ]
+  },
+  {
+    "id": 11,
+    "set": "principais",
+    "title": "Eliminação da sobreposição de imagens",
+    "question": "Qual é a principal vantagem da tomografia computadorizada sobre a radiografia convencional ao avaliar estruturas anatômicas profundas?",
+    "options": [
+      "A TC utiliza radiação em menor quantidade e, por isso, permite visualizar melhor todos os tecidos.",
+      "A TC permite avaliar somente estruturas ósseas, enquanto a radiografia mostra os tecidos moles.",
+      "A TC elimina a sobreposição das estruturas por meio de cortes seccionais e reconstruções tridimensionais, permitindo localizar e avaliar a extensão das lesões.",
+      "A TC aumenta o tamanho das estruturas anatômicas, facilitando a identificação de alterações pequenas.",
+      "A TC substitui completamente a necessidade de outros exames de imagem, independentemente da suspeita clínica."
+    ],
+    "answer": 2,
+    "explanations": [
+      "A principal vantagem não é necessariamente utilizar menos radiação, mas eliminar a sobreposição das estruturas.",
+      "A TC permite avaliar ossos e tecidos moles, não apenas estruturas ósseas.",
+      "Os cortes seccionais permitem visualizar estruturas sem a sobreposição típica da radiografia. As reconstruções 3D também auxiliam no planejamento cirúrgico.",
+      "A TC não aumenta fisicamente as estruturas; ela permite visualizar detalhes anatômicos com maior precisão.",
+      "A TC é muito importante, mas não substitui todos os outros exames."
+    ]
+  },
+  {
+    "id": 12,
+    "set": "principais",
+    "title": "Escala Hounsfield na prática",
+    "question": "O que é a Escala Hounsfield (HU) e o que significa uma lesão ser classificada como \"hipoatenuante\" no cérebro de um cão?",
+    "options": [
+      "É uma escala que mede a atenuação dos tecidos na TC. Uma lesão hipoatenuante apresenta menor atenuação que o tecido cerebral normal, aparecendo mais escura na imagem.",
+      "É uma escala utilizada para medir a temperatura dos tecidos. Uma lesão hipoatenuante indica aumento da temperatura cerebral.",
+      "É uma escala que mede exclusivamente a quantidade de cálcio. Uma lesão hipoatenuante indica necessariamente uma fratura.",
+      "É uma escala que avalia a velocidade do fluxo sanguíneo. Uma lesão hipoatenuante indica aumento da circulação cerebral.",
+      "É uma escala que mede a espessura dos tecidos. Uma lesão hipoatenuante aparece mais clara que o tecido cerebral normal."
+    ],
+    "answer": 0,
+    "explanations": [
+      "A escala Hounsfield quantifica a atenuação dos tecidos. Água apresenta aproximadamente 0 HU e ar aproximadamente −1000 HU. Uma região hipoatenuante é mais escura e pode estar relacionada a edema, necrose, inflamação ou acúmulo de fluidos.",
+      "A escala não mede temperatura.",
+      "Não avalia exclusivamente cálcio, e uma região hipoatenuante não significa necessariamente fratura.",
+      "Não mede diretamente a velocidade do fluxo sanguíneo.",
+      "Uma lesão hipoatenuante tende a aparecer mais escura, não mais clara."
+    ]
+  },
+  {
+    "id": 13,
+    "set": "principais",
+    "title": "Avaliação de obesidade em cães",
+    "question": "Por que a tomografia é considerada mais precisa do que a balança e a palpação para avaliar a gordura corporal em cães, e qual ponto anatômico é o principal marcador dessa análise?",
+    "options": [
+      "Porque a TC identifica apenas a gordura subcutânea, utilizando a região torácica como principal referência anatômica.",
+      "Porque a TC mede a quantidade de gordura por meio da temperatura corporal, utilizando a primeira vértebra lombar (L1).",
+      "Porque a TC avalia o peso corporal com maior precisão que a balança, utilizando a região da pelve como referência.",
+      "Porque a TC diferencia gordura visceral e subcutânea, mas sofre grande interferência da hidratação do animal. O principal marcador é a vértebra L7.",
+      "Porque a TC permite diferenciar gordura visceral e subcutânea com precisão, sem sofrer a mesma interferência do estado de hidratação, utilizando a altura da quarta vértebra lombar (L4) como referência."
+    ],
+    "answer": 4,
+    "explanations": [
+      "A TC consegue avaliar tanto a gordura visceral quanto a subcutânea.",
+      "A tomografia não utiliza temperatura corporal para medir gordura, e L1 não é o ponto de referência indicado no material.",
+      "A TC não tem como principal objetivo medir o peso corporal.",
+      "A TC permite avaliar os compartimentos de gordura e a referência anatômica indicada é L4.",
+      "A TC permite quantificar e diferenciar os depósitos de gordura, sendo L4 um importante ponto anatômico de avaliação."
+    ]
+  },
+  {
+    "id": 14,
+    "set": "principais",
+    "title": "Rastreio de metástases pulmonares",
+    "question": "Por que a tomografia é o exame padrão-ouro para buscar metástases nos pulmões de pacientes oncológicos?",
+    "options": [
+      "Porque a radiografia apresenta maior resolução que a TC e identifica metástases em estágios mais iniciais.",
+      "Porque a TC possui maior resolução e consegue identificar nódulos pulmonares menores que podem não ser visualizados na radiografia convencional.",
+      "Porque a TC identifica somente metástases grandes, enquanto a radiografia detecta alterações microscópicas.",
+      "Porque a TC dispensa completamente a avaliação clínica e os demais exames do paciente oncológico.",
+      "Porque a TC utiliza contraste obrigatório em todos os casos para identificar qualquer tipo de metástase pulmonar."
+    ],
+    "answer": 1,
+    "explanations": [
+      "A radiografia não apresenta maior resolução que a TC para essa finalidade.",
+      "A maior resolução da tomografia permite identificar nódulos menores, favorecendo a detecção precoce de metástases pulmonares.",
+      "Ocorre o contrário: a TC consegue detectar nódulos menores que podem passar despercebidos na radiografia.",
+      "A TC complementa a avaliação do paciente, mas não substitui a avaliação clínica.",
+      "O contraste pode ser utilizado conforme a indicação, mas não é obrigatório em todos os exames para rastreio pulmonar."
+    ]
+  },
+  {
+    "id": 15,
+    "set": "principais",
+    "title": "Angiotomografia na clínica e na perícia",
+    "question": "Para que serve a angiotomografia e qual a sua limitação quando realizada em cadáveres (post mortem)?",
+    "options": [
+      "Serve para avaliar exclusivamente os ossos e, em cadáveres, apresenta dificuldade devido à rigidez muscular.",
+      "Serve para identificar tumores cerebrais e, em cadáveres, sua principal limitação é a ausência de atividade elétrica cerebral.",
+      "Serve para avaliar a densidade dos órgãos e, em cadáveres, não pode ser realizada porque não existe circulação pulmonar.",
+      "Utiliza contraste iodado para visualizar os vasos sanguíneos e, em cadáveres, pode apresentar limitações devido à presença de coágulos e ao extravasamento do contraste para fora dos vasos.",
+      "Serve para avaliar exclusivamente o sistema urinário e, em cadáveres, apresenta dificuldade devido à ausência de produção de urina."
+    ],
+    "answer": 3,
+    "explanations": [
+      "A angiotomografia não é um exame exclusivo para ossos.",
+      "Sua finalidade principal é a avaliação dos vasos sanguíneos, não a identificação exclusiva de tumores cerebrais.",
+      "A avaliação vascular não se limita à densidade dos órgãos.",
+      "O contraste iodado permite mapear os vasos. No exame post mortem, coágulos e extravasamento do contraste podem prejudicar a interpretação.",
+      "Não é um exame exclusivo do sistema urinário."
+    ]
+  },
+  {
+    "id": 16,
+    "set": "principais",
+    "title": "Janelamento para diagnóstico nasal",
+    "question": "Como o ajuste de \"janelas\" na tomografia ajuda a diferenciar uma rinite inflamatória de um câncer na cavidade nasal?",
+    "options": [
+      "A janela óssea permite avaliar alterações como osteólise, enquanto a janela de tecidos moles auxilia na avaliação das estruturas e alterações dos tecidos. A destruição óssea pode sugerir um processo neoplásico agressivo.",
+      "A janela óssea permite avaliar exclusivamente a circulação sanguínea, enquanto a janela de tecidos moles identifica fraturas.",
+      "A janela de tecidos moles é utilizada para identificar apenas estruturas ósseas, enquanto a janela óssea avalia secreções nasais.",
+      "O ajuste das janelas permite medir a temperatura da cavidade nasal e identificar a presença de inflamação.",
+      "A janela óssea sempre diferencia com certeza uma rinite de um câncer, pois a osteólise ocorre exclusivamente em tumores."
+    ],
+    "answer": 0,
+    "explanations": [
+      "As diferentes janelas melhoram a visualização dos tecidos. A osteólise pode ser um sinal de agressividade e levantar suspeita de neoplasia.",
+      "As janelas não têm essas funções.",
+      "A janela óssea avalia melhor as estruturas ósseas, e a janela de tecidos moles permite analisar tecidos moles.",
+      "O janelamento não mede temperatura.",
+      "A osteólise não ocorre exclusivamente em tumores. Outras doenças também podem causar destruição óssea."
+    ]
+  },
+  {
+    "id": 17,
+    "set": "principais",
+    "title": "Necessidade de anestesia e radioproteção",
+    "question": "Por que é obrigatório anestesiar o animal para fazer uma tomografia e qual é o princípio de segurança adotado para a radiação?",
+    "options": [
+      "Porque a anestesia aumenta a capacidade de absorção dos raios X, e o princípio de segurança é utilizar a maior dose possível.",
+      "Porque a anestesia impede qualquer alteração anatômica durante o exame, e o princípio de segurança é eliminar completamente a radiação.",
+      "Porque a anestesia melhora a circulação sanguínea durante o exame, e o princípio de segurança é utilizar contraste em todos os pacientes.",
+      "Porque a anestesia evita que o animal sinta o contraste, e o princípio de segurança é realizar o exame repetidas vezes.",
+      "Porque é necessário manter o animal imóvel para evitar artefatos de movimento, utilizando o princípio ALARA, que determina a menor dose de radiação possível para obter uma imagem diagnóstica adequada."
+    ],
+    "answer": 4,
+    "explanations": [
+      "A anestesia não aumenta a absorção dos raios X, e não se deve utilizar a maior dose possível.",
+      "Não é possível eliminar completamente a radiação em um exame de TC.",
+      "A anestesia não tem como objetivo melhorar a circulação sanguínea, e o contraste não é obrigatório em todos os exames.",
+      "A anestesia não é realizada simplesmente para evitar desconforto com o contraste.",
+      "A imobilidade evita borramentos e artefatos. O princípio ALARA busca reduzir a exposição à radiação sem comprometer a qualidade diagnóstica. A necessidade de anestesia ou sedação depende do paciente e do protocolo."
+    ]
+  },
+  {
+    "id": 18,
+    "set": "principais",
+    "title": "Artefatos de imagem (volume parcial)",
+    "question": "O que é o artefato de \"volume parcial\" na tomografia e como o técnico evita esse erro?",
+    "options": [
+      "É uma falha causada exclusivamente pela movimentação do animal, evitada aumentando o tempo de exposição.",
+      "É um artefato que ocorre quando diferentes tecidos ocupam o mesmo voxel, fazendo com que suas atenuações sejam calculadas em conjunto. A aquisição de cortes mais finos ajuda a reduzir esse problema.",
+      "É uma alteração causada pela presença de contraste no organismo, evitada suspendendo a alimentação do animal.",
+      "É uma falha que ocorre quando o equipamento não consegue identificar tecidos ósseos, sendo corrigida pela diminuição da resolução da imagem.",
+      "É um artefato causado exclusivamente pela presença de ar nos pulmões, evitado utilizando contraste iodado."
+    ],
+    "answer": 1,
+    "explanations": [
+      "Movimento pode gerar artefatos, mas não é a causa do volume parcial.",
+      "Quando diferentes tecidos ocupam o mesmo voxel, o equipamento calcula uma atenuação média, podendo prejudicar a representação das estruturas. Cortes mais finos reduzem esse efeito.",
+      "O contraste não é a causa específica do artefato de volume parcial.",
+      "Não é uma falha exclusiva de identificação óssea.",
+      "O ar nos pulmões não é a causa exclusiva desse artefato."
+    ]
+  },
+  {
+    "id": 19,
+    "set": "principais",
+    "title": "Aplicações forenses e zoonoses (Virtopsia)",
+    "question": "Como a tomografia post mortem (Virtopsia) auxilia em casos periciais de maus-tratos ou balística, e qual sua vantagem de biossegurança?",
+    "options": [
+      "Permite identificar exclusivamente alterações nos órgãos internos, mas exige abertura completa do cadáver para reconstrução das imagens.",
+      "Substitui totalmente a necropsia convencional e elimina qualquer possibilidade de exposição a agentes infecciosos.",
+      "Permite reconstruções tridimensionais de trajetórias de projéteis e identificação de fraturas sem a necessidade inicial de abrir o cadáver, reduzindo o contato direto e o risco de exposição a zoonoses.",
+      "Permite identificar a causa da morte em todos os casos, dispensando exames laboratoriais e histopatológicos.",
+      "É utilizada somente para avaliar alterações externas, como feridas e hematomas, sem permitir a visualização de fraturas."
+    ],
+    "answer": 2,
+    "explanations": [
+      "A TC permite avaliar estruturas internas sem precisar abrir inicialmente o cadáver.",
+      "A virtopsia não substitui totalmente a necropsia convencional e não elimina todos os riscos biológicos.",
+      "A reconstrução tridimensional auxilia na avaliação de fraturas e trajetórias de projéteis. Além disso, reduz a manipulação direta do cadáver e a exposição a agentes zoonóticos.",
+      "Nem todos os casos podem ser solucionados somente pela TC. Exames complementares podem ser necessários.",
+      "A TC permite visualizar estruturas internas, inclusive ossos e fraturas."
+    ]
+  },
+  {
+    "id": 20,
+    "set": "principais",
+    "title": "Impacto na prática cirúrgica",
+    "question": "Como a precisão topográfica e a mensuração de massas tumorais fornecidas pela TC afetam a tomada de decisão do cirurgião antes mesmo de iniciar o procedimento?",
+    "options": [
+      "Permitem identificar somente o tamanho do tumor, sem contribuir para a escolha da abordagem cirúrgica.",
+      "Substituem a avaliação clínica e garantem que não ocorrerão complicações durante a cirurgia.",
+      "Permitem visualizar apenas a superfície do tumor, sendo desnecessárias para o planejamento cirúrgico.",
+      "Permitem localizar precisamente a lesão, avaliar sua extensão e relação com estruturas anatômicas, auxiliando na escolha do acesso cirúrgico, na antecipação de complicações e na redução de procedimentos exploratórios desnecessários.",
+      "São utilizadas somente após a cirurgia, para verificar se o tumor foi removido completamente."
+    ],
+    "answer": 3,
+    "explanations": [
+      "A TC não avalia apenas o tamanho, mas também a localização e a extensão da massa.",
+      "A TC auxilia no planejamento, mas não substitui a avaliação clínica nem garante ausência de complicações.",
+      "A TC permite avaliar estruturas em diferentes planos e reconstruções tridimensionais.",
+      "A precisão topográfica permite que o cirurgião planeje melhor a abordagem, antecipe dificuldades e realize um procedimento mais seguro e assertivo.",
+      "A TC também é muito importante antes da cirurgia, justamente para orientar o planejamento."
+    ]
+  }
+]
