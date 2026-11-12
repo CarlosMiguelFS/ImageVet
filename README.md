@@ -1,17 +1,30 @@
-# imagivet
+# ImagiVet
 
-A new Flutter project.
+Jogo de navegador para estudar tomografia computadorizada (TC) veterinária.
+Funciona no computador, no tablet e no celular: o layout se adapta à tela.
 
-## Getting Started
+## Modos de jogo
 
-This project is a starting point for a Flutter application.
+- **Perguntas principais**: 10 perguntas diretas sobre TC.
+- **Casos clínicos**: 10 casos com cenário clínico.
+- **Sobrevivência**: as 20 questões misturadas, até acabarem as 3 vidas.
 
-A few resources to get you started if this is your first Flutter project:
+Pontos, combo, moedas, XP, estrelas, baú diário, ofensiva, conquistas e ranking.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Como funciona
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Feito em Flutter Web; o site compilado fica em `build/web` e é publicado pela Vercel.
+- Login, perfil e ranking usam o Supabase (projeto exclusivo do ImagiVet).
+  O banco é criado rodando `supabase/schema.sql` no SQL Editor do projeto.
+- A pontuação é calculada e validada no servidor: o navegador só informa a alternativa escolhida.
+- Sem conta, dá para jogar com o progresso salvo só no navegador.
+
+## Desenvolvimento
+
+```sh
+flutter analyze
+flutter test
+flutter build web --no-web-resources-cdn
+```
+
+Depois de compilar, faça commit da pasta `build/web` para a Vercel publicar a nova versão.

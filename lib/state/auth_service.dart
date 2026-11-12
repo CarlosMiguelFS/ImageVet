@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -123,7 +122,7 @@ class SupabaseAuthService extends AuthService {
   }
 
   /// Endereço para onde os links de e-mail e o Google devem voltar.
-  String? get _redirectTo => kIsWeb ? Uri.base.origin : null;
+  String get _redirectTo => Uri.base.origin;
 
   @override
   Future<void> init() async {
