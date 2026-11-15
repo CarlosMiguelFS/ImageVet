@@ -187,7 +187,7 @@ class HomeScreen extends StatelessWidget {
                       TextSpan(text: 'Feito por '),
                       TextSpan(
                         text: 'Thayssa Vitoria Machado Muniz',
-                        style: TextStyle(color: AppColors.brand600, fontWeight: FontWeight.w700),
+                        style: TextStyle(color: AppColors.brand600, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
@@ -249,7 +249,7 @@ class _LevelChip extends StatelessWidget {
     decoration: BoxDecoration(color: AppColors.ink, borderRadius: BorderRadius.circular(AppRadius.pill)),
     child: Text(
       'Nível $level',
-      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 13.5),
+      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13.5),
     ),
   );
 }
@@ -271,7 +271,7 @@ class _Hero extends StatelessWidget {
             TextSpan(text: 'Perguntas e casos clínicos de TC veterinária com '),
             TextSpan(
               text: 'vidas, combos e recompensas',
-              style: TextStyle(color: AppColors.brand600, fontWeight: FontWeight.w700),
+              style: TextStyle(color: AppColors.brand600, fontWeight: FontWeight.w500),
             ),
             TextSpan(text: '. Cada acerto vale XP, moedas e sobe você de nível.'),
           ],
@@ -298,7 +298,7 @@ class _Hero extends StatelessWidget {
           children: [
             TextSpan(
               text: 'Partida de teste. ',
-              style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink),
+              style: TextStyle(fontWeight: FontWeight.w600, color: AppColors.ink),
             ),
             TextSpan(text: 'Não conta pontos: para valer, escolha um nível abaixo.'),
           ],
@@ -340,12 +340,12 @@ class _PlayerCard extends StatelessWidget {
                     children: [
                       Text(
                         store.title,
-                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800, letterSpacing: -0.5),
+                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, letterSpacing: -0.5),
                       ),
                       const SizedBox(height: 2),
                       Text(
                         'Faltam ${store.xpToNextLevel} XP para o nível ${store.level + 1}',
-                        style: const TextStyle(fontSize: 13.5, color: AppColors.inkMuted, fontWeight: FontWeight.w600),
+                        style: const TextStyle(fontSize: 13.5, color: AppColors.inkMuted, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
@@ -415,12 +415,12 @@ class _LevelRing extends StatelessWidget {
                 'NÍVEL',
                 style: TextStyle(
                   fontSize: 9.5,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w600,
                   letterSpacing: 1.2,
                   color: AppColors.inkMuted,
                 ),
               ),
-              Text('$level', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800, height: 1.1)),
+              Text('$level', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, height: 1.1)),
             ],
           ),
         ),
@@ -440,11 +440,11 @@ class _MiniStat extends StatelessWidget {
     children: [
       Text(
         label,
-        style: const TextStyle(fontSize: 12.5, color: AppColors.inkMuted, fontWeight: FontWeight.w600),
+        style: const TextStyle(fontSize: 12.5, color: AppColors.inkMuted, fontWeight: FontWeight.w500),
       ),
       Text(
         value,
-        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800, fontFeatures: [FontFeature.tabularFigures()]),
+        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, fontFeatures: [FontFeature.tabularFigures()]),
       ),
     ],
   );
@@ -532,7 +532,7 @@ class _ModeCard extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 18),
-        Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800, letterSpacing: -0.5)),
+        Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, letterSpacing: -0.5)),
         const SizedBox(height: 6),
         Text(description, style: mutedText.copyWith(fontSize: 14.5)),
         const SizedBox(height: 16),
@@ -546,7 +546,7 @@ class _ModeCard extends StatelessWidget {
                 decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(AppRadius.pill)),
                 child: Text(
                   t,
-                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: tone.foreground),
+                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w500, color: tone.foreground),
                 ),
               ),
           ],
@@ -609,7 +609,7 @@ class _ChestCard extends StatelessWidget {
         children: [
           const _EmojiTile(emoji: '🎁', tone: Tone.amber),
           const SizedBox(height: 18),
-          const Text('Baú diário', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
+          const Text('Baú diário', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
           const SizedBox(height: 6),
           Text(
             available ? 'Tem ${PlayerStore.chestCoins} 💎 esperando por você hoje.' : 'Já abriu hoje. Volte amanhã!',
@@ -644,7 +644,7 @@ class _StreakCard extends StatelessWidget {
           const SizedBox(height: 18),
           Text(
             streak == 0 ? 'Comece uma ofensiva' : '$streak ${streak == 1 ? 'dia' : 'dias'} de ofensiva',
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 6),
           Text(
@@ -686,7 +686,7 @@ class _PowerUpsCard extends StatelessWidget {
       children: [
         const _EmojiTile(emoji: '⚡', tone: Tone.stone),
         const SizedBox(height: 18),
-        const Text('Ajudas', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
+        const Text('Ajudas', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
         const SizedBox(height: 6),
         Text('Use suas moedas durante a partida.', style: mutedText.copyWith(fontSize: 14.5)),
         const SizedBox(height: 14),
@@ -702,11 +702,11 @@ class _PowerUpsCard extends StatelessWidget {
                     PowerUp.fiftyFifty => '50/50: elimina 2 erradas',
                     PowerUp.extraTime => '+15 segundos no relógio',
                     PowerUp.skip => 'Pular sem perder vida',
-                  }, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                  }, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
                 ),
                 Text(
                   '💎${p.cost}',
-                  style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.brand700),
+                  style: const TextStyle(fontWeight: FontWeight.w600, color: AppColors.brand700),
                 ),
               ],
             ),
@@ -750,7 +750,7 @@ class _Achievements extends StatelessWidget {
               Expanded(
                 child: Text(
                   '$unlocked de ${list.length} desbloqueadas',
-                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+                  style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                 ),
               ),
               const SizedBox(width: 12),
@@ -787,7 +787,7 @@ class _Achievements extends StatelessWidget {
                         Text(
                           a.name,
                           style: TextStyle(
-                            fontWeight: FontWeight.w800,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: a.unlocked ? AppColors.ink : AppColors.inkMuted,
                           ),

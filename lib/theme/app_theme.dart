@@ -38,28 +38,29 @@ abstract final class AppColors {
 }
 
 abstract final class AppRadius {
-  static const sm = 10.0;
-  static const md = 14.0;
-  static const lg = 18.0;
-  static const xl = 24.0;
-  static const xxl = 30.0;
+  static const sm = 8.0;
+  static const md = 12.0;
+  static const lg = 16.0;
+  static const xl = 20.0;
+  static const xxl = 28.0;
   static const pill = 999.0;
 }
 
 abstract final class AppShadows {
+  // Sombras suaves em camadas: uma linha fina de contorno e uma sombra longa e difusa.
   static const soft = [
     BoxShadow(color: Color(0x0A0F1A33), blurRadius: 2, offset: Offset(0, 1)),
-    BoxShadow(color: Color(0x140F1A33), blurRadius: 24, spreadRadius: -12, offset: Offset(0, 10)),
+    BoxShadow(color: Color(0x2E0F1A33), blurRadius: 34, spreadRadius: -18, offset: Offset(0, 14)),
   ];
   static const lifted = [
-    BoxShadow(color: Color(0x0F0F1A33), blurRadius: 3, offset: Offset(0, 1)),
-    BoxShadow(color: Color(0x2E0F1A33), blurRadius: 40, spreadRadius: -18, offset: Offset(0, 22)),
+    BoxShadow(color: Color(0x0D0F1A33), blurRadius: 3, offset: Offset(0, 1)),
+    BoxShadow(color: Color(0x380F1A33), blurRadius: 60, spreadRadius: -28, offset: Offset(0, 28)),
   ];
-  static const glow = [BoxShadow(color: Color(0x661F4FA8), blurRadius: 28, spreadRadius: -12, offset: Offset(0, 12))];
+  static const glow = [BoxShadow(color: Color(0x731F4FA8), blurRadius: 28, spreadRadius: -14, offset: Offset(0, 12))];
 }
 
 abstract final class AppTheme {
-  static const fontFamily = 'PlusJakartaSans';
+  static const fontFamily = 'Jost';
 
   static ThemeData light() {
     final scheme = ColorScheme.fromSeed(seedColor: AppColors.brand500, surface: AppColors.surface).copyWith(

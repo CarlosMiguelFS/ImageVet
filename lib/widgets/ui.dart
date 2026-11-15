@@ -59,9 +59,10 @@ class Headline extends StatelessWidget {
     final fontSize = size ?? (context.screenWidth * 0.06).clamp(30.0, 60.0);
     final style = TextStyle(
       fontSize: fontSize,
-      fontWeight: FontWeight.w800,
-      height: 1.18,
-      letterSpacing: -fontSize * 0.025,
+      // Títulos leves e com letras mais juntas (Jost 400).
+      fontWeight: FontWeight.w400,
+      height: 1.14,
+      letterSpacing: -fontSize * 0.02,
       color: color,
     );
     final spans = <InlineSpan>[];
@@ -76,7 +77,7 @@ class Headline extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: fontSize * 0.05),
             padding: EdgeInsets.symmetric(horizontal: fontSize * 0.22, vertical: fontSize * 0.02),
             decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(fontSize * 0.4)),
-            child: Text(m[2]!, style: style.copyWith(color: tone.foreground)),
+            child: Text(m[2]!, style: style.copyWith(color: tone.foreground, fontWeight: FontWeight.w500)),
           ),
         ),
       );
@@ -91,7 +92,7 @@ class Headline extends StatelessWidget {
   }
 }
 
-const mutedText = TextStyle(fontSize: 16, height: 1.55, color: AppColors.inkMuted, fontWeight: FontWeight.w500);
+const mutedText = TextStyle(fontSize: 16, height: 1.6, color: AppColors.inkMuted, fontWeight: FontWeight.w400);
 
 /// Etiqueta pequena e espaçada acima dos títulos.
 class Eyebrow extends StatelessWidget {
@@ -105,7 +106,7 @@ class Eyebrow extends StatelessWidget {
   Widget build(BuildContext context) {
     final label = Text(
       text.toUpperCase(),
-      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, letterSpacing: 1.6, color: color),
+      style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500, letterSpacing: 2.4, color: color),
     );
     if (icon == null) return label;
     return Row(
@@ -222,7 +223,7 @@ class PillButton extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: big ? 17 : 15,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     color: disabled ? AppColors.inkMuted : fg,
                   ),
                 ),
@@ -266,7 +267,7 @@ class StatPill extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 14.5,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w600,
                 color: tone.foreground,
                 fontFeatures: const [FontFeature.tabularFigures()],
               ),
@@ -309,7 +310,7 @@ class BrandMark extends StatelessWidget {
             ),
           ],
         ),
-        style: TextStyle(fontSize: size * 0.7, fontWeight: FontWeight.w800, letterSpacing: -0.6, color: AppColors.ink),
+        style: TextStyle(fontSize: size * 0.7, fontWeight: FontWeight.w600, letterSpacing: -0.6, color: AppColors.ink),
       ),
     ],
   );
@@ -442,7 +443,7 @@ class TopBar extends StatelessWidget {
             boxShadow: AppShadows.soft,
           ),
           child: DefaultTextStyle.merge(
-            style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink),
+            style: const TextStyle(fontWeight: FontWeight.w600, color: AppColors.ink),
             child: Row(
               children: [
                 leading,
@@ -478,7 +479,7 @@ class UserAvatar extends StatelessWidget {
     final fallback = Center(
       child: Text(
         _initials,
-        style: TextStyle(fontSize: size * 0.36, fontWeight: FontWeight.w800, color: AppColors.brand600),
+        style: TextStyle(fontSize: size * 0.36, fontWeight: FontWeight.w600, color: AppColors.brand600),
       ),
     );
     return Container(

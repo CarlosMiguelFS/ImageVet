@@ -128,7 +128,7 @@ class _Section extends StatelessWidget {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
+        Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
         const SizedBox(height: 6),
         Text(body, style: const TextStyle(fontSize: 14.5, height: 1.6, color: AppColors.ink)),
       ],

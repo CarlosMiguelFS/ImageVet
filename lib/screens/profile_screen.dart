@@ -373,7 +373,7 @@ class _DeleteAccountDialogState extends State<_DeleteAccountDialog> {
 
   @override
   Widget build(BuildContext context) => AlertDialog(
-    title: const Text('Excluir conta?', style: TextStyle(fontWeight: FontWeight.w800)),
+    title: const Text('Excluir conta?', style: TextStyle(fontWeight: FontWeight.w600)),
     content: Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -484,13 +484,13 @@ class _ProfileStat extends StatelessWidget {
         Text(emoji, style: const TextStyle(fontSize: 22)),
         const SizedBox(height: 6),
         FittedBox(
-          child: Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800)),
+          child: Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600)),
         ),
         Text(
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w600),
+          style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w500),
         ),
       ],
     ),

@@ -161,7 +161,7 @@ class _GameScreenState extends State<GameScreen> {
     final leave = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Sair da partida?', style: TextStyle(fontWeight: FontWeight.w800)),
+        title: const Text('Sair da partida?', style: TextStyle(fontWeight: FontWeight.w600)),
         content: Text(
           widget.practice
               ? 'É só uma partida de teste: nada dela é salvo.'
@@ -310,7 +310,7 @@ class _Hud extends StatelessWidget {
                     children: [
                       Text(
                         position,
-                        style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.inkSoft),
+                        style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: AppColors.inkSoft),
                       ),
                       const SizedBox(height: 6),
                       RoundedProgress(
@@ -436,7 +436,7 @@ class _TimerRing extends StatelessWidget {
                   ? const Icon(Icons.pause_rounded, size: 18, color: AppColors.inkMuted)
                   : Text(
                       '$seconds',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: color),
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: color),
                     ),
             ),
           ],
@@ -478,7 +478,7 @@ class _QuestionCard extends StatelessWidget {
             q.title,
             style: TextStyle(
               fontSize: context.isPhone ? 20 : 24,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w600,
               letterSpacing: -0.6,
               height: 1.25,
             ),
@@ -558,7 +558,7 @@ class _OptionTileState extends State<_OptionTile> {
                         _OptionState.wrong => const Icon(Icons.close_rounded, color: Colors.white, size: 20),
                         _ => Text(
                           widget.letter,
-                          style: TextStyle(fontWeight: FontWeight.w800, color: badgeFg),
+                          style: TextStyle(fontWeight: FontWeight.w600, color: badgeFg),
                         ),
                       },
                     ),
@@ -617,7 +617,7 @@ class _PowerUps extends StatelessWidget {
                     children: [
                       Text(p.emoji, style: const TextStyle(fontSize: 16)),
                       const SizedBox(width: 6),
-                      Text(p.label, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14)),
+                      Text(p.label, style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14)),
                       const SizedBox(width: 8),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
@@ -627,7 +627,7 @@ class _PowerUps extends StatelessWidget {
                         ),
                         child: Text(
                           practice ? 'grátis' : '💎${p.cost}',
-                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.brand700),
+                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.brand700),
                         ),
                       ),
                     ],
@@ -703,7 +703,7 @@ class _ExplanationLine extends StatelessWidget {
         decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(AppRadius.pill)),
         child: Text(
           label,
-          style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: tone.foreground),
+          style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: tone.foreground),
         ),
       ),
       const SizedBox(height: 8),
@@ -750,12 +750,12 @@ class _ContinueBar extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: tone.foreground),
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: tone.foreground),
                     ),
                     if (o.correct)
                       Text(
                         '+${o.points} pontos · +${o.coins} 💎',
-                        style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: tone.foreground),
+                        style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w500, color: tone.foreground),
                       ),
                   ],
                 ),
@@ -809,7 +809,7 @@ class _PointsBurst extends StatelessWidget {
                 ),
                 child: Text(
                   '+${outcome.points}',
-                  style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w800),
+                  style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

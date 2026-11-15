@@ -76,7 +76,7 @@ class ResultScreen extends StatelessWidget {
                           'Partida de teste: estes pontos não contam para o seu perfil nem para o ranking. '
                           'Escolha um nível na tela inicial para valer pontos!',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: AppColors.mintInk, fontWeight: FontWeight.w600, fontSize: 14),
+                          style: TextStyle(color: AppColors.mintInk, fontWeight: FontWeight.w500, fontSize: 14),
                         ),
                       ],
                       if (change.syncFailed) ...[
@@ -84,7 +84,7 @@ class ResultScreen extends StatelessWidget {
                         const Text(
                           'Sem conexão com o servidor: esta partida não entrou no seu perfil nem no ranking.',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: AppColors.coralInk, fontWeight: FontWeight.w600, fontSize: 14),
+                          style: TextStyle(color: AppColors.coralInk, fontWeight: FontWeight.w500, fontSize: 14),
                         ),
                       ],
                       if (change.leveledUp) ...[
@@ -121,7 +121,7 @@ class ResultScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Nível ${store.level} · ${store.title}',
-                                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+                                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                                   ),
                                   StatPill(emoji: '✨', value: '+${summary.xp} XP'),
                                 ],
@@ -243,14 +243,14 @@ class _LevelUp extends StatelessWidget {
                   'SUBIU DE NÍVEL!',
                   style: TextStyle(
                     color: Colors.white70,
-                    fontWeight: FontWeight.w800,
+                    fontWeight: FontWeight.w600,
                     letterSpacing: 1.4,
                     fontSize: 12,
                   ),
                 ),
                 Text(
                   'Nível $level · $title',
-                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800),
+                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -274,11 +274,11 @@ class _Stat extends StatelessWidget {
         Text(emoji, style: const TextStyle(fontSize: 22)),
         const SizedBox(height: 6),
         FittedBox(
-          child: Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800)),
+          child: Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
         ),
         Text(
           label,
-          style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w600),
+          style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w500),
         ),
       ],
     ),

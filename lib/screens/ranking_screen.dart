@@ -174,7 +174,7 @@ class _RankingRow extends StatelessWidget {
                   : Text(
                       '${entry.posicao}º',
                       textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppColors.inkMuted),
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: AppColors.inkMuted),
                     ),
             ),
             const SizedBox(width: 10),
@@ -188,7 +188,7 @@ class _RankingRow extends StatelessWidget {
                     entry.eu ? '${entry.nome} (você)' : entry.nome,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700),
+                    style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w500),
                   ),
                   Text(
                     [
@@ -210,7 +210,7 @@ class _RankingRow extends StatelessWidget {
                   '${entry.pontos}',
                   style: const TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     fontFeatures: [FontFeature.tabularFigures()],
                   ),
                 ),
@@ -290,7 +290,7 @@ class _PeriodToggle extends StatelessWidget {
                 child: Text(
                   label,
                   style: TextStyle(
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     fontSize: 14,
                     color: id == value ? Colors.white : AppColors.inkMuted,
                   ),
