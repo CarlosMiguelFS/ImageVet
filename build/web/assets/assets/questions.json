@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "set": "teste",
+    "set": "valendo",
     "title": "Eliminação da superposição de imagens",
     "question": "Um cão apresenta suspeita de hérnia de disco. O veterinário solicita uma tomografia computadorizada para avaliar melhor a região da coluna vertebral. Qual é a principal vantagem desse exame em relação à radiografia convencional?",
     "options": [
@@ -18,11 +18,12 @@
       "Ondas sonoras são utilizadas na ultrassonografia, não na tomografia computadorizada. A TC utiliza raios X.",
       "A TC não produz apenas imagens planas. Sua principal vantagem é justamente permitir a avaliação em cortes e diferentes planos.",
       "A TC também permite avaliar tecidos moles, como músculos, órgãos e estruturas nervosas, não apenas ossos."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 2,
-    "set": "teste",
+    "set": "valendo",
     "title": "Escala Hounsfield na prática",
     "question": "Durante uma tomografia computadorizada do encéfalo de um cão, o radiologista identifica uma região mais escura que o tecido cerebral ao redor. Essa alteração é descrita como hipoatenuante.\n\nConsiderando a escala Hounsfield, qual interpretação é mais adequada?",
     "options": [
@@ -39,11 +40,12 @@
       "Uma região hipoatenuante aparece mais escura porque atenua menos os raios X. No encéfalo, pode estar associada a edema, necrose, inflamação ou alterações com acúmulo de líquido.",
       "O cálcio aumenta a atenuação dos raios X, deixando a região mais clara, e não mais escura.",
       "Hiperatenuante significa maior atenuação e aparência mais clara, sendo o contrário do que foi observado."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 3,
-    "set": "teste",
+    "set": "valendo",
     "title": "Avaliação da obesidade em cães",
     "question": "Um cão apresenta sobrepeso, mas o veterinário precisa avaliar com maior precisão a distribuição da gordura corporal, principalmente para diferenciar a gordura visceral da subcutânea.\n\nPor que a tomografia computadorizada é uma ferramenta importante nessa avaliação?",
     "options": [
@@ -60,11 +62,12 @@
       "A avaliação clínica continua sendo importante. A TC complementa a análise, mas não substitui automaticamente o exame físico e o escore de condição corporal.",
       "A TC permite visualizar e quantificar diferentes depósitos de gordura, sendo a região da quarta vértebra lombar (L4) um importante ponto anatômico de referência.",
       "A tomografia utiliza raios X e diferenças de atenuação dos tecidos, não atividade elétrica muscular."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 4,
-    "set": "teste",
+    "set": "valendo",
     "title": "Rastreio de metástases pulmonares",
     "question": "Um cão diagnosticado com neoplasia será submetido a uma cirurgia para retirada do tumor. Antes do procedimento, o veterinário solicita uma tomografia do tórax para investigar possíveis metástases pulmonares.\n\nQual é a principal justificativa para essa escolha?",
     "options": [
@@ -81,11 +84,12 @@
       "A TC é muito utilizada na avaliação pulmonar e também permite investigar alterações em diversos outros órgãos e tecidos.",
       "Encontrar um nódulo não significa confirmar malignidade. A caracterização pode exigir acompanhamento, citologia ou histopatologia.",
       "Os exames possuem capacidades diagnósticas diferentes. A TC geralmente apresenta maior sensibilidade para pequenos nódulos pulmonares."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 5,
-    "set": "teste",
+    "set": "valendo",
     "title": "Angiotomografia na clínica e na perícia",
     "question": "Um cão apresenta suspeita de shunt portossistêmico. O veterinário solicita uma angiotomografia para investigar possíveis alterações vasculares. Em outro momento, um exame semelhante é realizado em um cadáver durante uma investigação pericial.\n\nQual alternativa descreve corretamente a utilização e a limitação desse exame?",
     "options": [
@@ -102,11 +106,12 @@
       "A angiotomografia permite avaliar vasos profundos, incluindo estruturas vasculares abdominais, como as envolvidas no shunt portossistêmico.",
       "O contraste iodado permite visualizar o trajeto dos vasos sanguíneos. Em cadáveres, coágulos e extravasamento do contraste podem comprometer a interpretação.",
       "O contraste é fundamental para destacar a vascularização e permitir uma avaliação mais detalhada dos vasos."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 6,
-    "set": "teste",
+    "set": "valendo",
     "title": "Janelamento para diagnóstico nasal",
     "question": "Um cão apresenta secreção nasal persistente, espirros e dificuldade respiratória. Na tomografia, o veterinário deseja diferenciar um processo inflamatório de uma possível neoplasia na cavidade nasal.\n\nQual recurso da tomografia auxilia nessa investigação?",
     "options": [
@@ -123,11 +128,12 @@
       "A janela óssea permite avaliar estruturas mineralizadas, como os ossos nasais e o septo, não apenas secreções.",
       "A escala Hounsfield mede a atenuação dos raios X pelos tecidos, não a temperatura.",
       "A janela de tecidos moles é mais adequada para avaliar estruturas como mucosas e massas, enquanto a janela óssea destaca melhor alterações ósseas."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 7,
-    "set": "teste",
+    "set": "valendo",
     "title": "Necessidade de anestesia e radioproteção",
     "question": "Um cão muito agitado precisa realizar uma tomografia computadorizada. Durante a preparação do exame, o médico-veterinário explica a necessidade de manter o animal imóvel e os cuidados relacionados à exposição à radiação.\n\nQual alternativa apresenta a justificativa correta?",
     "options": [
@@ -144,11 +150,12 @@
       "A principal finalidade da anestesia ou sedação é permitir a imobilidade do paciente. A radiação deve sempre ser utilizada de forma controlada.",
       "A anestesia não elimina os efeitos biológicos da radiação. O ALARA também não estabelece uma dose fixa para todos os pacientes.",
       "Qualquer movimento pode produzir artefatos e prejudicar a interpretação das imagens. O princípio ALARA significa As Low As Reasonably Achievable, ou seja, manter a dose de radiação tão baixa quanto razoavelmente possível, sem comprometer a qualidade diagnóstica."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 8,
-    "set": "teste",
+    "set": "valendo",
     "title": "Artefato de volume parcial",
     "question": "Durante a realização de uma tomografia, o técnico percebe que uma determinada região apresenta uma densidade diferente da esperada. Ao analisar a imagem, identifica que tecidos com características distintas estão ocupando o mesmo corte tomográfico.\n\nQual alternativa explica corretamente esse fenômeno e como evitá-lo?",
     "options": [
@@ -165,11 +172,12 @@
       "O efeito de volume parcial acontece quando tecidos com diferentes atenuações ocupam o mesmo voxel. O equipamento calcula uma média dessas atenuações, podendo produzir uma representação que não corresponde exatamente à densidade de nenhum dos tecidos isoladamente. Cortes mais finos ajudam a diminuir esse efeito.",
       "O volume parcial não significa incapacidade de identificar ossos. É um fenômeno relacionado à mistura de diferentes tecidos dentro do mesmo voxel.",
       "A composição corporal e o tempo de anestesia não são métodos de correção desse artefato."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 9,
-    "set": "teste",
+    "set": "valendo",
     "title": "Aplicações forenses e zoonoses (Virtopsia)",
     "question": "Em uma investigação veterinária, um cadáver de animal apresenta suspeita de ferimentos provocados por arma de fogo e possíveis fraturas. A equipe opta por realizar uma tomografia post mortem antes de iniciar a necropsia.\n\nQual é uma das principais vantagens dessa abordagem?",
     "options": [
@@ -186,11 +194,12 @@
       "A tomografia auxilia a investigação, mas não substitui automaticamente a necropsia, os exames laboratoriais e outras análises periciais.",
       "Uma das principais vantagens da virtopsia é justamente permitir a avaliação não invasiva, sem necessidade de abertura inicial do cadáver.",
       "Os raios X utilizados na tomografia não esterilizam o cadáver nem eliminam agentes infecciosos."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 10,
-    "set": "teste",
+    "set": "valendo",
     "title": "Impacto na prática cirúrgica e diagnóstico precoce",
     "question": "Um cão apresenta uma massa tumoral próxima a estruturas anatômicas importantes. Antes de realizar a cirurgia, o cirurgião solicita uma tomografia computadorizada para avaliar a localização, as dimensões e a extensão da lesão.\n\nComo essas informações influenciam o planejamento cirúrgico?",
     "options": [
@@ -207,11 +216,12 @@
       "A tomografia produz imagens seccionais de estruturas internas, permitindo avaliar a extensão da lesão antes da cirurgia.",
       "As informações topográficas e as reconstruções tridimensionais permitem ao cirurgião planejar o melhor acesso, avaliar estruturas que podem estar comprometidas e antecipar dificuldades, tornando o procedimento mais seguro.",
       "A TC demonstra características anatômicas da massa, mas não confirma sozinha sua natureza histológica. A confirmação pode exigir citologia ou histopatologia."
-    ]
+    ],
+    "nivel": 6
   },
   {
     "id": 11,
-    "set": "valendo",
+    "set": "teste",
     "title": "Eliminação da sobreposição de imagens",
     "question": "Qual é a principal vantagem da tomografia computadorizada sobre a radiografia convencional ao avaliar estruturas anatômicas profundas?",
     "options": [
@@ -228,12 +238,11 @@
       "Os cortes seccionais permitem visualizar estruturas sem a sobreposição típica da radiografia. As reconstruções 3D também auxiliam no planejamento cirúrgico.",
       "A TC não aumenta fisicamente as estruturas; ela permite visualizar detalhes anatômicos com maior precisão.",
       "A TC é muito importante, mas não substitui todos os outros exames."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 12,
-    "set": "valendo",
+    "set": "teste",
     "title": "Escala Hounsfield na prática",
     "question": "O que é a Escala Hounsfield (HU) e o que significa uma lesão ser classificada como \"hipoatenuante\" no cérebro de um cão?",
     "options": [
@@ -250,12 +259,11 @@
       "Não avalia exclusivamente cálcio, e uma região hipoatenuante não significa necessariamente fratura.",
       "Não mede diretamente a velocidade do fluxo sanguíneo.",
       "Uma lesão hipoatenuante tende a aparecer mais escura, não mais clara."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 13,
-    "set": "valendo",
+    "set": "teste",
     "title": "Avaliação de obesidade em cães",
     "question": "Por que a tomografia é considerada mais precisa do que a balança e a palpação para avaliar a gordura corporal em cães, e qual ponto anatômico é o principal marcador dessa análise?",
     "options": [
@@ -272,12 +280,11 @@
       "A TC não tem como principal objetivo medir o peso corporal.",
       "A TC permite avaliar os compartimentos de gordura e a referência anatômica indicada é L4.",
       "A TC permite quantificar e diferenciar os depósitos de gordura, sendo L4 um importante ponto anatômico de avaliação."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 14,
-    "set": "valendo",
+    "set": "teste",
     "title": "Rastreio de metástases pulmonares",
     "question": "Por que a tomografia é o exame padrão-ouro para buscar metástases nos pulmões de pacientes oncológicos?",
     "options": [
@@ -294,12 +301,11 @@
       "Ocorre o contrário: a TC consegue detectar nódulos menores que podem passar despercebidos na radiografia.",
       "A TC complementa a avaliação do paciente, mas não substitui a avaliação clínica.",
       "O contraste pode ser utilizado conforme a indicação, mas não é obrigatório em todos os exames para rastreio pulmonar."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 15,
-    "set": "valendo",
+    "set": "teste",
     "title": "Angiotomografia na clínica e na perícia",
     "question": "Para que serve a angiotomografia e qual a sua limitação quando realizada em cadáveres (post mortem)?",
     "options": [
@@ -316,12 +322,11 @@
       "A avaliação vascular não se limita à densidade dos órgãos.",
       "O contraste iodado permite mapear os vasos. No exame post mortem, coágulos e extravasamento do contraste podem prejudicar a interpretação.",
       "Não é um exame exclusivo do sistema urinário."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 16,
-    "set": "valendo",
+    "set": "teste",
     "title": "Janelamento para diagnóstico nasal",
     "question": "Como o ajuste de \"janelas\" na tomografia ajuda a diferenciar uma rinite inflamatória de um câncer na cavidade nasal?",
     "options": [
@@ -338,12 +343,11 @@
       "A janela óssea avalia melhor as estruturas ósseas, e a janela de tecidos moles permite analisar tecidos moles.",
       "O janelamento não mede temperatura.",
       "A osteólise não ocorre exclusivamente em tumores. Outras doenças também podem causar destruição óssea."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 17,
-    "set": "valendo",
+    "set": "teste",
     "title": "Necessidade de anestesia e radioproteção",
     "question": "Por que é obrigatório anestesiar o animal para fazer uma tomografia e qual é o princípio de segurança adotado para a radiação?",
     "options": [
@@ -360,12 +364,11 @@
       "A anestesia não tem como objetivo melhorar a circulação sanguínea, e o contraste não é obrigatório em todos os exames.",
       "A anestesia não é realizada simplesmente para evitar desconforto com o contraste.",
       "A imobilidade evita borramentos e artefatos. O princípio ALARA busca reduzir a exposição à radiação sem comprometer a qualidade diagnóstica. A necessidade de anestesia ou sedação depende do paciente e do protocolo."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 18,
-    "set": "valendo",
+    "set": "teste",
     "title": "Artefatos de imagem (volume parcial)",
     "question": "O que é o artefato de \"volume parcial\" na tomografia e como o técnico evita esse erro?",
     "options": [
@@ -382,12 +385,11 @@
       "O contraste não é a causa específica do artefato de volume parcial.",
       "Não é uma falha exclusiva de identificação óssea.",
       "O ar nos pulmões não é a causa exclusiva desse artefato."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 19,
-    "set": "valendo",
+    "set": "teste",
     "title": "Aplicações forenses e zoonoses (Virtopsia)",
     "question": "Como a tomografia post mortem (Virtopsia) auxilia em casos periciais de maus-tratos ou balística, e qual sua vantagem de biossegurança?",
     "options": [
@@ -404,12 +406,11 @@
       "A reconstrução tridimensional auxilia na avaliação de fraturas e trajetórias de projéteis. Além disso, reduz a manipulação direta do cadáver e a exposição a agentes zoonóticos.",
       "Nem todos os casos podem ser solucionados somente pela TC. Exames complementares podem ser necessários.",
       "A TC permite visualizar estruturas internas, inclusive ossos e fraturas."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 20,
-    "set": "valendo",
+    "set": "teste",
     "title": "Impacto na prática cirúrgica",
     "question": "Como a precisão topográfica e a mensuração de massas tumorais fornecidas pela TC afetam a tomada de decisão do cirurgião antes mesmo de iniciar o procedimento?",
     "options": [
@@ -426,8 +427,7 @@
       "A TC permite avaliar estruturas em diferentes planos e reconstruções tridimensionais.",
       "A precisão topográfica permite que o cirurgião planeje melhor a abordagem, antecipe dificuldades e realize um procedimento mais seguro e assertivo.",
       "A TC também é muito importante antes da cirurgia, justamente para orientar o planejamento."
-    ],
-    "nivel": 5
+    ]
   },
   {
     "id": 21,

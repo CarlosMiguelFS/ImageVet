@@ -52,9 +52,16 @@ class HomeScreen extends StatelessWidget {
     (
       number: 5,
       emoji: '🧠',
-      name: 'Casos e desafios',
-      description: 'Casos clínicos para interpretar e perguntas de 5 alternativas. O nível mais difícil.',
+      name: 'Interpretação e prática',
+      description: 'Situações da rotina: encéfalo, metástases, tumores nasais, perícia e planejamento cirúrgico.',
       tone: Tone.coral,
+    ),
+    (
+      number: PlayerStore.finalStage,
+      emoji: '🩻',
+      name: 'Casos clínicos',
+      description: 'A fase final: 10 casos clínicos completos, com 5 alternativas. Abre depois dos 5 níveis.',
+      tone: Tone.brand,
     ),
   ];
 
@@ -147,15 +154,20 @@ class HomeScreen extends StatelessWidget {
                     for (final l in _levels)
                       _ModeCard(
                         emoji: l.emoji,
-                        title: 'Nível ${l.number} · ${l.name}',
+                        title: l.number == PlayerStore.finalStage
+                            ? '${l.name} · Fase final'
+                            : 'Nível ${l.number} · ${l.name}',
                         description: l.description,
                         tags: [
-                          _scoring(l.number).length > 10
-                              ? '10 de ${_scoring(l.number).length} questões'
-                              : '${_scoring(l.number).length} questões',
-                          'Vale pontos',
+                          '${_scoring(l.number).length} questões',
+                          if (store.passedStages.contains(l.number)) 'Concluído' else 'Vale pontos',
                         ],
                         tone: l.tone,
+                        lockedHint: store.isStageUnlocked(l.number)
+                            ? null
+                            : l.number == PlayerStore.finalStage
+                            ? 'Passe nos 5 níveis para abrir'
+                            : 'Passe no nível ${l.number - 1} para abrir',
                         onTap: () => _playScoring(context, GameMode.classic, l.number),
                       ),
                     _ModeCard(
@@ -519,6 +531,7 @@ class _ModeCard extends StatelessWidget {
     required this.tags,
     required this.tone,
     required this.onTap,
+    this.lockedHint,
   });
 
   final String emoji, title, description;
@@ -526,42 +539,55 @@ class _ModeCard extends StatelessWidget {
   final Tone tone;
   final VoidCallback onTap;
 
+  /// Quando não é nulo, o cartão está trancado e mostra como liberar.
+  final String? lockedHint;
+
   @override
-  Widget build(BuildContext context) => SoftCard(
-    onTap: onTap,
-    radius: AppRadius.xxl,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            _EmojiTile(emoji: emoji, tone: tone),
-            const Spacer(),
-            const Icon(Icons.arrow_forward_rounded, color: AppColors.ink),
-          ],
-        ),
-        const SizedBox(height: 18),
-        Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, letterSpacing: -0.5)),
-        const SizedBox(height: 6),
-        Text(description, style: mutedText.copyWith(fontSize: 14.5)),
-        const SizedBox(height: 16),
-        Wrap(
-          spacing: 8,
-          runSpacing: 8,
-          children: [
-            for (final t in tags)
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(AppRadius.pill)),
-                child: Text(
-                  t,
-                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w500, color: tone.foreground),
-                ),
+  Widget build(BuildContext context) {
+    final locked = lockedHint != null;
+    final card = SoftCard(
+      onTap: locked
+          ? () => ScaffoldMessenger.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(SnackBar(content: Text('$lockedHint.')))
+          : onTap,
+      radius: AppRadius.xxl,
+      child: _content(locked),
+    );
+    return locked ? Opacity(opacity: 0.6, child: card) : card;
+  }
+
+  Widget _content(bool locked) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Row(
+        children: [
+          _EmojiTile(emoji: emoji, tone: locked ? Tone.stone : tone),
+          const Spacer(),
+          Icon(locked ? Icons.lock_outline_rounded : Icons.arrow_forward_rounded, color: AppColors.ink),
+        ],
+      ),
+      const SizedBox(height: 18),
+      Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, letterSpacing: -0.5)),
+      const SizedBox(height: 6),
+      Text(description, style: mutedText.copyWith(fontSize: 14.5)),
+      const SizedBox(height: 16),
+      Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: [
+          for (final t in tags)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(AppRadius.pill)),
+              child: Text(
+                t,
+                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w500, color: tone.foreground),
               ),
-          ],
-        ),
-      ],
-    ),
+            ),
+        ],
+      ),
+    ],
   );
 }
 

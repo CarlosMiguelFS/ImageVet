@@ -19,21 +19,21 @@ GameController _game(GameMode mode, {int seed = 1}) =>
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  test('banco de questões: 10 do modo teste + 60 valendo pontos, com gabarito e explicações', () {
+  test('banco de questões: 10 do "Jogar agora" + 60 valendo pontos, com gabarito e explicações', () {
     final all = _questions();
     expect(all, hasLength(70));
     expect(all.map((q) => q.id).toSet(), hasLength(70), reason: 'ids únicos');
     String key(Iterable<Question> qs) => [for (final q in qs) 'ABCDE'[q.answer]].join();
 
-    // Modo teste: os 10 casos clínicos apresentados ao professor (ids 1 a 10).
+    // "Jogar agora": as 10 perguntas principais (ids 11 a 20), gabarito C A E B D A E B C D.
     final teste = all.where((q) => q.set == QuestionSet.teste);
-    expect([for (final q in teste) q.id], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    expect(key(teste), 'BCDADBECAD');
+    expect([for (final q in teste) q.id], [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+    expect(key(teste), 'CAEBDAEBCD');
 
     // Valendo pontos: as 10 perguntas diretas (5 alternativas) + as 50 novas (4 alternativas).
     final valendo = all.where((q) => q.set == QuestionSet.valendo).toList();
     expect(valendo, hasLength(60));
-    expect(key(valendo.take(10)), 'CAEBDAEBCD');
+    expect(key(valendo.take(10)), 'BCDADBECAD');
     expect(
       key(valendo.skip(10)),
       'BACDACBDAC'
@@ -43,7 +43,7 @@ void main() {
       'ACDBCADBCA',
       reason: 'gabarito enviado pela equipe, bloco a bloco',
     );
-    // Níveis da tela inicial: 1 a 4 com 10 questões cada; o 5 junta os casos e as perguntas de 5 alternativas.
+    // Níveis da tela inicial: 1 a 5 com 10 questões cada e a fase final (6) com os casos clínicos.
     List<int> ids(int level) => [
       for (final q in valendo)
         if (q.level == level) q.id,
@@ -52,7 +52,8 @@ void main() {
     expect(ids(2), [for (var i = 31; i <= 40; i++) i]);
     expect(ids(3), [for (var i = 41; i <= 50; i++) i]);
     expect(ids(4), [for (var i = 51; i <= 60; i++) i]);
-    expect(ids(5), [for (var i = 11; i <= 20; i++) i, for (var i = 61; i <= 70; i++) i]);
+    expect(ids(5), [for (var i = 61; i <= 70; i++) i]);
+    expect(ids(6), [for (var i = 1; i <= 10; i++) i], reason: 'casos clínicos = fase final');
     expect(teste.every((q) => q.level == null), isTrue, reason: 'o teste do "Jogar agora" não tem nível');
 
     for (final q in all) {
@@ -197,6 +198,45 @@ void main() {
       now = DateTime(2026, 11, 14, 8);
       expect(s.activeStreak, 0);
       expect((await s.recordMatch(m)).streakDays, 1);
+    });
+
+    test('níveis abrem em sequência e os casos clínicos só depois dos 5', () async {
+      final s = PlayerStore();
+      await s.load();
+      MatchSummary match(int stars) => MatchSummary(
+        mode: 'classic',
+        score: 0,
+        correct: stars == 0 ? 2 : 5,
+        answered: 10,
+        maxCombo: 0,
+        xp: 0,
+        coins: 0,
+        stars: stars,
+      );
+      expect(s.isStageUnlocked(1), isTrue);
+      expect(s.isStageUnlocked(2), isFalse);
+      expect(s.isStageUnlocked(PlayerStore.finalStage), isFalse);
+
+      // Sem estrela não conclui o nível.
+      expect((await s.recordMatch(match(0), stage: 1)).stagePassed, isNull);
+      expect(s.isStageUnlocked(2), isFalse);
+
+      expect((await s.recordMatch(match(1), stage: 1)).stagePassed, 1);
+      expect(s.isStageUnlocked(2), isTrue);
+      expect((await s.recordMatch(match(3), stage: 1)).stagePassed, isNull, reason: 'já estava concluído');
+
+      for (var stage = 2; stage <= 4; stage++) {
+        await s.recordMatch(match(2), stage: stage);
+      }
+      expect(s.isStageUnlocked(5), isTrue);
+      expect(s.isStageUnlocked(PlayerStore.finalStage), isFalse);
+      await s.recordMatch(match(1), stage: 5);
+      expect(s.isStageUnlocked(PlayerStore.finalStage), isTrue);
+
+      // Fica salvo no aparelho.
+      final again = PlayerStore();
+      await again.load();
+      expect(again.passedStages, {1, 2, 3, 4, 5});
     });
 
     test('baú diário abre uma vez por dia', () async {

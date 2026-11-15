@@ -34,7 +34,11 @@ class ProgressChange {
     required this.streakIncreased,
     this.confirmed,
     this.syncFailed = false,
+    this.stagePassed,
   });
+
+  /// Nível (1 a 6) concluído pela primeira vez nesta partida, se houver.
+  final int? stagePassed;
 
   final int levelBefore, levelAfter, streakDays;
   final bool newRecord, streakIncreased;
@@ -85,6 +89,19 @@ class PlayerStore extends ChangeNotifier {
   int streakDays = 0;
   String? _lastPlayDay;
   String? _lastChestDay;
+
+  /// Níveis concluídos: 1 a 5 e [finalStage] (casos clínicos).
+  Set<int> passedStages = {};
+
+  /// A fase final (casos clínicos) só abre depois dos níveis 1 a 5.
+  static const finalStage = 6;
+
+  /// O nível 1 está sempre aberto; cada um abre quando o anterior é concluído.
+  bool isStageUnlocked(int stage) => stage <= 1
+      ? true
+      : stage == finalStage
+      ? [for (var s = 1; s < finalStage; s++) s].every(passedStages.contains)
+      : passedStages.contains(stage - 1);
 
   // ---------------------------------------------------------------------------
   // Conta
@@ -138,6 +155,7 @@ class PlayerStore extends ChangeNotifier {
     streakDays = p.diasSeguidos;
     _lastPlayDay = p.ultimoDiaJogado;
     _lastChestDay = p.bauDia;
+    passedStages = {...p.niveisConcluidos};
     notifyListeners();
   }
 
@@ -220,6 +238,7 @@ class PlayerStore extends ChangeNotifier {
     streakDays = p.getInt('streakDays') ?? 0;
     _lastPlayDay = p.getString('lastPlayDay');
     _lastChestDay = p.getString('lastChestDay');
+    passedStages = {for (final s in p.getStringList('passedStages') ?? const <String>[]) ?int.tryParse(s)};
     notifyListeners();
   }
 
@@ -240,6 +259,7 @@ class PlayerStore extends ChangeNotifier {
       p.setInt('streakDays', streakDays),
       if (_lastPlayDay != null) p.setString('lastPlayDay', _lastPlayDay!),
       if (_lastChestDay != null) p.setString('lastChestDay', _lastChestDay!),
+      p.setStringList('passedStages', [for (final s in passedStages) '$s']),
     ]);
   }
 
@@ -333,8 +353,15 @@ class PlayerStore extends ChangeNotifier {
     return true;
   }
 
-  Future<ProgressChange> recordMatch(MatchSummary m) async {
+  /// Registra a partida. [stage] é o nível jogado (1 a 6), quando todas as questões são do mesmo nível.
+  Future<ProgressChange> recordMatch(MatchSummary m, {int? stage}) async {
     final levelBefore = level;
+    final stagesBefore = {...passedStages};
+    int? newlyPassed() {
+      final added = passedStages.difference(stagesBefore);
+      return added.isEmpty ? null : added.first;
+    }
+
     final remote = _remote;
     final match = _matchId;
     if (remote != null) {
@@ -350,6 +377,7 @@ class PlayerStore extends ChangeNotifier {
           newRecord: r.newRecord,
           streakDays: streakDays,
           streakIncreased: r.streakIncreased,
+          stagePassed: newlyPassed(),
           confirmed: MatchSummary(
             mode: m.mode,
             score: r.score,
@@ -402,6 +430,8 @@ class PlayerStore extends ChangeNotifier {
       _lastPlayDay = _today;
       streakIncreased = true;
     }
+    // Mesma regra do servidor: partida de 10 do mesmo nível com pelo menos 1 estrela.
+    if (stage != null && m.mode == 'classic' && m.stars >= 1) passedStages.add(stage);
 
     notifyListeners();
     await _save();
@@ -411,6 +441,7 @@ class PlayerStore extends ChangeNotifier {
       newRecord: newRecord,
       streakDays: streakDays,
       streakIncreased: streakIncreased,
+      stagePassed: newlyPassed(),
     );
   }
 }

@@ -53,7 +53,7 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = PlayerScope.of(context);
-    final celebrate = summary.stars >= 2 || change.newRecord || change.leveledUp;
+    final celebrate = summary.stars >= 2 || change.newRecord || change.leveledUp || change.stagePassed != null;
     return Scaffold(
       body: Stack(
         children: [
@@ -87,6 +87,10 @@ class ResultScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(color: AppColors.coralInk, fontWeight: FontWeight.w500, fontSize: 14),
                         ),
+                      ],
+                      if (change.stagePassed case final stage?) ...[
+                        const SizedBox(height: 20),
+                        _StageUnlocked(stage: stage),
                       ],
                       if (change.leveledUp) ...[
                         const SizedBox(height: 20),
@@ -280,6 +284,37 @@ class _Stat extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w500),
+        ),
+      ],
+    ),
+  );
+}
+
+/// Aviso de nível concluído e do que foi liberado.
+class _StageUnlocked extends StatelessWidget {
+  const _StageUnlocked({required this.stage});
+
+  final int stage;
+
+  String get _message => switch (stage) {
+    PlayerStore.finalStage => 'Você venceu a fase final dos casos clínicos. Parabéns!',
+    5 => 'Nível 5 concluído! Os casos clínicos foram liberados.',
+    _ => 'Nível $stage concluído! O nível ${stage + 1} foi liberado.',
+  };
+
+  @override
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+    decoration: BoxDecoration(color: AppColors.mint, borderRadius: BorderRadius.circular(AppRadius.xl)),
+    child: Row(
+      children: [
+        const Emoji('🎉', size: 32),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            _message,
+            style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, color: AppColors.mintInk),
+          ),
         ),
       ],
     ),

@@ -38,6 +38,12 @@ class _GameScreenState extends State<GameScreen> {
   bool _reported = false;
   AnswerOutcome? _lastOutcome;
 
+  /// Nível da partida (1 a 6) quando todas as questões são do mesmo nível.
+  late final int? _stage = () {
+    final levels = {for (final q in widget.questions) q.level};
+    return levels.length == 1 ? levels.first : null;
+  }();
+
   /// Muda a cada resposta, para reiniciar as animações de acerto/erro.
   int _feedbackKey = 0;
 
@@ -95,7 +101,7 @@ class _GameScreenState extends State<GameScreen> {
             streakDays: store.activeStreak,
             streakIncreased: false,
           )
-        : await store.recordMatch(local);
+        : await store.recordMatch(local, stage: _stage);
     final summary = change.confirmed ?? local;
     if (!mounted) return;
     await Navigator.of(context).pushReplacement(

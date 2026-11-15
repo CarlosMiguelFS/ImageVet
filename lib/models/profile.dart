@@ -17,6 +17,7 @@ class Profile {
     this.melhorCombo = 0,
     this.diasSeguidos = 0,
     this.ultimoDiaJogado,
+    this.niveisConcluidos = const {},
     this.bauDia,
     this.termosVersao,
     this.termosAceitosEm,
@@ -41,6 +42,7 @@ class Profile {
       melhorCombo: n('melhor_combo'),
       diasSeguidos: n('dias_seguidos'),
       ultimoDiaJogado: j['ultimo_dia_jogado'] as String?,
+      niveisConcluidos: {for (final n in (j['niveis_concluidos'] as List?) ?? const []) (n as num).toInt()},
       bauDia: j['bau_dia'] as String?,
       termosVersao: j['termos_versao'] as String?,
       termosAceitosEm: DateTime.tryParse((j['termos_aceitos_em'] as String?) ?? ''),
@@ -53,6 +55,9 @@ class Profile {
   final bool noRanking;
   final int pontos, xp, moedas, respondidas, acertos, partidas;
   final int melhorClassico, melhorEstrelas, melhorSobrevivencia, melhorCombo, diasSeguidos;
+
+  /// Níveis concluídos (1 a 5 e 6 = casos clínicos), registrados pelo servidor.
+  final Set<int> niveisConcluidos;
 
   /// Datas no formato `AAAA-MM-DD` (dia de Brasília, calculado no servidor).
   final String? ultimoDiaJogado, bauDia;

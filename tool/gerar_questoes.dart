@@ -14,11 +14,11 @@ void main() {
   final kept = [
     for (final q in existing)
       if ((q['id'] as int) <= 20)
-        (q['id'] as int) <= 10
-            // 1 a 10: as questões do "Jogar agora" (não valem pontos).
+        (q['id'] as int) > 10
+            // 11 a 20: as 10 perguntas principais, no "Jogar agora" (não valem pontos).
             ? ({...q, 'set': 'teste'}..remove('nivel'))
-            // 11 a 20: perguntas diretas de 5 alternativas, junto com os casos do nível 5.
-            : {...q, 'set': 'valendo', 'nivel': 5},
+            // 1 a 10: casos clínicos de 5 alternativas, a fase final (nível 6) depois dos 5 níveis.
+            : {...q, 'set': 'valendo', 'nivel': 6},
   ];
 
   final parsed = _parse(File('tool/novas_questoes.txt').readAsLinesSync());
@@ -31,7 +31,9 @@ void main() {
   file.writeAsStringSync('${const JsonEncoder.withIndent('  ').convert(all)}\n');
   stdout.writeln('${all.length} questões (${parsed.length} novas).');
   for (final q in all) {
-    stdout.writeln('  (${q['id']}, ${q['answer']}, ${(q['options'] as List).length}),');
+    if (q['set'] != 'teste') {
+      stdout.writeln('  (${q['id']}, ${q['answer']}, ${(q['options'] as List).length}, ${q['nivel']}),');
+    }
   }
 }
 
