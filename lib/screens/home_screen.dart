@@ -186,7 +186,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       TextSpan(text: 'Feito por '),
                       TextSpan(
-                        text: 'Carlos Miguel Fernandes dos Santos',
+                        text: 'Thayssa Vitoria Machado Muniz',
                         style: TextStyle(color: AppColors.brand600, fontWeight: FontWeight.w700),
                       ),
                     ],
