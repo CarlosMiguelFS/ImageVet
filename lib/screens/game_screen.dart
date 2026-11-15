@@ -12,11 +12,15 @@ import '../widgets/ui.dart';
 import 'result_screen.dart';
 
 class GameScreen extends StatefulWidget {
-  const GameScreen({super.key, required this.mode, required this.questions, this.random});
+  const GameScreen({super.key, required this.mode, required this.questions, this.random, this.practice = false});
 
   final GameMode mode;
   final List<Question> questions;
   final Random? random;
+
+  /// Modo teste: mostra pontos e combos, mas nada vai para o perfil, o ranking
+  /// ou o servidor, e as ajudas são grátis.
+  final bool practice;
 
   @override
   State<GameScreen> createState() => _GameScreenState();
@@ -47,7 +51,7 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void initState() {
     super.initState();
-    PlayerScope.read(context).beginMatch(widget.mode.id);
+    if (!widget.practice) PlayerScope.read(context).beginMatch(widget.mode.id);
   }
 
   @override
@@ -62,7 +66,7 @@ class _GameScreenState extends State<GameScreen> {
 
   void _onGameChanged() {
     final outcome = _game.outcome;
-    if (outcome != null && !identical(outcome, _lastOutcome)) {
+    if (outcome != null && !identical(outcome, _lastOutcome) && !widget.practice) {
       _lastOutcome = outcome;
       final item = _game.item;
       final selected = outcome.selected;
@@ -81,7 +85,16 @@ class _GameScreenState extends State<GameScreen> {
 
   Future<void> _finish() async {
     final local = _game.summary();
-    final change = await PlayerScope.read(context).recordMatch(local);
+    final store = PlayerScope.read(context);
+    final change = widget.practice
+        ? ProgressChange(
+            levelBefore: store.level,
+            levelAfter: store.level,
+            newRecord: false,
+            streakDays: store.activeStreak,
+            streakIncreased: false,
+          )
+        : await store.recordMatch(local);
     final summary = change.confirmed ?? local;
     if (!mounted) return;
     await Navigator.of(context).pushReplacement(
@@ -93,6 +106,7 @@ class _GameScreenState extends State<GameScreen> {
           change: change,
           livesLeft: _game.lives,
           questions: widget.questions,
+          practice: widget.practice,
         ),
         transitionsBuilder: (_, a, _, child) => FadeTransition(opacity: a, child: child),
       ),
@@ -124,6 +138,11 @@ class _GameScreenState extends State<GameScreen> {
 
   Future<void> _usePowerUp(PowerUp p) async {
     if (!_game.canUse(p)) return;
+    if (widget.practice) {
+      _game.apply(p);
+      unawaited(HapticFeedback.selectionClick());
+      return;
+    }
     final store = PlayerScope.read(context);
     final ok = await store.buyPowerUp(powerUp: p.name, cost: p.cost, questionId: _game.item.question.id);
     if (!ok) {
@@ -143,7 +162,12 @@ class _GameScreenState extends State<GameScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Sair da partida?', style: TextStyle(fontWeight: FontWeight.w800)),
-        content: const Text('Os pontos que você já fez nesta partida ficam salvos.', style: mutedText),
+        content: Text(
+          widget.practice
+              ? 'É só o modo teste: nada desta partida é salvo.'
+              : 'Os pontos que você já fez nesta partida ficam salvos.',
+          style: mutedText,
+        ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Continuar jogando')),
           TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Sair')),
@@ -204,7 +228,7 @@ class _GameScreenState extends State<GameScreen> {
                               _Shake(
                                 key: ValueKey('shake-$_feedbackKey'),
                                 active: _game.outcome != null && !_game.outcome!.correct,
-                                child: _QuestionCard(game: _game),
+                                child: _QuestionCard(game: _game, practice: widget.practice),
                               ),
                               const SizedBox(height: 16),
                               for (var i = 0; i < _game.item.length; i++)
@@ -219,7 +243,7 @@ class _GameScreenState extends State<GameScreen> {
                                 ),
                               if (!_game.isAnswered) ...[
                                 const SizedBox(height: 6),
-                                _PowerUps(game: _game, onUse: _usePowerUp),
+                                _PowerUps(game: _game, onUse: _usePowerUp, practice: widget.practice),
                               ] else ...[
                                 const SizedBox(height: 6),
                                 _Explanation(game: _game),
@@ -423,9 +447,10 @@ class _TimerRing extends StatelessWidget {
 }
 
 class _QuestionCard extends StatelessWidget {
-  const _QuestionCard({required this.game});
+  const _QuestionCard({required this.game, this.practice = false});
 
   final GameController game;
+  final bool practice;
 
   @override
   Widget build(BuildContext context) {
@@ -440,7 +465,10 @@ class _QuestionCard extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              const StatPill(emoji: '🩻', value: 'Tomografia', tone: Tone.brand),
+              if (practice)
+                const StatPill(emoji: '🎓', value: 'Modo teste · não conta pontos', tone: Tone.mint)
+              else
+                const StatPill(emoji: '🩻', value: 'Tomografia', tone: Tone.brand),
               if (game.mode == GameMode.survival && game.totalTime < game.item.seconds)
                 const StatPill(emoji: '⚡', value: 'Mais rápido!', tone: Tone.amber),
             ],
@@ -559,10 +587,11 @@ class _OptionTileState extends State<_OptionTile> {
 }
 
 class _PowerUps extends StatelessWidget {
-  const _PowerUps({required this.game, required this.onUse});
+  const _PowerUps({required this.game, required this.onUse, this.practice = false});
 
   final GameController game;
   final ValueChanged<PowerUp> onUse;
+  final bool practice;
 
   @override
   Widget build(BuildContext context) {
@@ -574,7 +603,7 @@ class _PowerUps extends StatelessWidget {
       children: [
         for (final p in PowerUp.values)
           Opacity(
-            opacity: game.canUse(p) && coins >= p.cost ? 1 : 0.45,
+            opacity: game.canUse(p) && (practice || coins >= p.cost) ? 1 : 0.45,
             child: Material(
               color: AppColors.surface,
               shape: const StadiumBorder(side: BorderSide(color: AppColors.lineStrong)),
@@ -597,7 +626,7 @@ class _PowerUps extends StatelessWidget {
                           borderRadius: BorderRadius.circular(AppRadius.pill),
                         ),
                         child: Text(
-                          '💎${p.cost}',
+                          practice ? 'grátis' : '💎${p.cost}',
                           style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.brand700),
                         ),
                       ),

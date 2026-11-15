@@ -185,19 +185,12 @@ alter table public.gabarito enable row level security;
 revoke all on public.gabarito from anon, authenticated;
 
 -- Índice da alternativa correta (0 = A) na ordem de assets/questions.json.
+-- Só entram as questões que valem pontos. As 10 do "Modo teste" (ids 1 a 10)
+-- ficam fora: o app corrige localmente e não envia nada ao servidor.
+delete from public.gabarito where questao_id between 1 and 10;
+
 insert into public.gabarito (questao_id, resposta, total_alternativas) values
-  -- Casos clínicos
-  (1, 1, 5),
-  (2, 2, 5),
-  (3, 3, 5),
-  (4, 0, 5),
-  (5, 3, 5),
-  (6, 1, 5),
-  (7, 4, 5),
-  (8, 2, 5),
-  (9, 0, 5),
-  (10, 3, 5),
-  -- Perguntas principais
+  -- Perguntas diretas (5 alternativas)
   (11, 2, 5),
   (12, 0, 5),
   (13, 4, 5),
@@ -207,7 +200,58 @@ insert into public.gabarito (questao_id, resposta, total_alternativas) values
   (17, 4, 5),
   (18, 1, 5),
   (19, 2, 5),
-  (20, 3, 5)
+  (20, 3, 5),
+  -- Perguntas novas (4 alternativas): nível 1, 2 e 3
+  (21, 1, 4),
+  (22, 0, 4),
+  (23, 2, 4),
+  (24, 3, 4),
+  (25, 0, 4),
+  (26, 2, 4),
+  (27, 1, 4),
+  (28, 3, 4),
+  (29, 0, 4),
+  (30, 2, 4),
+  (31, 1, 4),
+  (32, 3, 4),
+  (33, 0, 4),
+  (34, 2, 4),
+  (35, 1, 4),
+  (36, 3, 4),
+  (37, 2, 4),
+  (38, 0, 4),
+  (39, 2, 4),
+  (40, 1, 4),
+  (41, 2, 4),
+  (42, 0, 4),
+  (43, 3, 4),
+  (44, 1, 4),
+  (45, 2, 4),
+  (46, 0, 4),
+  (47, 3, 4),
+  (48, 1, 4),
+  (49, 0, 4),
+  (50, 2, 4),
+  (51, 1, 4),
+  (52, 3, 4),
+  (53, 0, 4),
+  (54, 2, 4),
+  (55, 1, 4),
+  (56, 3, 4),
+  (57, 0, 4),
+  (58, 2, 4),
+  (59, 1, 4),
+  (60, 3, 4),
+  (61, 0, 4),
+  (62, 2, 4),
+  (63, 3, 4),
+  (64, 1, 4),
+  (65, 2, 4),
+  (66, 0, 4),
+  (67, 3, 4),
+  (68, 1, 4),
+  (69, 2, 4),
+  (70, 0, 4)
 on conflict (questao_id) do update set
   resposta = excluded.resposta,
   total_alternativas = excluded.total_alternativas;

@@ -1,21 +1,21 @@
 import 'dart:math';
 
-/// Os dois bancos de questões do jogo.
+/// Os dois bancos de questões: o modo teste (demonstração, não conta pontos) e o que vale pontos.
 enum QuestionSet {
-  principais('principais', 'Perguntas principais'),
-  casos('casos', 'Casos clínicos');
+  teste('teste', 'Modo teste'),
+  valendo('valendo', 'Valendo pontos');
 
   const QuestionSet(this.id, this.label);
   final String id;
   final String label;
 
-  static QuestionSet fromId(String? id) => values.firstWhere((s) => s.id == id, orElse: () => principais);
+  static QuestionSet fromId(String? id) => values.firstWhere((s) => s.id == id, orElse: () => valendo);
 }
 
 class Question {
   const Question({
     required this.id,
-    this.set = QuestionSet.principais,
+    this.set = QuestionSet.valendo,
     required this.title,
     required this.question,
     required this.options,
@@ -35,7 +35,7 @@ class Question {
 
   final int id;
 
-  /// Banco a que a questão pertence (perguntas principais ou casos clínicos).
+  /// Banco da questão: modo teste (não conta pontos) ou valendo pontos.
   final QuestionSet set;
   final String title;
   final String question;

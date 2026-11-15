@@ -5,9 +5,12 @@ Funciona no computador, no tablet e no celular: o layout se adapta à tela.
 
 ## Modos de jogo
 
-- **Perguntas principais**: 10 perguntas diretas sobre TC.
-- **Casos clínicos**: 10 casos com cenário clínico.
-- **Sobrevivência**: as 20 questões misturadas, até acabarem as 3 vidas.
+- **Modo teste**: 10 casos clínicos para conhecer o jogo. Mostra os pontos, mas não conta nada.
+- **Partida valendo** (botão "Jogar agora"): 10 questões sorteadas entre as 60 que valem pontos.
+- **Sobrevivência**: as 60 questões que valem pontos, até acabarem as 3 vidas.
+
+Para adicionar perguntas: edite `tool/novas_questoes.txt`, rode `dart run tool/gerar_questoes.dart`
+e copie as linhas do gabarito mostradas para `supabase/schema.sql` (e rode o SQL no Supabase).
 
 Pontos, combo, moedas, XP, estrelas, baú diário, ofensiva, conquistas e ranking.
 

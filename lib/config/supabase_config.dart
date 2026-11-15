@@ -7,10 +7,7 @@
 /// Os valores também podem vir do build:
 /// `flutter build web --dart-define=SUPABASE_URL=https://xxxx.supabase.co --dart-define=SUPABASE_PUBLISHABLE_KEY=sb_publishable_...`
 abstract final class SupabaseConfig {
-  static const url = String.fromEnvironment(
-    'SUPABASE_URL',
-    defaultValue: 'https://lcfwmnafpswlgmkxwlnl.supabase.co',
-  );
+  static const url = String.fromEnvironment('SUPABASE_URL', defaultValue: 'https://lcfwmnafpswlgmkxwlnl.supabase.co');
 
   static const publishableKey = String.fromEnvironment(
     'SUPABASE_PUBLISHABLE_KEY',

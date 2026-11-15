@@ -19,27 +19,36 @@ GameController _game(GameMode mode, {int seed = 1}) =>
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  test('banco de questões: 10 principais + 10 casos clínicos, 5 alternativas, gabarito e explicações', () {
+  test('banco de questões: 10 do modo teste + 60 valendo pontos, com gabarito e explicações', () {
     final all = _questions();
-    expect(all, hasLength(20));
-    expect(all.map((q) => q.id).toSet(), hasLength(20), reason: 'ids únicos');
-    final principais = [
-      for (final q in all)
-        if (q.set == QuestionSet.principais) q,
-    ];
-    expect([for (final q in principais) 'ABCDE'[q.answer]].join(), 'CAEBDAEBCD');
-    final qs = [
-      for (final q in all)
-        if (q.set == QuestionSet.casos) q,
-    ];
-    expect(qs, hasLength(10));
-    for (final q in qs) {
-      expect(q.options, hasLength(5), reason: 'questão ${q.id}');
-      expect(q.explanations, hasLength(5), reason: 'questão ${q.id}');
-      expect(q.answer, inInclusiveRange(0, 4));
+    expect(all, hasLength(70));
+    expect(all.map((q) => q.id).toSet(), hasLength(70), reason: 'ids únicos');
+    String key(Iterable<Question> qs) => [for (final q in qs) 'ABCDE'[q.answer]].join();
+
+    // Modo teste: os 10 casos clínicos apresentados ao professor (ids 1 a 10).
+    final teste = all.where((q) => q.set == QuestionSet.teste);
+    expect([for (final q in teste) q.id], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(key(teste), 'BCDADBECAD');
+
+    // Valendo pontos: as 10 perguntas diretas (5 alternativas) + as 50 novas (4 alternativas).
+    final valendo = all.where((q) => q.set == QuestionSet.valendo).toList();
+    expect(valendo, hasLength(60));
+    expect(key(valendo.take(10)), 'CAEBDAEBCD');
+    expect(
+      key(valendo.skip(10)),
+      'BACDACBDAC'
+      'BDACBDCACB'
+      'CADBCADBAC'
+      'BDACBDACBD'
+      'ACDBCADBCA',
+      reason: 'gabarito enviado pela equipe, bloco a bloco',
+    );
+    for (final q in all) {
+      expect(q.options.length, q.id <= 20 ? 5 : 4, reason: 'questão ${q.id}');
+      expect(q.explanations, hasLength(q.options.length), reason: 'questão ${q.id}');
+      expect(q.answer, inInclusiveRange(0, q.options.length - 1));
+      expect(q.title, isNotEmpty);
     }
-    // Gabarito dos casos clínicos enviado pela equipe: B, C, D, A, D, B, E, C, A, D.
-    expect([for (final q in qs) 'ABCDE'[q.answer]].join(), 'BCDADBECAD');
   });
 
   test('alternativas embaralhadas mantêm texto, explicação e gabarito', () {

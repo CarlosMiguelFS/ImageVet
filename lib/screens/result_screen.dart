@@ -16,6 +16,7 @@ class ResultScreen extends StatelessWidget {
     required this.change,
     required this.livesLeft,
     required this.questions,
+    this.practice = false,
   });
 
   final GameMode mode;
@@ -23,6 +24,9 @@ class ResultScreen extends StatelessWidget {
   final ProgressChange change;
   final int livesLeft;
   final List<Question> questions;
+
+  /// Modo teste: os pontos aparecem, mas não entram no perfil nem no ranking.
+  final bool practice;
 
   String get _headline {
     if (mode == GameMode.survival) {
@@ -66,6 +70,15 @@ class ResultScreen extends StatelessWidget {
                       Headline(_headline, size: context.isPhone ? 32 : 42, textAlign: TextAlign.center),
                       const SizedBox(height: 10),
                       Text(_subtitle, textAlign: TextAlign.center, style: mutedText),
+                      if (practice) ...[
+                        const SizedBox(height: 14),
+                        const Text(
+                          'Modo teste: estes pontos não contam para o seu perfil nem para o ranking. '
+                          'Jogue uma partida valendo pontos para subir de nível!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: AppColors.mintInk, fontWeight: FontWeight.w600, fontSize: 14),
+                        ),
+                      ],
                       if (change.syncFailed) ...[
                         const SizedBox(height: 14),
                         const Text(
@@ -95,49 +108,50 @@ class ResultScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 12),
-                      SoftCard(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Wrap(
-                              alignment: WrapAlignment.spaceBetween,
-                              crossAxisAlignment: WrapCrossAlignment.center,
-                              spacing: 10,
-                              runSpacing: 8,
-                              children: [
-                                Text(
-                                  'Nível ${store.level} · ${store.title}',
-                                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
-                                ),
-                                StatPill(emoji: '✨', value: '+${summary.xp} XP'),
-                              ],
-                            ),
-                            const SizedBox(height: 12),
-                            RoundedProgress(value: store.levelProgress, height: 12),
-                            const SizedBox(height: 10),
-                            Wrap(
-                              spacing: 8,
-                              runSpacing: 8,
-                              children: [
-                                StatPill(
-                                  emoji: '💎',
-                                  value: '+${summary.coins}',
-                                  tone: Tone.stone,
-                                  tooltip: 'Moedas ganhas',
-                                ),
-                                if (change.newRecord)
-                                  const StatPill(emoji: '🏆', value: 'Novo recorde', tone: Tone.amber),
-                                if (change.streakIncreased)
-                                  StatPill(
-                                    emoji: '🔥',
-                                    value: '${change.streakDays} ${change.streakDays == 1 ? 'dia' : 'dias'} seguidos',
-                                    tone: Tone.clay,
+                      if (!practice)
+                        SoftCard(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Wrap(
+                                alignment: WrapAlignment.spaceBetween,
+                                crossAxisAlignment: WrapCrossAlignment.center,
+                                spacing: 10,
+                                runSpacing: 8,
+                                children: [
+                                  Text(
+                                    'Nível ${store.level} · ${store.title}',
+                                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
                                   ),
-                              ],
-                            ),
-                          ],
+                                  StatPill(emoji: '✨', value: '+${summary.xp} XP'),
+                                ],
+                              ),
+                              const SizedBox(height: 12),
+                              RoundedProgress(value: store.levelProgress, height: 12),
+                              const SizedBox(height: 10),
+                              Wrap(
+                                spacing: 8,
+                                runSpacing: 8,
+                                children: [
+                                  StatPill(
+                                    emoji: '💎',
+                                    value: '+${summary.coins}',
+                                    tone: Tone.stone,
+                                    tooltip: 'Moedas ganhas',
+                                  ),
+                                  if (change.newRecord)
+                                    const StatPill(emoji: '🏆', value: 'Novo recorde', tone: Tone.amber),
+                                  if (change.streakIncreased)
+                                    StatPill(
+                                      emoji: '🔥',
+                                      value: '${change.streakDays} ${change.streakDays == 1 ? 'dia' : 'dias'} seguidos',
+                                      tone: Tone.clay,
+                                    ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
                       const SizedBox(height: 28),
                       PillButton(
                         label: 'Jogar de novo',
@@ -146,7 +160,7 @@ class ResultScreen extends StatelessWidget {
                         expand: true,
                         onPressed: () => Navigator.of(context).pushReplacement(
                           MaterialPageRoute<void>(
-                            builder: (_) => GameScreen(mode: mode, questions: questions),
+                            builder: (_) => GameScreen(mode: mode, questions: questions, practice: practice),
                           ),
                         ),
                       ),

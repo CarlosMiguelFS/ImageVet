@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "set": "casos",
+    "set": "teste",
     "title": "Eliminação da superposição de imagens",
     "question": "Um cão apresenta suspeita de hérnia de disco. O veterinário solicita uma tomografia computadorizada para avaliar melhor a região da coluna vertebral. Qual é a principal vantagem desse exame em relação à radiografia convencional?",
     "options": [
@@ -22,7 +22,7 @@
   },
   {
     "id": 2,
-    "set": "casos",
+    "set": "teste",
     "title": "Escala Hounsfield na prática",
     "question": "Durante uma tomografia computadorizada do encéfalo de um cão, o radiologista identifica uma região mais escura que o tecido cerebral ao redor. Essa alteração é descrita como hipoatenuante.\n\nConsiderando a escala Hounsfield, qual interpretação é mais adequada?",
     "options": [
@@ -43,7 +43,7 @@
   },
   {
     "id": 3,
-    "set": "casos",
+    "set": "teste",
     "title": "Avaliação da obesidade em cães",
     "question": "Um cão apresenta sobrepeso, mas o veterinário precisa avaliar com maior precisão a distribuição da gordura corporal, principalmente para diferenciar a gordura visceral da subcutânea.\n\nPor que a tomografia computadorizada é uma ferramenta importante nessa avaliação?",
     "options": [
@@ -64,7 +64,7 @@
   },
   {
     "id": 4,
-    "set": "casos",
+    "set": "teste",
     "title": "Rastreio de metástases pulmonares",
     "question": "Um cão diagnosticado com neoplasia será submetido a uma cirurgia para retirada do tumor. Antes do procedimento, o veterinário solicita uma tomografia do tórax para investigar possíveis metástases pulmonares.\n\nQual é a principal justificativa para essa escolha?",
     "options": [
@@ -85,7 +85,7 @@
   },
   {
     "id": 5,
-    "set": "casos",
+    "set": "teste",
     "title": "Angiotomografia na clínica e na perícia",
     "question": "Um cão apresenta suspeita de shunt portossistêmico. O veterinário solicita uma angiotomografia para investigar possíveis alterações vasculares. Em outro momento, um exame semelhante é realizado em um cadáver durante uma investigação pericial.\n\nQual alternativa descreve corretamente a utilização e a limitação desse exame?",
     "options": [
@@ -106,7 +106,7 @@
   },
   {
     "id": 6,
-    "set": "casos",
+    "set": "teste",
     "title": "Janelamento para diagnóstico nasal",
     "question": "Um cão apresenta secreção nasal persistente, espirros e dificuldade respiratória. Na tomografia, o veterinário deseja diferenciar um processo inflamatório de uma possível neoplasia na cavidade nasal.\n\nQual recurso da tomografia auxilia nessa investigação?",
     "options": [
@@ -127,7 +127,7 @@
   },
   {
     "id": 7,
-    "set": "casos",
+    "set": "teste",
     "title": "Necessidade de anestesia e radioproteção",
     "question": "Um cão muito agitado precisa realizar uma tomografia computadorizada. Durante a preparação do exame, o médico-veterinário explica a necessidade de manter o animal imóvel e os cuidados relacionados à exposição à radiação.\n\nQual alternativa apresenta a justificativa correta?",
     "options": [
@@ -148,7 +148,7 @@
   },
   {
     "id": 8,
-    "set": "casos",
+    "set": "teste",
     "title": "Artefato de volume parcial",
     "question": "Durante a realização de uma tomografia, o técnico percebe que uma determinada região apresenta uma densidade diferente da esperada. Ao analisar a imagem, identifica que tecidos com características distintas estão ocupando o mesmo corte tomográfico.\n\nQual alternativa explica corretamente esse fenômeno e como evitá-lo?",
     "options": [
@@ -169,7 +169,7 @@
   },
   {
     "id": 9,
-    "set": "casos",
+    "set": "teste",
     "title": "Aplicações forenses e zoonoses (Virtopsia)",
     "question": "Em uma investigação veterinária, um cadáver de animal apresenta suspeita de ferimentos provocados por arma de fogo e possíveis fraturas. A equipe opta por realizar uma tomografia post mortem antes de iniciar a necropsia.\n\nQual é uma das principais vantagens dessa abordagem?",
     "options": [
@@ -190,7 +190,7 @@
   },
   {
     "id": 10,
-    "set": "casos",
+    "set": "teste",
     "title": "Impacto na prática cirúrgica e diagnóstico precoce",
     "question": "Um cão apresenta uma massa tumoral próxima a estruturas anatômicas importantes. Antes de realizar a cirurgia, o cirurgião solicita uma tomografia computadorizada para avaliar a localização, as dimensões e a extensão da lesão.\n\nComo essas informações influenciam o planejamento cirúrgico?",
     "options": [
@@ -211,7 +211,7 @@
   },
   {
     "id": 11,
-    "set": "principais",
+    "set": "valendo",
     "title": "Eliminação da sobreposição de imagens",
     "question": "Qual é a principal vantagem da tomografia computadorizada sobre a radiografia convencional ao avaliar estruturas anatômicas profundas?",
     "options": [
@@ -232,7 +232,7 @@
   },
   {
     "id": 12,
-    "set": "principais",
+    "set": "valendo",
     "title": "Escala Hounsfield na prática",
     "question": "O que é a Escala Hounsfield (HU) e o que significa uma lesão ser classificada como \"hipoatenuante\" no cérebro de um cão?",
     "options": [
@@ -253,7 +253,7 @@
   },
   {
     "id": 13,
-    "set": "principais",
+    "set": "valendo",
     "title": "Avaliação de obesidade em cães",
     "question": "Por que a tomografia é considerada mais precisa do que a balança e a palpação para avaliar a gordura corporal em cães, e qual ponto anatômico é o principal marcador dessa análise?",
     "options": [
@@ -274,7 +274,7 @@
   },
   {
     "id": 14,
-    "set": "principais",
+    "set": "valendo",
     "title": "Rastreio de metástases pulmonares",
     "question": "Por que a tomografia é o exame padrão-ouro para buscar metástases nos pulmões de pacientes oncológicos?",
     "options": [
@@ -295,7 +295,7 @@
   },
   {
     "id": 15,
-    "set": "principais",
+    "set": "valendo",
     "title": "Angiotomografia na clínica e na perícia",
     "question": "Para que serve a angiotomografia e qual a sua limitação quando realizada em cadáveres (post mortem)?",
     "options": [
@@ -316,7 +316,7 @@
   },
   {
     "id": 16,
-    "set": "principais",
+    "set": "valendo",
     "title": "Janelamento para diagnóstico nasal",
     "question": "Como o ajuste de \"janelas\" na tomografia ajuda a diferenciar uma rinite inflamatória de um câncer na cavidade nasal?",
     "options": [
@@ -337,7 +337,7 @@
   },
   {
     "id": 17,
-    "set": "principais",
+    "set": "valendo",
     "title": "Necessidade de anestesia e radioproteção",
     "question": "Por que é obrigatório anestesiar o animal para fazer uma tomografia e qual é o princípio de segurança adotado para a radiação?",
     "options": [
@@ -358,7 +358,7 @@
   },
   {
     "id": 18,
-    "set": "principais",
+    "set": "valendo",
     "title": "Artefatos de imagem (volume parcial)",
     "question": "O que é o artefato de \"volume parcial\" na tomografia e como o técnico evita esse erro?",
     "options": [
@@ -379,7 +379,7 @@
   },
   {
     "id": 19,
-    "set": "principais",
+    "set": "valendo",
     "title": "Aplicações forenses e zoonoses (Virtopsia)",
     "question": "Como a tomografia post mortem (Virtopsia) auxilia em casos periciais de maus-tratos ou balística, e qual sua vantagem de biossegurança?",
     "options": [
@@ -400,7 +400,7 @@
   },
   {
     "id": 20,
-    "set": "principais",
+    "set": "valendo",
     "title": "Impacto na prática cirúrgica",
     "question": "Como a precisão topográfica e a mensuração de massas tumorais fornecidas pela TC afetam a tomada de decisão do cirurgião antes mesmo de iniciar o procedimento?",
     "options": [
@@ -418,5 +418,1005 @@
       "A precisão topográfica permite que o cirurgião planeje melhor a abordagem, antecipe dificuldades e realize um procedimento mais seguro e assertivo.",
       "A TC também é muito importante antes da cirurgia, justamente para orientar o planejamento."
     ]
+  },
+  {
+    "id": 21,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "O que significa TC",
+    "options": [
+      "Tratamento Clínico",
+      "Tomografia Computadorizada",
+      "Técnica Cardíaca",
+      "Terapia Contrastada"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Tratamento clínico é uma forma de conduzir o tratamento do paciente, não um exame de imagem.",
+      "TC significa Tomografia Computadorizada, exame que utiliza raios X e processamento computacional para formar imagens detalhadas do corpo.",
+      "Técnica cardíaca não corresponde ao significado da sigla TC.",
+      "Terapia contrastada não é o nome do exame. O contraste pode ser utilizado em alguns exames de tomografia."
+    ],
+    "question": "O que significa a sigla TC?"
+  },
+  {
+    "id": 22,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Radiação da tomografia",
+    "options": [
+      "Raios X",
+      "Ondas sonoras",
+      "Luz ultravioleta",
+      "Ondas magnéticas"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A TC utiliza raios X que atravessam o corpo e são captados por detectores para formar as imagens.",
+      "Ondas sonoras são utilizadas na ultrassonografia.",
+      "A luz ultravioleta não é utilizada para produzir imagens tomográficas.",
+      "Campos magnéticos e radiofrequência são utilizados na ressonância magnética."
+    ],
+    "question": "Qual tipo de radiação é utilizado na tomografia computadorizada?"
+  },
+  {
+    "id": 23,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "TC × radiografia",
+    "options": [
+      "Não utiliza radiação",
+      "É sempre mais barata",
+      "Elimina a sobreposição das estruturas anatômicas",
+      "Avalia somente os ossos"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A TC utiliza radiação ionizante, assim como a radiografia.",
+      "A TC geralmente apresenta custo mais elevado devido à tecnologia e à estrutura necessárias.",
+      "A TC produz imagens em cortes, permitindo visualizar estruturas sem a sobreposição característica da radiografia convencional.",
+      "A TC avalia ossos, órgãos e tecidos moles."
+    ],
+    "question": "Qual é uma das principais vantagens da TC em relação à radiografia?"
+  },
+  {
+    "id": 24,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Cortes seccionais",
+    "options": [
+      "Fotografias externas do animal",
+      "Imagens exclusivas do esqueleto",
+      "Imagens produzidas por ultrassom",
+      "Imagens que mostram o corpo em diferentes planos e fatias"
+    ],
+    "answer": 3,
+    "explanations": [
+      "Os cortes seccionais mostram estruturas internas, não fotografias externas.",
+      "Os cortes podem mostrar tecidos moles e órgãos, não somente o esqueleto.",
+      "São imagens obtidas por tomografia, que utiliza raios X, e não por ultrassom.",
+      "Os cortes permitem analisar o corpo em diferentes planos, facilitando a localização de alterações anatômicas."
+    ],
+    "question": "O que são cortes seccionais na tomografia?"
+  },
+  {
+    "id": 25,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "A água na escala Hounsfield",
+    "options": [
+      "0 HU",
+      "−1000 HU",
+      "+1000 HU",
+      "−500 HU"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A água é utilizada como referência na escala Hounsfield e apresenta aproximadamente 0 HU.",
+      "Aproximadamente −1000 HU corresponde ao ar.",
+      "+1000 HU é um valor associado a tecidos de alta atenuação, não à água.",
+      "−500 HU é um valor negativo que pode representar materiais de baixa atenuação, mas não a água."
+    ],
+    "question": "Qual valor corresponde aproximadamente à água na escala Hounsfield?"
+  },
+  {
+    "id": 26,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "O ar na escala Hounsfield",
+    "options": [
+      "0 HU",
+      "+1000 HU",
+      "−1000 HU",
+      "+500 HU"
+    ],
+    "answer": 2,
+    "explanations": [
+      "0 HU corresponde aproximadamente à água.",
+      "O ar apresenta atenuação muito menor, não positiva.",
+      "O ar apresenta aproximadamente −1000 HU, sendo uma das menores atenuações da escala.",
+      "+500 HU representa uma atenuação muito maior que a do ar."
+    ],
+    "question": "Qual valor corresponde aproximadamente ao ar na escala Hounsfield?"
+  },
+  {
+    "id": 27,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Estrutura hiperdensa",
+    "options": [
+      "Uma estrutura que não aparece na imagem",
+      "Uma estrutura que apresenta maior atenuação e geralmente aparece mais clara",
+      "Uma estrutura que apresenta menor atenuação e aparece mais escura",
+      "Uma estrutura que contém somente ar"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Uma estrutura hiperdensa é visualizada na imagem, geralmente com tonalidade mais clara.",
+      "Estruturas com maior atenuação dos raios X tendem a aparecer mais claras.",
+      "Menor atenuação corresponde a uma estrutura hipoatenuante.",
+      "O ar apresenta baixa atenuação e aparece escuro."
+    ],
+    "question": "O que significa uma estrutura hiperdensa na tomografia?"
+  },
+  {
+    "id": 28,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Alta atenuação",
+    "options": [
+      "Ar",
+      "Gordura",
+      "Água",
+      "Osso"
+    ],
+    "answer": 3,
+    "explanations": [
+      "O ar apresenta atenuação muito baixa.",
+      "A gordura apresenta valores de atenuação baixos e geralmente negativos.",
+      "A água apresenta aproximadamente 0 HU.",
+      "O osso apresenta alta atenuação devido à sua composição mineralizada, aparecendo mais claro na imagem."
+    ],
+    "question": "Qual estrutura geralmente apresenta alta atenuação na tomografia?"
+  },
+  {
+    "id": 29,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Reconstrução 3D",
+    "options": [
+      "Uma representação volumétrica das estruturas anatômicas",
+      "Uma imagem exclusivamente frontal",
+      "Uma imagem feita sem radiação",
+      "Uma medição da temperatura corporal"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A reconstrução 3D permite visualizar estruturas em três dimensões, facilitando a compreensão da anatomia e das lesões.",
+      "Uma imagem frontal representa apenas um plano, não uma reconstrução tridimensional.",
+      "A reconstrução é feita a partir dos dados adquiridos pela TC, que utiliza raios X.",
+      "A reconstrução 3D não mede temperatura corporal."
+    ],
+    "question": "O que é uma reconstrução tridimensional (3D)?"
+  },
+  {
+    "id": 30,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "O que a TC avalia",
+    "options": [
+      "Apenas fraturas",
+      "Apenas órgãos abdominais",
+      "Ossos, órgãos e tecidos moles",
+      "Apenas o sistema circulatório"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A TC também avalia órgãos e tecidos moles.",
+      "Pode avaliar estruturas de diversas regiões do corpo, não somente o abdômen.",
+      "A TC permite avaliar diferentes estruturas anatômicas, incluindo ossos, pulmões, órgãos e tecidos moles.",
+      "O sistema circulatório pode ser estudado com angiotomografia, mas não é a única aplicação."
+    ],
+    "question": "A tomografia computadorizada pode ser utilizada para avaliar:"
+  },
+  {
+    "id": 31,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Estrutura hipoatenuante",
+    "options": [
+      "Aparece mais clara que os tecidos ao redor",
+      "Apresenta menor atenuação e geralmente aparece mais escura",
+      "Apresenta maior quantidade de cálcio obrigatoriamente",
+      "Não pode ser visualizada na imagem"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Estruturas hipoatenuantes tendem a aparecer mais escuras, e não mais claras.",
+      "Uma estrutura hipoatenuante absorve ou atenua menos os raios X em comparação ao tecido de referência.",
+      "Maior quantidade de cálcio geralmente aumenta a atenuação, não diminui.",
+      "Estruturas hipoatenuantes podem ser visualizadas normalmente, apenas apresentam tonalidade mais escura."
+    ],
+    "question": "O que significa uma estrutura hipoatenuante na tomografia?"
+  },
+  {
+    "id": 32,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Ar na imagem",
+    "options": [
+      "Muito clara",
+      "Cinza intermediária",
+      "Branca",
+      "Muito escura"
+    ],
+    "answer": 3,
+    "explanations": [
+      "Regiões muito claras geralmente apresentam alta atenuação, como os ossos.",
+      "O ar apresenta atenuação muito baixa e costuma aparecer mais escuro.",
+      "O branco geralmente representa estruturas com alta atenuação.",
+      "O ar apresenta aproximadamente −1000 HU e aparece muito escuro na imagem tomográfica."
+    ],
+    "question": "Qual é a aparência típica de uma região preenchida por ar na TC?"
+  },
+  {
+    "id": 33,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Janela para os ossos",
+    "options": [
+      "Janela óssea",
+      "Janela pulmonar",
+      "Janela abdominal",
+      "Janela cardíaca"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A janela óssea permite visualizar melhor a estrutura e os detalhes dos ossos, facilitando a identificação de fraturas e destruição óssea.",
+      "A janela pulmonar é utilizada principalmente para avaliar o parênquima pulmonar.",
+      "A janela abdominal é direcionada à avaliação de órgãos e tecidos da região abdominal.",
+      "A janela cardíaca não é a opção específica para avaliar alterações ósseas."
+    ],
+    "question": "Qual janela é mais adequada para avaliar alterações nos ossos?"
+  },
+  {
+    "id": 34,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Janela para tecidos moles",
+    "options": [
+      "Janela óssea",
+      "Janela de ar",
+      "Janela de tecidos moles",
+      "Janela mineral"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A janela óssea destaca estruturas mineralizadas, como os ossos.",
+      "Janela de ar não é a denominação adequada para essa avaliação.",
+      "A janela de tecidos moles permite visualizar melhor órgãos, músculos e outras estruturas não ósseas.",
+      "Janela mineral não é a janela utilizada para avaliar órgãos e tecidos moles."
+    ],
+    "question": "Para avaliar melhor órgãos e tecidos moles, qual janela é utilizada?"
+  },
+  {
+    "id": 35,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Estrutura hipodensa",
+    "options": [
+      "Que apresenta maior densidade que o tecido de referência",
+      "Que apresenta menor atenuação em comparação ao tecido de referência",
+      "Que apresenta obrigatoriamente uma fratura",
+      "Que está preenchida exclusivamente por osso"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Maior atenuação corresponde a uma estrutura hiperdensa ou hiperatenuante.",
+      "Uma estrutura hipodensa apresenta menor atenuação em relação ao tecido utilizado como referência.",
+      "Hipodensidade não significa necessariamente fratura.",
+      "O osso geralmente apresenta alta atenuação, e não baixa."
+    ],
+    "question": "O que significa uma estrutura hipodensa?"
+  },
+  {
+    "id": 36,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Plano sagital",
+    "options": [
+      "Transversal",
+      "Dorsal",
+      "Oblíquo",
+      "Sagital"
+    ],
+    "answer": 3,
+    "explanations": [
+      "O plano transversal divide o corpo em porções cranial e caudal.",
+      "O plano dorsal divide o corpo em porções dorsal e ventral.",
+      "O plano oblíquo realiza um corte inclinado em relação aos planos anatômicos convencionais.",
+      "O plano sagital divide o corpo em porções direita e esquerda."
+    ],
+    "question": "Qual plano de imagem divide o corpo em porções direita e esquerda?"
+  },
+  {
+    "id": 37,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Plano transversal",
+    "options": [
+      "Dorsal",
+      "Sagital",
+      "Transversal",
+      "Longitudinal"
+    ],
+    "answer": 2,
+    "explanations": [
+      "O plano dorsal divide o corpo em regiões dorsal e ventral.",
+      "O plano sagital divide o corpo em regiões direita e esquerda.",
+      "O plano transversal divide o corpo em porções cranial e caudal.",
+      "Longitudinal descreve uma orientação ao longo do eixo do corpo, mas não é a resposta anatômica específica solicitada."
+    ],
+    "question": "Qual plano de imagem divide o corpo em porções cranial e caudal?"
+  },
+  {
+    "id": 38,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Estrutura anecoica",
+    "options": [
+      "Uma estrutura sem ecos, geralmente visualizada como preta na ultrassonografia",
+      "Uma estrutura muito branca na tomografia",
+      "Uma estrutura com alta concentração de cálcio",
+      "Uma estrutura que apresenta grande quantidade de gordura"
+    ],
+    "answer": 0,
+    "explanations": [
+      "Anecoico é um termo da ultrassonografia. Indica uma estrutura que não produz ecos internos e geralmente aparece preta, como um líquido simples.",
+      "Uma estrutura branca na TC apresenta alta atenuação, mas isso não define anecogenicidade.",
+      "Estruturas mineralizadas podem gerar ecos intensos na ultrassonografia, mas não são definidas simplesmente como anecoicas.",
+      "Gordura não é necessariamente anecoica; sua aparência depende da estrutura e do exame utilizado."
+    ],
+    "question": "O que é uma estrutura anecoica?"
+  },
+  {
+    "id": 39,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Região mais clara",
+    "options": [
+      "Hipoatenuante",
+      "Hipodensa",
+      "Hiperdensa ou hiperatenuante",
+      "Anecoica"
+    ],
+    "answer": 2,
+    "explanations": [
+      "Hipoatenuante significa menor atenuação e aparência geralmente mais escura.",
+      "Hipodensa também indica menor atenuação em relação ao tecido de referência.",
+      "Regiões hiperdensas ou hiperatenuantes apresentam maior atenuação e geralmente aparecem mais claras.",
+      "Anecoico é um termo utilizado na ultrassonografia, não para descrever a densidade na TC."
+    ],
+    "question": "Quando uma região aparece mais clara que o tecido ao redor na TC, ela pode ser descrita como:"
+  },
+  {
+    "id": 40,
+    "set": "valendo",
+    "nivel": 1,
+    "title": "Escolha da janela",
+    "options": [
+      "Para diminuir o peso do animal",
+      "Para destacar melhor determinadas estruturas e alterações",
+      "Para eliminar a necessidade de reconstrução das imagens",
+      "Para impedir a emissão de radiação"
+    ],
+    "answer": 1,
+    "explanations": [
+      "A seleção da janela não interfere no peso do paciente.",
+      "Cada janela permite destacar melhor determinados tecidos, facilitando a identificação de alterações.",
+      "A seleção da janela não elimina a necessidade de reconstruções quando elas são indicadas.",
+      "A janela modifica a visualização dos dados adquiridos, mas não impede a emissão de raios X."
+    ],
+    "question": "Por que é importante selecionar corretamente a janela de visualização?"
+  },
+  {
+    "id": 41,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "TC e metástases pulmonares",
+    "options": [
+      "Porque permite avaliar apenas o coração",
+      "Porque não utiliza raios X",
+      "Porque consegue identificar nódulos pequenos que podem não aparecer na radiografia",
+      "Porque substitui a biópsia em todos os casos"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A TC também avalia os pulmões e outras estruturas torácicas.",
+      "A tomografia utiliza raios X para formar as imagens.",
+      "A maior resolução da TC permite detectar nódulos pulmonares menores, que podem passar despercebidos na radiografia convencional.",
+      "A TC auxilia na investigação, mas não substitui a biópsia quando é necessária a confirmação histopatológica."
+    ],
+    "question": "Por que a TC é muito utilizada no rastreamento de metástases pulmonares?"
+  },
+  {
+    "id": 42,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Vértebra de referência",
+    "options": [
+      "L4",
+      "C1",
+      "T5",
+      "S1"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A quarta vértebra lombar (L4) é utilizada como referência anatômica para a análise da gordura corporal.",
+      "C1 é uma vértebra cervical, localizada na região do pescoço.",
+      "T5 está localizada na região torácica e não é o ponto de referência indicado.",
+      "S1 pertence à região sacral, não sendo a referência utilizada nesse método."
+    ],
+    "question": "Na avaliação da obesidade em cães por TC, qual vértebra é utilizada como referência anatômica no material estudado?"
+  },
+  {
+    "id": 43,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Contraste na angiotomografia",
+    "options": [
+      "Diminuir a densidade dos ossos",
+      "Reduzir a temperatura corporal",
+      "Impedir a movimentação do animal",
+      "Destacar os vasos sanguíneos"
+    ],
+    "answer": 3,
+    "explanations": [
+      "O contraste não tem como finalidade diminuir a densidade dos ossos.",
+      "O contraste não é utilizado para controlar a temperatura.",
+      "A imobilidade depende de contenção, sedação ou anestesia quando indicadas.",
+      "O contraste iodado aumenta a atenuação do sangue nos vasos, permitindo visualizar melhor sua anatomia e possíveis alterações."
+    ],
+    "question": "Qual é a principal função do contraste iodado na angiotomografia?"
+  },
+  {
+    "id": 44,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Osteólise",
+    "options": [
+      "Aumento da produção de gordura",
+      "Destruição ou reabsorção do tecido ósseo",
+      "Acúmulo de ar nos pulmões",
+      "Inflamação exclusiva dos músculos"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Osteólise não está relacionada à produção de gordura.",
+      "Osteólise é a destruição ou reabsorção do tecido ósseo, podendo ser observada em diferentes doenças.",
+      "Acúmulo de ar nos pulmões é uma alteração pulmonar, não óssea.",
+      "Osteólise envolve tecido ósseo, não exclusivamente tecido muscular."
+    ],
+    "question": "O que é osteólise?"
+  },
+  {
+    "id": 45,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Sinal de processo agressivo",
+    "options": [
+      "Preservação completa das estruturas ósseas",
+      "Ausência de alterações nos tecidos",
+      "Destruição dos ossos nasais",
+      "Presença de gordura subcutânea"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A preservação óssea não é o achado que sugere destruição agressiva.",
+      "Ausência de alterações não indica um processo agressivo.",
+      "A destruição dos ossos nasais, chamada osteólise, pode sugerir uma lesão agressiva, incluindo neoplasias.",
+      "Gordura subcutânea é uma estrutura normal e não indica, por si só, tumor nasal."
+    ],
+    "question": "Um cão apresenta suspeita de tumor na cavidade nasal. Qual alteração na TC pode indicar um processo agressivo?"
+  },
+  {
+    "id": 46,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Exame para o shunt",
+    "options": [
+      "Angiotomografia",
+      "Eletrocardiograma",
+      "Radiografia odontológica",
+      "Densitometria óssea"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A angiotomografia permite visualizar os vasos sanguíneos com contraste e auxiliar na identificação de alterações vasculares, como o shunt portossistêmico.",
+      "O eletrocardiograma avalia a atividade elétrica do coração.",
+      "A radiografia odontológica avalia estruturas dentárias.",
+      "A densitometria óssea avalia características relacionadas à densidade mineral dos ossos."
+    ],
+    "question": "Na investigação de um shunt portossistêmico, qual exame pode auxiliar na visualização dos vasos envolvidos?"
+  },
+  {
+    "id": 47,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Gordura visceral × subcutânea",
+    "options": [
+      "A gordura visceral fica apenas na pele",
+      "A gordura subcutânea fica dentro dos órgãos",
+      "Não existe diferença anatômica entre elas",
+      "A gordura visceral está associada aos órgãos internos, enquanto a subcutânea fica sob a pele"
+    ],
+    "answer": 3,
+    "explanations": [
+      "A gordura visceral não fica na pele; está localizada na cavidade abdominal, associada aos órgãos internos.",
+      "A gordura subcutânea fica abaixo da pele, e não dentro dos órgãos.",
+      "Existem diferenças anatômicas entre esses dois compartimentos de gordura.",
+      "A gordura visceral está relacionada aos órgãos internos, enquanto a gordura subcutânea se encontra abaixo da pele."
+    ],
+    "question": "Qual é a principal diferença entre gordura visceral e gordura subcutânea?"
+  },
+  {
+    "id": 48,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "3D na avaliação de tumores",
+    "options": [
+      "Impede o crescimento do tumor",
+      "Ajuda a visualizar a localização e a extensão da lesão",
+      "Substitui todos os exames laboratoriais",
+      "Elimina a necessidade de avaliação cirúrgica"
+    ],
+    "answer": 1,
+    "explanations": [
+      "A reconstrução 3D não trata nem impede o crescimento tumoral.",
+      "A reconstrução tridimensional facilita a visualização da localização, formato e extensão da massa.",
+      "Exames laboratoriais continuam sendo importantes conforme a suspeita clínica.",
+      "A reconstrução auxilia o planejamento, mas não elimina a necessidade de avaliação cirúrgica quando indicada."
+    ],
+    "question": "Qual é uma vantagem da reconstrução 3D na avaliação de tumores?"
+  },
+  {
+    "id": 49,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "TC na hérnia de disco",
+    "options": [
+      "Porque permite avaliar a localização da alteração e possíveis alterações nas estruturas próximas",
+      "Porque mede a temperatura dos discos",
+      "Porque identifica somente alterações musculares",
+      "Porque dispensa qualquer exame neurológico"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A TC permite visualizar alterações na coluna, localizar a lesão e auxiliar na avaliação de sua extensão e relação com estruturas próximas.",
+      "A TC não mede a temperatura dos discos intervertebrais.",
+      "O exame permite avaliar estruturas ósseas e outras alterações, não apenas músculos.",
+      "O exame neurológico continua sendo importante para avaliar o paciente e correlacionar os achados de imagem."
+    ],
+    "question": "Por que a TC é importante na avaliação de hérnias de disco?"
+  },
+  {
+    "id": 50,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Por que rastrear metástases",
+    "options": [
+      "Avaliar exclusivamente o peso corporal",
+      "Identificar somente alterações cardíacas",
+      "Investigar se o tumor se disseminou para outros locais, como os pulmões",
+      "Determinar a idade do animal"
+    ],
+    "answer": 2,
+    "explanations": [
+      "O peso corporal não é a finalidade do rastreamento de metástases.",
+      "A investigação não se limita ao coração.",
+      "O rastreamento procura identificar se células tumorais se disseminaram para outros órgãos ou tecidos.",
+      "A TC não é utilizada para determinar a idade do animal."
+    ],
+    "question": "Qual é a principal finalidade do rastreamento de metástases em um paciente oncológico?"
+  },
+  {
+    "id": 51,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Movimento durante o exame",
+    "options": [
+      "Aumenta a resolução da imagem",
+      "Pode gerar artefatos e prejudicar a interpretação",
+      "Elimina a necessidade de reconstrução",
+      "Melhora a visualização dos tecidos"
+    ],
+    "answer": 1,
+    "explanations": [
+      "O movimento não aumenta a resolução; pode prejudicar a qualidade da imagem.",
+      "A movimentação pode gerar borramentos e artefatos, dificultando a interpretação das estruturas.",
+      "A movimentação não elimina a necessidade de reconstrução.",
+      "O movimento pode comprometer a visualização dos tecidos."
+    ],
+    "question": "O que pode acontecer quando o animal se movimenta durante a aquisição das imagens?"
+  },
+  {
+    "id": 52,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Artefato de volume parcial",
+    "options": [
+      "Uma alteração causada exclusivamente pelo contraste",
+      "Uma falha na emissão de raios X",
+      "Uma alteração causada somente pela respiração",
+      "A média das atenuações de diferentes tecidos que ocupam o mesmo voxel"
+    ],
+    "answer": 3,
+    "explanations": [
+      "O contraste não é a causa específica do volume parcial.",
+      "O artefato não significa necessariamente falha na emissão dos raios X.",
+      "A respiração pode gerar artefatos de movimento, mas não define o volume parcial.",
+      "Quando diferentes tecidos ocupam o mesmo voxel, o equipamento calcula uma média de suas atenuações, podendo representar incorretamente cada tecido."
+    ],
+    "question": "O que é o artefato de volume parcial?"
+  },
+  {
+    "id": 53,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Reduzindo o volume parcial",
+    "options": [
+      "Utilizando cortes mais finos",
+      "Aumentando a espessura dos cortes",
+      "Diminuindo a resolução",
+      "Retirando o contraste de todos os exames"
+    ],
+    "answer": 0,
+    "explanations": [
+      "Cortes mais finos reduzem a possibilidade de diferentes tecidos ocuparem o mesmo voxel, diminuindo o efeito de volume parcial.",
+      "Cortes mais espessos podem aumentar esse efeito.",
+      "Diminuir a resolução não é a solução para esse problema.",
+      "O uso ou não de contraste não é a medida específica para reduzir o volume parcial."
+    ],
+    "question": "Como é possível reduzir o artefato de volume parcial?"
+  },
+  {
+    "id": 54,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Princípio ALARA",
+    "options": [
+      "Utilizar a maior dose de radiação possível",
+      "Realizar o exame várias vezes para garantir o resultado",
+      "Manter a exposição à radiação tão baixa quanto razoavelmente possível, sem comprometer o diagnóstico",
+      "Evitar qualquer tipo de exame de imagem"
+    ],
+    "answer": 2,
+    "explanations": [
+      "O princípio não recomenda aumentar a dose sem necessidade.",
+      "Repetir exames sem justificativa pode aumentar a exposição à radiação.",
+      "ALARA significa As Low As Reasonably Achievable, ou seja, manter a exposição tão baixa quanto razoavelmente possível, preservando a qualidade diagnóstica.",
+      "O princípio não proíbe exames de imagem; orienta o uso seguro da radiação."
+    ],
+    "question": "O que significa o princípio ALARA?"
+  },
+  {
+    "id": 55,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Anestesia ou sedação",
+    "options": [
+      "Para aumentar a densidade dos tecidos",
+      "Para evitar que o animal se movimente e prejudique as imagens",
+      "Para eliminar a radiação",
+      "Para aumentar o tamanho dos órgãos"
+    ],
+    "answer": 1,
+    "explanations": [
+      "A anestesia não aumenta a densidade dos tecidos.",
+      "Manter o animal imóvel evita artefatos de movimento e melhora a qualidade das imagens. A necessidade de sedação ou anestesia depende do paciente e do protocolo.",
+      "A anestesia não elimina a radiação utilizada no exame.",
+      "A anestesia não aumenta o tamanho dos órgãos."
+    ],
+    "question": "Por que a anestesia ou sedação pode ser necessária durante a TC?"
+  },
+  {
+    "id": 56,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Angiotomografia post mortem",
+    "options": [
+      "A impossibilidade de visualizar qualquer estrutura óssea",
+      "A ausência de tecidos moles",
+      "A incapacidade de produzir imagens tridimensionais",
+      "A presença de coágulos e o extravasamento do contraste"
+    ],
+    "answer": 3,
+    "explanations": [
+      "A TC post mortem permite visualizar estruturas ósseas.",
+      "Os tecidos moles também podem ser avaliados.",
+      "A TC pode produzir reconstruções tridimensionais mesmo após a morte.",
+      "Coágulos e extravasamento do contraste podem dificultar a visualização e a interpretação dos vasos sanguíneos."
+    ],
+    "question": "Qual é uma possível limitação da angiotomografia post mortem?"
+  },
+  {
+    "id": 57,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Região hiperatenuante no encéfalo",
+    "options": [
+      "Maior atenuação que o tecido cerebral de referência, podendo estar relacionada a diferentes alterações, como hemorragia ou mineralização",
+      "Necessariamente edema cerebral",
+      "Exclusivamente acúmulo de ar",
+      "Ausência completa de tecido"
+    ],
+    "answer": 0,
+    "explanations": [
+      "Uma região hiperatenuante aparece mais clara e pode estar relacionada a hemorragia, mineralização ou outras alterações, dependendo do contexto.",
+      "Edema cerebral costuma apresentar menor atenuação, podendo aparecer mais escuro.",
+      "O ar apresenta baixa atenuação e aparece escuro.",
+      "Ausência de tecido não é o significado de hiperatenuação."
+    ],
+    "question": "O que pode indicar uma região hiperatenuante no encéfalo?"
+  },
+  {
+    "id": 58,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Contraste intravenoso",
+    "options": [
+      "Diminuir a resolução da imagem",
+      "Substituir a radiação",
+      "Melhorar a visualização de vasos e a diferenciação de determinadas estruturas",
+      "Impedir a formação de cortes seccionais"
+    ],
+    "answer": 2,
+    "explanations": [
+      "O objetivo do contraste não é diminuir a resolução.",
+      "O contraste não substitui os raios X; ele modifica a atenuação de determinadas estruturas.",
+      "O contraste pode destacar vasos sanguíneos e ajudar a diferenciar estruturas e alterações.",
+      "A formação dos cortes seccionais continua ocorrendo normalmente."
+    ],
+    "question": "Qual é a função do contraste intravenoso em determinados exames de TC?"
+  },
+  {
+    "id": 59,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Janela óssea nos tumores nasais",
+    "options": [
+      "Porque permite medir a temperatura do tumor",
+      "Porque facilita a identificação de alterações como destruição óssea",
+      "Porque mostra exclusivamente a circulação sanguínea",
+      "Porque identifica apenas secreções nasais"
+    ],
+    "answer": 1,
+    "explanations": [
+      "A janela óssea não mede temperatura.",
+      "Permite avaliar a integridade dos ossos nasais e identificar osteólise, que pode indicar um processo agressivo.",
+      "A circulação sanguínea não é a finalidade da janela óssea.",
+      "A janela óssea não é específica para secreções nasais."
+    ],
+    "question": "Por que a janela óssea é importante na investigação de tumores nasais?"
+  },
+  {
+    "id": 60,
+    "set": "valendo",
+    "nivel": 2,
+    "title": "Cortes muito espessos",
+    "options": [
+      "Aumento obrigatório da resolução",
+      "Eliminação de todos os artefatos",
+      "Melhor visualização de todos os detalhes",
+      "Perda de detalhes e maior efeito de volume parcial"
+    ],
+    "answer": 3,
+    "explanations": [
+      "Cortes mais espessos não aumentam obrigatoriamente a resolução espacial.",
+      "Cortes espessos não eliminam todos os artefatos.",
+      "Estruturas pequenas podem ficar menos bem definidas.",
+      "Cortes espessos podem misturar diferentes tecidos no mesmo voxel, causando perda de detalhes e aumento do efeito de volume parcial."
+    ],
+    "question": "Qual é uma possível consequência de utilizar cortes muito espessos na avaliação de estruturas pequenas?"
+  },
+  {
+    "id": 61,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Hérnia de disco e cirurgia",
+    "options": [
+      "Identificar a localização da alteração e auxiliar na avaliação da extensão do comprometimento",
+      "Determinar exclusivamente a temperatura do disco",
+      "Medir a frequência cardíaca",
+      "Substituir o exame neurológico"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A TC permite localizar a alteração, avaliar sua extensão e observar estruturas próximas, auxiliando o cirurgião na escolha da abordagem.",
+      "A TC não mede a temperatura dos discos intervertebrais.",
+      "A frequência cardíaca é avaliada por outros métodos, como auscultação e monitorização cardíaca.",
+      "O exame de imagem complementa a avaliação neurológica, mas não substitui o exame clínico."
+    ],
+    "question": "Um cão apresenta sinais neurológicos e suspeita de hérnia de disco. Qual é uma contribuição importante da TC para o planejamento cirúrgico?"
+  },
+  {
+    "id": 62,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Região escura no encéfalo",
+    "options": [
+      "A região é obrigatoriamente uma hemorragia",
+      "A região apresenta maior atenuação",
+      "A região é hipoatenuante e pode estar relacionada a edema, necrose ou inflamação",
+      "A região é necessariamente uma estrutura óssea"
+    ],
+    "answer": 2,
+    "explanations": [
+      "Uma hemorragia frequentemente apresenta maior atenuação, embora isso dependa da fase e das características da lesão.",
+      "Uma região mais escura apresenta menor atenuação, e não maior.",
+      "A hipoatenuação pode estar associada a edema, necrose, inflamação ou acúmulo de fluidos. É necessário correlacionar com os demais achados.",
+      "Estruturas ósseas geralmente apresentam alta atenuação e aparecem claras."
+    ],
+    "question": "Durante uma TC cerebral, uma região aparece mais escura que o tecido encefálico normal. Qual interpretação é mais adequada?"
+  },
+  {
+    "id": 63,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Radiografia normal, TC pedida",
+    "options": [
+      "A TC não utiliza radiação",
+      "A radiografia não permite avaliar o tórax",
+      "A TC serve apenas para medir o coração",
+      "A TC pode identificar nódulos pulmonares menores que não foram detectados na radiografia"
+    ],
+    "answer": 3,
+    "explanations": [
+      "A TC utiliza radiação ionizante.",
+      "A radiografia permite avaliar o tórax, mas apresenta limitações para identificar nódulos muito pequenos.",
+      "A TC avalia diversas estruturas torácicas, incluindo os pulmões.",
+      "A maior resolução da TC permite detectar nódulos pequenos que podem não aparecer na radiografia, melhorando o rastreamento de metástases."
+    ],
+    "question": "Um paciente oncológico apresenta radiografia torácica sem nódulos aparentes. Mesmo assim, o veterinário solicita TC. Qual é a justificativa?"
+  },
+  {
+    "id": 64,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Massa nasal com destruição óssea",
+    "options": [
+      "O exame confirma obrigatoriamente uma rinite simples",
+      "Os achados aumentam a suspeita de processo agressivo, incluindo neoplasia, mas precisam ser interpretados com os demais dados clínicos e exames",
+      "A destruição óssea descarta neoplasia",
+      "O resultado indica exclusivamente uma alteração muscular"
+    ],
+    "answer": 1,
+    "explanations": [
+      "Destruição óssea não é um achado que confirme uma rinite simples.",
+      "A osteólise associada à alteração dos tecidos moles pode sugerir um processo agressivo, como uma neoplasia. Entretanto, não confirma o diagnóstico sozinha.",
+      "A destruição óssea pode justamente aumentar a suspeita de neoplasia.",
+      "Os achados envolvem estruturas ósseas e tecidos moles, não exclusivamente músculos."
+    ],
+    "question": "Na avaliação de uma massa nasal, a TC demonstra destruição óssea e alteração dos tecidos moles adjacentes. Qual é a interpretação mais adequada?"
+  },
+  {
+    "id": 65,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Contraste fora dos vasos",
+    "options": [
+      "Aumento da temperatura do cadáver",
+      "Formação de novas artérias",
+      "Extravasamento do contraste, que dificulta a avaliação vascular",
+      "Produção excessiva de sangue"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A temperatura não explica diretamente o contraste fora dos vasos.",
+      "O extravasamento não representa formação de novas artérias.",
+      "O contraste pode sair dos vasos e atingir tecidos adjacentes, prejudicando a interpretação da anatomia vascular.",
+      "Após a morte não ocorre produção fisiológica de sangue como essa alternativa sugere."
+    ],
+    "question": "Durante uma angiotomografia post mortem, o contraste é observado fora dos vasos sanguíneos. Qual é uma possível explicação?"
+  },
+  {
+    "id": 66,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Obesidade visceral",
+    "options": [
+      "Porque permite diferenciar e quantificar depósitos de gordura visceral e subcutânea",
+      "Porque mede diretamente o metabolismo do animal",
+      "Porque identifica somente a gordura da pele",
+      "Porque determina a quantidade de alimento ingerido"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A TC permite visualizar e quantificar os compartimentos de gordura, diferenciando a gordura visceral da subcutânea.",
+      "A TC não mede diretamente o metabolismo do animal.",
+      "A avaliação não se limita à gordura localizada sob a pele.",
+      "O exame não determina quanto alimento o animal consome."
+    ],
+    "question": "Um cão apresenta suspeita de obesidade visceral. Por que a TC pode ser mais útil que a avaliação apenas por palpação?"
+  },
+  {
+    "id": 67,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Osso e tecido mole no mesmo voxel",
+    "options": [
+      "Aumento da temperatura da região",
+      "Formação obrigatória de uma fratura",
+      "Desaparecimento completo da estrutura",
+      "Média das atenuações dos tecidos, podendo gerar uma imagem que não representa corretamente cada tecido isoladamente"
+    ],
+    "answer": 3,
+    "explanations": [
+      "O volume parcial não provoca aumento da temperatura.",
+      "A presença de dois tecidos no mesmo voxel não causa fratura.",
+      "A estrutura não necessariamente desaparece; pode ter sua representação alterada.",
+      "O equipamento calcula uma média das atenuações dos tecidos presentes no mesmo voxel, podendo produzir uma imagem imprecisa. Esse é o artefato de volume parcial."
+    ],
+    "question": "Durante a avaliação de uma imagem, o radiologista observa que osso e tecido mole ocupam o mesmo voxel. Qual problema pode ocorrer?"
+  },
+  {
+    "id": 68,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Perícia de arma de fogo",
+    "options": [
+      "Determina sozinha a autoria do disparo",
+      "Permite avaliar fraturas e reconstruir trajetórias de projéteis em imagens tridimensionais",
+      "Substitui todos os exames periciais",
+      "Elimina a necessidade de preservar evidências"
+    ],
+    "answer": 1,
+    "explanations": [
+      "A TC não identifica sozinha quem realizou o disparo.",
+      "A TC permite avaliar fraturas, localizar projéteis e auxiliar na reconstrução de trajetórias, contribuindo para a investigação pericial.",
+      "A TC complementa a perícia, mas não substitui todos os procedimentos e exames necessários.",
+      "As evidências devem continuar sendo preservadas e analisadas adequadamente."
+    ],
+    "question": "Em uma investigação forense de possível disparo de arma de fogo, qual vantagem a TC post mortem oferece?"
+  },
+  {
+    "id": 69,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "Planejando a retirada da massa",
+    "options": [
+      "Garantindo que não haverá sangramento",
+      "Substituindo completamente a cirurgia",
+      "Demonstrando a localização, extensão e relação da massa com estruturas próximas, auxiliando na escolha do acesso cirúrgico",
+      "Determinando sozinha o tipo histológico do tumor"
+    ],
+    "answer": 2,
+    "explanations": [
+      "A TC não garante ausência de sangramento durante a cirurgia.",
+      "O exame fornece informações para o planejamento, mas não substitui o procedimento cirúrgico.",
+      "A TC permite avaliar a localização e a extensão da massa e sua relação com estruturas próximas, ajudando a escolher o acesso cirúrgico mais adequado.",
+      "A TC pode sugerir características de uma lesão, mas a identificação histológica geralmente depende de análise de tecido, como biópsia."
+    ],
+    "question": "Um cirurgião precisa planejar a retirada de uma massa próxima a estruturas anatômicas importantes. Como a TC pode auxiliar?"
+  },
+  {
+    "id": 70,
+    "set": "valendo",
+    "nivel": 3,
+    "title": "A TC na Medicina Veterinária",
+    "options": [
+      "É um exame complementar que fornece informações anatômicas detalhadas, mas seus achados devem ser correlacionados com a avaliação clínica e, quando necessário, outros exames",
+      "É capaz de diagnosticar todas as doenças sem exames complementares",
+      "Substitui obrigatoriamente a radiografia, a ultrassonografia e a ressonância magnética",
+      "É utilizada exclusivamente para avaliação de fraturas"
+    ],
+    "answer": 0,
+    "explanations": [
+      "A TC fornece informações anatômicas detalhadas e é muito útil no diagnóstico e planejamento cirúrgico, mas deve ser interpretada junto à avaliação clínica e a outros exames quando necessário.",
+      "Nenhum exame de imagem consegue diagnosticar todas as doenças isoladamente.",
+      "Cada método de imagem possui indicações e vantagens próprias. A TC não substitui obrigatoriamente os demais.",
+      "A TC também avalia órgãos, tecidos moles, pulmões, vasos sanguíneos e outras estruturas."
+    ],
+    "question": "Qual alternativa apresenta a interpretação mais correta sobre a tomografia computadorizada na Medicina Veterinária?"
   }
 ]

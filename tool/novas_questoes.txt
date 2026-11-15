@@ -1,0 +1,613 @@
+# Fonte das perguntas que valem pontos (ids 21 em diante), no formato:
+#   N|nivel          -> nível das próximas perguntas (1 fácil ... 3 avançado)
+#   Q|Título         -> começa uma pergunta
+#   (linhas do enunciado)
+#   A|... B|... C|... D|...  -> alternativas
+#   R|letra          -> resposta correta
+#   E|...            -> explicação de cada alternativa, na mesma ordem
+# Gere o JSON com: dart run tool/gerar_questoes.dart
+
+N|1
+Q|O que significa TC
+O que significa a sigla TC?
+A|Tratamento Clínico
+B|Tomografia Computadorizada
+C|Técnica Cardíaca
+D|Terapia Contrastada
+R|B
+E|Tratamento clínico é uma forma de conduzir o tratamento do paciente, não um exame de imagem.
+E|TC significa Tomografia Computadorizada, exame que utiliza raios X e processamento computacional para formar imagens detalhadas do corpo.
+E|Técnica cardíaca não corresponde ao significado da sigla TC.
+E|Terapia contrastada não é o nome do exame. O contraste pode ser utilizado em alguns exames de tomografia.
+
+Q|Radiação da tomografia
+Qual tipo de radiação é utilizado na tomografia computadorizada?
+A|Raios X
+B|Ondas sonoras
+C|Luz ultravioleta
+D|Ondas magnéticas
+R|A
+E|A TC utiliza raios X que atravessam o corpo e são captados por detectores para formar as imagens.
+E|Ondas sonoras são utilizadas na ultrassonografia.
+E|A luz ultravioleta não é utilizada para produzir imagens tomográficas.
+E|Campos magnéticos e radiofrequência são utilizados na ressonância magnética.
+
+Q|TC × radiografia
+Qual é uma das principais vantagens da TC em relação à radiografia?
+A|Não utiliza radiação
+B|É sempre mais barata
+C|Elimina a sobreposição das estruturas anatômicas
+D|Avalia somente os ossos
+R|C
+E|A TC utiliza radiação ionizante, assim como a radiografia.
+E|A TC geralmente apresenta custo mais elevado devido à tecnologia e à estrutura necessárias.
+E|A TC produz imagens em cortes, permitindo visualizar estruturas sem a sobreposição característica da radiografia convencional.
+E|A TC avalia ossos, órgãos e tecidos moles.
+
+Q|Cortes seccionais
+O que são cortes seccionais na tomografia?
+A|Fotografias externas do animal
+B|Imagens exclusivas do esqueleto
+C|Imagens produzidas por ultrassom
+D|Imagens que mostram o corpo em diferentes planos e fatias
+R|D
+E|Os cortes seccionais mostram estruturas internas, não fotografias externas.
+E|Os cortes podem mostrar tecidos moles e órgãos, não somente o esqueleto.
+E|São imagens obtidas por tomografia, que utiliza raios X, e não por ultrassom.
+E|Os cortes permitem analisar o corpo em diferentes planos, facilitando a localização de alterações anatômicas.
+
+Q|A água na escala Hounsfield
+Qual valor corresponde aproximadamente à água na escala Hounsfield?
+A|0 HU
+B|−1000 HU
+C|+1000 HU
+D|−500 HU
+R|A
+E|A água é utilizada como referência na escala Hounsfield e apresenta aproximadamente 0 HU.
+E|Aproximadamente −1000 HU corresponde ao ar.
+E|+1000 HU é um valor associado a tecidos de alta atenuação, não à água.
+E|−500 HU é um valor negativo que pode representar materiais de baixa atenuação, mas não a água.
+
+Q|O ar na escala Hounsfield
+Qual valor corresponde aproximadamente ao ar na escala Hounsfield?
+A|0 HU
+B|+1000 HU
+C|−1000 HU
+D|+500 HU
+R|C
+E|0 HU corresponde aproximadamente à água.
+E|O ar apresenta atenuação muito menor, não positiva.
+E|O ar apresenta aproximadamente −1000 HU, sendo uma das menores atenuações da escala.
+E|+500 HU representa uma atenuação muito maior que a do ar.
+
+Q|Estrutura hiperdensa
+O que significa uma estrutura hiperdensa na tomografia?
+A|Uma estrutura que não aparece na imagem
+B|Uma estrutura que apresenta maior atenuação e geralmente aparece mais clara
+C|Uma estrutura que apresenta menor atenuação e aparece mais escura
+D|Uma estrutura que contém somente ar
+R|B
+E|Uma estrutura hiperdensa é visualizada na imagem, geralmente com tonalidade mais clara.
+E|Estruturas com maior atenuação dos raios X tendem a aparecer mais claras.
+E|Menor atenuação corresponde a uma estrutura hipoatenuante.
+E|O ar apresenta baixa atenuação e aparece escuro.
+
+Q|Alta atenuação
+Qual estrutura geralmente apresenta alta atenuação na tomografia?
+A|Ar
+B|Gordura
+C|Água
+D|Osso
+R|D
+E|O ar apresenta atenuação muito baixa.
+E|A gordura apresenta valores de atenuação baixos e geralmente negativos.
+E|A água apresenta aproximadamente 0 HU.
+E|O osso apresenta alta atenuação devido à sua composição mineralizada, aparecendo mais claro na imagem.
+
+Q|Reconstrução 3D
+O que é uma reconstrução tridimensional (3D)?
+A|Uma representação volumétrica das estruturas anatômicas
+B|Uma imagem exclusivamente frontal
+C|Uma imagem feita sem radiação
+D|Uma medição da temperatura corporal
+R|A
+E|A reconstrução 3D permite visualizar estruturas em três dimensões, facilitando a compreensão da anatomia e das lesões.
+E|Uma imagem frontal representa apenas um plano, não uma reconstrução tridimensional.
+E|A reconstrução é feita a partir dos dados adquiridos pela TC, que utiliza raios X.
+E|A reconstrução 3D não mede temperatura corporal.
+
+Q|O que a TC avalia
+A tomografia computadorizada pode ser utilizada para avaliar:
+A|Apenas fraturas
+B|Apenas órgãos abdominais
+C|Ossos, órgãos e tecidos moles
+D|Apenas o sistema circulatório
+R|C
+E|A TC também avalia órgãos e tecidos moles.
+E|Pode avaliar estruturas de diversas regiões do corpo, não somente o abdômen.
+E|A TC permite avaliar diferentes estruturas anatômicas, incluindo ossos, pulmões, órgãos e tecidos moles.
+E|O sistema circulatório pode ser estudado com angiotomografia, mas não é a única aplicação.
+
+N|1
+Q|Estrutura hipoatenuante
+O que significa uma estrutura hipoatenuante na tomografia?
+A|Aparece mais clara que os tecidos ao redor
+B|Apresenta menor atenuação e geralmente aparece mais escura
+C|Apresenta maior quantidade de cálcio obrigatoriamente
+D|Não pode ser visualizada na imagem
+R|B
+E|Estruturas hipoatenuantes tendem a aparecer mais escuras, e não mais claras.
+E|Uma estrutura hipoatenuante absorve ou atenua menos os raios X em comparação ao tecido de referência.
+E|Maior quantidade de cálcio geralmente aumenta a atenuação, não diminui.
+E|Estruturas hipoatenuantes podem ser visualizadas normalmente, apenas apresentam tonalidade mais escura.
+
+Q|Ar na imagem
+Qual é a aparência típica de uma região preenchida por ar na TC?
+A|Muito clara
+B|Cinza intermediária
+C|Branca
+D|Muito escura
+R|D
+E|Regiões muito claras geralmente apresentam alta atenuação, como os ossos.
+E|O ar apresenta atenuação muito baixa e costuma aparecer mais escuro.
+E|O branco geralmente representa estruturas com alta atenuação.
+E|O ar apresenta aproximadamente −1000 HU e aparece muito escuro na imagem tomográfica.
+
+Q|Janela para os ossos
+Qual janela é mais adequada para avaliar alterações nos ossos?
+A|Janela óssea
+B|Janela pulmonar
+C|Janela abdominal
+D|Janela cardíaca
+R|A
+E|A janela óssea permite visualizar melhor a estrutura e os detalhes dos ossos, facilitando a identificação de fraturas e destruição óssea.
+E|A janela pulmonar é utilizada principalmente para avaliar o parênquima pulmonar.
+E|A janela abdominal é direcionada à avaliação de órgãos e tecidos da região abdominal.
+E|A janela cardíaca não é a opção específica para avaliar alterações ósseas.
+
+Q|Janela para tecidos moles
+Para avaliar melhor órgãos e tecidos moles, qual janela é utilizada?
+A|Janela óssea
+B|Janela de ar
+C|Janela de tecidos moles
+D|Janela mineral
+R|C
+E|A janela óssea destaca estruturas mineralizadas, como os ossos.
+E|Janela de ar não é a denominação adequada para essa avaliação.
+E|A janela de tecidos moles permite visualizar melhor órgãos, músculos e outras estruturas não ósseas.
+E|Janela mineral não é a janela utilizada para avaliar órgãos e tecidos moles.
+
+Q|Estrutura hipodensa
+O que significa uma estrutura hipodensa?
+A|Que apresenta maior densidade que o tecido de referência
+B|Que apresenta menor atenuação em comparação ao tecido de referência
+C|Que apresenta obrigatoriamente uma fratura
+D|Que está preenchida exclusivamente por osso
+R|B
+E|Maior atenuação corresponde a uma estrutura hiperdensa ou hiperatenuante.
+E|Uma estrutura hipodensa apresenta menor atenuação em relação ao tecido utilizado como referência.
+E|Hipodensidade não significa necessariamente fratura.
+E|O osso geralmente apresenta alta atenuação, e não baixa.
+
+Q|Plano sagital
+Qual plano de imagem divide o corpo em porções direita e esquerda?
+A|Transversal
+B|Dorsal
+C|Oblíquo
+D|Sagital
+R|D
+E|O plano transversal divide o corpo em porções cranial e caudal.
+E|O plano dorsal divide o corpo em porções dorsal e ventral.
+E|O plano oblíquo realiza um corte inclinado em relação aos planos anatômicos convencionais.
+E|O plano sagital divide o corpo em porções direita e esquerda.
+
+Q|Plano transversal
+Qual plano de imagem divide o corpo em porções cranial e caudal?
+A|Dorsal
+B|Sagital
+C|Transversal
+D|Longitudinal
+R|C
+E|O plano dorsal divide o corpo em regiões dorsal e ventral.
+E|O plano sagital divide o corpo em regiões direita e esquerda.
+E|O plano transversal divide o corpo em porções cranial e caudal.
+E|Longitudinal descreve uma orientação ao longo do eixo do corpo, mas não é a resposta anatômica específica solicitada.
+
+Q|Estrutura anecoica
+O que é uma estrutura anecoica?
+A|Uma estrutura sem ecos, geralmente visualizada como preta na ultrassonografia
+B|Uma estrutura muito branca na tomografia
+C|Uma estrutura com alta concentração de cálcio
+D|Uma estrutura que apresenta grande quantidade de gordura
+R|A
+E|Anecoico é um termo da ultrassonografia. Indica uma estrutura que não produz ecos internos e geralmente aparece preta, como um líquido simples.
+E|Uma estrutura branca na TC apresenta alta atenuação, mas isso não define anecogenicidade.
+E|Estruturas mineralizadas podem gerar ecos intensos na ultrassonografia, mas não são definidas simplesmente como anecoicas.
+E|Gordura não é necessariamente anecoica; sua aparência depende da estrutura e do exame utilizado.
+
+Q|Região mais clara
+Quando uma região aparece mais clara que o tecido ao redor na TC, ela pode ser descrita como:
+A|Hipoatenuante
+B|Hipodensa
+C|Hiperdensa ou hiperatenuante
+D|Anecoica
+R|C
+E|Hipoatenuante significa menor atenuação e aparência geralmente mais escura.
+E|Hipodensa também indica menor atenuação em relação ao tecido de referência.
+E|Regiões hiperdensas ou hiperatenuantes apresentam maior atenuação e geralmente aparecem mais claras.
+E|Anecoico é um termo utilizado na ultrassonografia, não para descrever a densidade na TC.
+
+Q|Escolha da janela
+Por que é importante selecionar corretamente a janela de visualização?
+A|Para diminuir o peso do animal
+B|Para destacar melhor determinadas estruturas e alterações
+C|Para eliminar a necessidade de reconstrução das imagens
+D|Para impedir a emissão de radiação
+R|B
+E|A seleção da janela não interfere no peso do paciente.
+E|Cada janela permite destacar melhor determinados tecidos, facilitando a identificação de alterações.
+E|A seleção da janela não elimina a necessidade de reconstruções quando elas são indicadas.
+E|A janela modifica a visualização dos dados adquiridos, mas não impede a emissão de raios X.
+
+N|2
+Q|TC e metástases pulmonares
+Por que a TC é muito utilizada no rastreamento de metástases pulmonares?
+A|Porque permite avaliar apenas o coração
+B|Porque não utiliza raios X
+C|Porque consegue identificar nódulos pequenos que podem não aparecer na radiografia
+D|Porque substitui a biópsia em todos os casos
+R|C
+E|A TC também avalia os pulmões e outras estruturas torácicas.
+E|A tomografia utiliza raios X para formar as imagens.
+E|A maior resolução da TC permite detectar nódulos pulmonares menores, que podem passar despercebidos na radiografia convencional.
+E|A TC auxilia na investigação, mas não substitui a biópsia quando é necessária a confirmação histopatológica.
+
+Q|Vértebra de referência
+Na avaliação da obesidade em cães por TC, qual vértebra é utilizada como referência anatômica no material estudado?
+A|L4
+B|C1
+C|T5
+D|S1
+R|A
+E|A quarta vértebra lombar (L4) é utilizada como referência anatômica para a análise da gordura corporal.
+E|C1 é uma vértebra cervical, localizada na região do pescoço.
+E|T5 está localizada na região torácica e não é o ponto de referência indicado.
+E|S1 pertence à região sacral, não sendo a referência utilizada nesse método.
+
+Q|Contraste na angiotomografia
+Qual é a principal função do contraste iodado na angiotomografia?
+A|Diminuir a densidade dos ossos
+B|Reduzir a temperatura corporal
+C|Impedir a movimentação do animal
+D|Destacar os vasos sanguíneos
+R|D
+E|O contraste não tem como finalidade diminuir a densidade dos ossos.
+E|O contraste não é utilizado para controlar a temperatura.
+E|A imobilidade depende de contenção, sedação ou anestesia quando indicadas.
+E|O contraste iodado aumenta a atenuação do sangue nos vasos, permitindo visualizar melhor sua anatomia e possíveis alterações.
+
+Q|Osteólise
+O que é osteólise?
+A|Aumento da produção de gordura
+B|Destruição ou reabsorção do tecido ósseo
+C|Acúmulo de ar nos pulmões
+D|Inflamação exclusiva dos músculos
+R|B
+E|Osteólise não está relacionada à produção de gordura.
+E|Osteólise é a destruição ou reabsorção do tecido ósseo, podendo ser observada em diferentes doenças.
+E|Acúmulo de ar nos pulmões é uma alteração pulmonar, não óssea.
+E|Osteólise envolve tecido ósseo, não exclusivamente tecido muscular.
+
+Q|Sinal de processo agressivo
+Um cão apresenta suspeita de tumor na cavidade nasal. Qual alteração na TC pode indicar um processo agressivo?
+A|Preservação completa das estruturas ósseas
+B|Ausência de alterações nos tecidos
+C|Destruição dos ossos nasais
+D|Presença de gordura subcutânea
+R|C
+E|A preservação óssea não é o achado que sugere destruição agressiva.
+E|Ausência de alterações não indica um processo agressivo.
+E|A destruição dos ossos nasais, chamada osteólise, pode sugerir uma lesão agressiva, incluindo neoplasias.
+E|Gordura subcutânea é uma estrutura normal e não indica, por si só, tumor nasal.
+
+Q|Exame para o shunt
+Na investigação de um shunt portossistêmico, qual exame pode auxiliar na visualização dos vasos envolvidos?
+A|Angiotomografia
+B|Eletrocardiograma
+C|Radiografia odontológica
+D|Densitometria óssea
+R|A
+E|A angiotomografia permite visualizar os vasos sanguíneos com contraste e auxiliar na identificação de alterações vasculares, como o shunt portossistêmico.
+E|O eletrocardiograma avalia a atividade elétrica do coração.
+E|A radiografia odontológica avalia estruturas dentárias.
+E|A densitometria óssea avalia características relacionadas à densidade mineral dos ossos.
+
+Q|Gordura visceral × subcutânea
+Qual é a principal diferença entre gordura visceral e gordura subcutânea?
+A|A gordura visceral fica apenas na pele
+B|A gordura subcutânea fica dentro dos órgãos
+C|Não existe diferença anatômica entre elas
+D|A gordura visceral está associada aos órgãos internos, enquanto a subcutânea fica sob a pele
+R|D
+E|A gordura visceral não fica na pele; está localizada na cavidade abdominal, associada aos órgãos internos.
+E|A gordura subcutânea fica abaixo da pele, e não dentro dos órgãos.
+E|Existem diferenças anatômicas entre esses dois compartimentos de gordura.
+E|A gordura visceral está relacionada aos órgãos internos, enquanto a gordura subcutânea se encontra abaixo da pele.
+
+Q|3D na avaliação de tumores
+Qual é uma vantagem da reconstrução 3D na avaliação de tumores?
+A|Impede o crescimento do tumor
+B|Ajuda a visualizar a localização e a extensão da lesão
+C|Substitui todos os exames laboratoriais
+D|Elimina a necessidade de avaliação cirúrgica
+R|B
+E|A reconstrução 3D não trata nem impede o crescimento tumoral.
+E|A reconstrução tridimensional facilita a visualização da localização, formato e extensão da massa.
+E|Exames laboratoriais continuam sendo importantes conforme a suspeita clínica.
+E|A reconstrução auxilia o planejamento, mas não elimina a necessidade de avaliação cirúrgica quando indicada.
+
+Q|TC na hérnia de disco
+Por que a TC é importante na avaliação de hérnias de disco?
+A|Porque permite avaliar a localização da alteração e possíveis alterações nas estruturas próximas
+B|Porque mede a temperatura dos discos
+C|Porque identifica somente alterações musculares
+D|Porque dispensa qualquer exame neurológico
+R|A
+E|A TC permite visualizar alterações na coluna, localizar a lesão e auxiliar na avaliação de sua extensão e relação com estruturas próximas.
+E|A TC não mede a temperatura dos discos intervertebrais.
+E|O exame permite avaliar estruturas ósseas e outras alterações, não apenas músculos.
+E|O exame neurológico continua sendo importante para avaliar o paciente e correlacionar os achados de imagem.
+
+Q|Por que rastrear metástases
+Qual é a principal finalidade do rastreamento de metástases em um paciente oncológico?
+A|Avaliar exclusivamente o peso corporal
+B|Identificar somente alterações cardíacas
+C|Investigar se o tumor se disseminou para outros locais, como os pulmões
+D|Determinar a idade do animal
+R|C
+E|O peso corporal não é a finalidade do rastreamento de metástases.
+E|A investigação não se limita ao coração.
+E|O rastreamento procura identificar se células tumorais se disseminaram para outros órgãos ou tecidos.
+E|A TC não é utilizada para determinar a idade do animal.
+
+N|2
+Q|Movimento durante o exame
+O que pode acontecer quando o animal se movimenta durante a aquisição das imagens?
+A|Aumenta a resolução da imagem
+B|Pode gerar artefatos e prejudicar a interpretação
+C|Elimina a necessidade de reconstrução
+D|Melhora a visualização dos tecidos
+R|B
+E|O movimento não aumenta a resolução; pode prejudicar a qualidade da imagem.
+E|A movimentação pode gerar borramentos e artefatos, dificultando a interpretação das estruturas.
+E|A movimentação não elimina a necessidade de reconstrução.
+E|O movimento pode comprometer a visualização dos tecidos.
+
+Q|Artefato de volume parcial
+O que é o artefato de volume parcial?
+A|Uma alteração causada exclusivamente pelo contraste
+B|Uma falha na emissão de raios X
+C|Uma alteração causada somente pela respiração
+D|A média das atenuações de diferentes tecidos que ocupam o mesmo voxel
+R|D
+E|O contraste não é a causa específica do volume parcial.
+E|O artefato não significa necessariamente falha na emissão dos raios X.
+E|A respiração pode gerar artefatos de movimento, mas não define o volume parcial.
+E|Quando diferentes tecidos ocupam o mesmo voxel, o equipamento calcula uma média de suas atenuações, podendo representar incorretamente cada tecido.
+
+Q|Reduzindo o volume parcial
+Como é possível reduzir o artefato de volume parcial?
+A|Utilizando cortes mais finos
+B|Aumentando a espessura dos cortes
+C|Diminuindo a resolução
+D|Retirando o contraste de todos os exames
+R|A
+E|Cortes mais finos reduzem a possibilidade de diferentes tecidos ocuparem o mesmo voxel, diminuindo o efeito de volume parcial.
+E|Cortes mais espessos podem aumentar esse efeito.
+E|Diminuir a resolução não é a solução para esse problema.
+E|O uso ou não de contraste não é a medida específica para reduzir o volume parcial.
+
+Q|Princípio ALARA
+O que significa o princípio ALARA?
+A|Utilizar a maior dose de radiação possível
+B|Realizar o exame várias vezes para garantir o resultado
+C|Manter a exposição à radiação tão baixa quanto razoavelmente possível, sem comprometer o diagnóstico
+D|Evitar qualquer tipo de exame de imagem
+R|C
+E|O princípio não recomenda aumentar a dose sem necessidade.
+E|Repetir exames sem justificativa pode aumentar a exposição à radiação.
+E|ALARA significa As Low As Reasonably Achievable, ou seja, manter a exposição tão baixa quanto razoavelmente possível, preservando a qualidade diagnóstica.
+E|O princípio não proíbe exames de imagem; orienta o uso seguro da radiação.
+
+Q|Anestesia ou sedação
+Por que a anestesia ou sedação pode ser necessária durante a TC?
+A|Para aumentar a densidade dos tecidos
+B|Para evitar que o animal se movimente e prejudique as imagens
+C|Para eliminar a radiação
+D|Para aumentar o tamanho dos órgãos
+R|B
+E|A anestesia não aumenta a densidade dos tecidos.
+E|Manter o animal imóvel evita artefatos de movimento e melhora a qualidade das imagens. A necessidade de sedação ou anestesia depende do paciente e do protocolo.
+E|A anestesia não elimina a radiação utilizada no exame.
+E|A anestesia não aumenta o tamanho dos órgãos.
+
+Q|Angiotomografia post mortem
+Qual é uma possível limitação da angiotomografia post mortem?
+A|A impossibilidade de visualizar qualquer estrutura óssea
+B|A ausência de tecidos moles
+C|A incapacidade de produzir imagens tridimensionais
+D|A presença de coágulos e o extravasamento do contraste
+R|D
+E|A TC post mortem permite visualizar estruturas ósseas.
+E|Os tecidos moles também podem ser avaliados.
+E|A TC pode produzir reconstruções tridimensionais mesmo após a morte.
+E|Coágulos e extravasamento do contraste podem dificultar a visualização e a interpretação dos vasos sanguíneos.
+
+Q|Região hiperatenuante no encéfalo
+O que pode indicar uma região hiperatenuante no encéfalo?
+A|Maior atenuação que o tecido cerebral de referência, podendo estar relacionada a diferentes alterações, como hemorragia ou mineralização
+B|Necessariamente edema cerebral
+C|Exclusivamente acúmulo de ar
+D|Ausência completa de tecido
+R|A
+E|Uma região hiperatenuante aparece mais clara e pode estar relacionada a hemorragia, mineralização ou outras alterações, dependendo do contexto.
+E|Edema cerebral costuma apresentar menor atenuação, podendo aparecer mais escuro.
+E|O ar apresenta baixa atenuação e aparece escuro.
+E|Ausência de tecido não é o significado de hiperatenuação.
+
+Q|Contraste intravenoso
+Qual é a função do contraste intravenoso em determinados exames de TC?
+A|Diminuir a resolução da imagem
+B|Substituir a radiação
+C|Melhorar a visualização de vasos e a diferenciação de determinadas estruturas
+D|Impedir a formação de cortes seccionais
+R|C
+E|O objetivo do contraste não é diminuir a resolução.
+E|O contraste não substitui os raios X; ele modifica a atenuação de determinadas estruturas.
+E|O contraste pode destacar vasos sanguíneos e ajudar a diferenciar estruturas e alterações.
+E|A formação dos cortes seccionais continua ocorrendo normalmente.
+
+Q|Janela óssea nos tumores nasais
+Por que a janela óssea é importante na investigação de tumores nasais?
+A|Porque permite medir a temperatura do tumor
+B|Porque facilita a identificação de alterações como destruição óssea
+C|Porque mostra exclusivamente a circulação sanguínea
+D|Porque identifica apenas secreções nasais
+R|B
+E|A janela óssea não mede temperatura.
+E|Permite avaliar a integridade dos ossos nasais e identificar osteólise, que pode indicar um processo agressivo.
+E|A circulação sanguínea não é a finalidade da janela óssea.
+E|A janela óssea não é específica para secreções nasais.
+
+Q|Cortes muito espessos
+Qual é uma possível consequência de utilizar cortes muito espessos na avaliação de estruturas pequenas?
+A|Aumento obrigatório da resolução
+B|Eliminação de todos os artefatos
+C|Melhor visualização de todos os detalhes
+D|Perda de detalhes e maior efeito de volume parcial
+R|D
+E|Cortes mais espessos não aumentam obrigatoriamente a resolução espacial.
+E|Cortes espessos não eliminam todos os artefatos.
+E|Estruturas pequenas podem ficar menos bem definidas.
+E|Cortes espessos podem misturar diferentes tecidos no mesmo voxel, causando perda de detalhes e aumento do efeito de volume parcial.
+
+N|3
+Q|Hérnia de disco e cirurgia
+Um cão apresenta sinais neurológicos e suspeita de hérnia de disco. Qual é uma contribuição importante da TC para o planejamento cirúrgico?
+A|Identificar a localização da alteração e auxiliar na avaliação da extensão do comprometimento
+B|Determinar exclusivamente a temperatura do disco
+C|Medir a frequência cardíaca
+D|Substituir o exame neurológico
+R|A
+E|A TC permite localizar a alteração, avaliar sua extensão e observar estruturas próximas, auxiliando o cirurgião na escolha da abordagem.
+E|A TC não mede a temperatura dos discos intervertebrais.
+E|A frequência cardíaca é avaliada por outros métodos, como auscultação e monitorização cardíaca.
+E|O exame de imagem complementa a avaliação neurológica, mas não substitui o exame clínico.
+
+Q|Região escura no encéfalo
+Durante uma TC cerebral, uma região aparece mais escura que o tecido encefálico normal. Qual interpretação é mais adequada?
+A|A região é obrigatoriamente uma hemorragia
+B|A região apresenta maior atenuação
+C|A região é hipoatenuante e pode estar relacionada a edema, necrose ou inflamação
+D|A região é necessariamente uma estrutura óssea
+R|C
+E|Uma hemorragia frequentemente apresenta maior atenuação, embora isso dependa da fase e das características da lesão.
+E|Uma região mais escura apresenta menor atenuação, e não maior.
+E|A hipoatenuação pode estar associada a edema, necrose, inflamação ou acúmulo de fluidos. É necessário correlacionar com os demais achados.
+E|Estruturas ósseas geralmente apresentam alta atenuação e aparecem claras.
+
+Q|Radiografia normal, TC pedida
+Um paciente oncológico apresenta radiografia torácica sem nódulos aparentes. Mesmo assim, o veterinário solicita TC. Qual é a justificativa?
+A|A TC não utiliza radiação
+B|A radiografia não permite avaliar o tórax
+C|A TC serve apenas para medir o coração
+D|A TC pode identificar nódulos pulmonares menores que não foram detectados na radiografia
+R|D
+E|A TC utiliza radiação ionizante.
+E|A radiografia permite avaliar o tórax, mas apresenta limitações para identificar nódulos muito pequenos.
+E|A TC avalia diversas estruturas torácicas, incluindo os pulmões.
+E|A maior resolução da TC permite detectar nódulos pequenos que podem não aparecer na radiografia, melhorando o rastreamento de metástases.
+
+Q|Massa nasal com destruição óssea
+Na avaliação de uma massa nasal, a TC demonstra destruição óssea e alteração dos tecidos moles adjacentes. Qual é a interpretação mais adequada?
+A|O exame confirma obrigatoriamente uma rinite simples
+B|Os achados aumentam a suspeita de processo agressivo, incluindo neoplasia, mas precisam ser interpretados com os demais dados clínicos e exames
+C|A destruição óssea descarta neoplasia
+D|O resultado indica exclusivamente uma alteração muscular
+R|B
+E|Destruição óssea não é um achado que confirme uma rinite simples.
+E|A osteólise associada à alteração dos tecidos moles pode sugerir um processo agressivo, como uma neoplasia. Entretanto, não confirma o diagnóstico sozinha.
+E|A destruição óssea pode justamente aumentar a suspeita de neoplasia.
+E|Os achados envolvem estruturas ósseas e tecidos moles, não exclusivamente músculos.
+
+Q|Contraste fora dos vasos
+Durante uma angiotomografia post mortem, o contraste é observado fora dos vasos sanguíneos. Qual é uma possível explicação?
+A|Aumento da temperatura do cadáver
+B|Formação de novas artérias
+C|Extravasamento do contraste, que dificulta a avaliação vascular
+D|Produção excessiva de sangue
+R|C
+E|A temperatura não explica diretamente o contraste fora dos vasos.
+E|O extravasamento não representa formação de novas artérias.
+E|O contraste pode sair dos vasos e atingir tecidos adjacentes, prejudicando a interpretação da anatomia vascular.
+E|Após a morte não ocorre produção fisiológica de sangue como essa alternativa sugere.
+
+Q|Obesidade visceral
+Um cão apresenta suspeita de obesidade visceral. Por que a TC pode ser mais útil que a avaliação apenas por palpação?
+A|Porque permite diferenciar e quantificar depósitos de gordura visceral e subcutânea
+B|Porque mede diretamente o metabolismo do animal
+C|Porque identifica somente a gordura da pele
+D|Porque determina a quantidade de alimento ingerido
+R|A
+E|A TC permite visualizar e quantificar os compartimentos de gordura, diferenciando a gordura visceral da subcutânea.
+E|A TC não mede diretamente o metabolismo do animal.
+E|A avaliação não se limita à gordura localizada sob a pele.
+E|O exame não determina quanto alimento o animal consome.
+
+Q|Osso e tecido mole no mesmo voxel
+Durante a avaliação de uma imagem, o radiologista observa que osso e tecido mole ocupam o mesmo voxel. Qual problema pode ocorrer?
+A|Aumento da temperatura da região
+B|Formação obrigatória de uma fratura
+C|Desaparecimento completo da estrutura
+D|Média das atenuações dos tecidos, podendo gerar uma imagem que não representa corretamente cada tecido isoladamente
+R|D
+E|O volume parcial não provoca aumento da temperatura.
+E|A presença de dois tecidos no mesmo voxel não causa fratura.
+E|A estrutura não necessariamente desaparece; pode ter sua representação alterada.
+E|O equipamento calcula uma média das atenuações dos tecidos presentes no mesmo voxel, podendo produzir uma imagem imprecisa. Esse é o artefato de volume parcial.
+
+Q|Perícia de arma de fogo
+Em uma investigação forense de possível disparo de arma de fogo, qual vantagem a TC post mortem oferece?
+A|Determina sozinha a autoria do disparo
+B|Permite avaliar fraturas e reconstruir trajetórias de projéteis em imagens tridimensionais
+C|Substitui todos os exames periciais
+D|Elimina a necessidade de preservar evidências
+R|B
+E|A TC não identifica sozinha quem realizou o disparo.
+E|A TC permite avaliar fraturas, localizar projéteis e auxiliar na reconstrução de trajetórias, contribuindo para a investigação pericial.
+E|A TC complementa a perícia, mas não substitui todos os procedimentos e exames necessários.
+E|As evidências devem continuar sendo preservadas e analisadas adequadamente.
+
+Q|Planejando a retirada da massa
+Um cirurgião precisa planejar a retirada de uma massa próxima a estruturas anatômicas importantes. Como a TC pode auxiliar?
+A|Garantindo que não haverá sangramento
+B|Substituindo completamente a cirurgia
+C|Demonstrando a localização, extensão e relação da massa com estruturas próximas, auxiliando na escolha do acesso cirúrgico
+D|Determinando sozinha o tipo histológico do tumor
+R|C
+E|A TC não garante ausência de sangramento durante a cirurgia.
+E|O exame fornece informações para o planejamento, mas não substitui o procedimento cirúrgico.
+E|A TC permite avaliar a localização e a extensão da massa e sua relação com estruturas próximas, ajudando a escolher o acesso cirúrgico mais adequado.
+E|A TC pode sugerir características de uma lesão, mas a identificação histológica geralmente depende de análise de tecido, como biópsia.
+
+Q|A TC na Medicina Veterinária
+Qual alternativa apresenta a interpretação mais correta sobre a tomografia computadorizada na Medicina Veterinária?
+A|É um exame complementar que fornece informações anatômicas detalhadas, mas seus achados devem ser correlacionados com a avaliação clínica e, quando necessário, outros exames
+B|É capaz de diagnosticar todas as doenças sem exames complementares
+C|Substitui obrigatoriamente a radiografia, a ultrassonografia e a ressonância magnética
+D|É utilizada exclusivamente para avaliação de fraturas
+R|A
+E|A TC fornece informações anatômicas detalhadas e é muito útil no diagnóstico e planejamento cirúrgico, mas deve ser interpretada junto à avaliação clínica e a outros exames quando necessário.
+E|Nenhum exame de imagem consegue diagnosticar todas as doenças isoladamente.
+E|Cada método de imagem possui indicações e vantagens próprias. A TC não substitui obrigatoriamente os demais.
+E|A TC também avalia órgãos, tecidos moles, pulmões, vasos sanguíneos e outras estruturas.

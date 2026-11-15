@@ -19,20 +19,22 @@ class HomeScreen extends StatelessWidget {
 
   final List<Question> questions;
 
-  /// Abre uma partida; [set] limita o Clássico a um dos bancos (a Sobrevivência usa todos).
-  void _play(BuildContext context, GameMode mode, [QuestionSet? set]) => Navigator.of(context).push(
-    MaterialPageRoute<void>(
-      builder: (_) => GameScreen(
-        mode: mode,
-        questions: set == null
-            ? questions
-            : [
-                for (final q in questions)
-                  if (q.set == set) q,
-              ],
-      ),
-    ),
-  );
+  /// Abre uma partida com as questões de [set]. O modo teste não conta pontos.
+  void _play(BuildContext context, GameMode mode, [QuestionSet set = QuestionSet.valendo]) =>
+      Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (_) => GameScreen(
+            mode: mode,
+            practice: set == QuestionSet.teste,
+            questions: [
+              for (final q in questions)
+                if (q.set == set) q,
+            ],
+          ),
+        ),
+      );
+
+  int get _scoringCount => questions.where((q) => q.set == QuestionSet.valendo).length;
 
   @override
   Widget build(BuildContext context) {
@@ -69,10 +71,7 @@ class HomeScreen extends StatelessWidget {
                 ? Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Expanded(
-                        flex: 6,
-                        child: _Hero(onPlay: () => _play(context, GameMode.classic, QuestionSet.principais)),
-                      ),
+                      Expanded(flex: 6, child: _Hero(onPlay: () => _play(context, GameMode.classic))),
                       const SizedBox(width: 48),
                       const Expanded(flex: 4, child: _PlayerCard()),
                     ],
@@ -80,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      _Hero(onPlay: () => _play(context, GameMode.classic, QuestionSet.principais)),
+                      _Hero(onPlay: () => _play(context, GameMode.classic)),
                       const SizedBox(height: 28),
                       const _PlayerCard(),
                     ],
@@ -98,25 +97,27 @@ class HomeScreen extends StatelessWidget {
                 _Grid(
                   children: [
                     _ModeCard(
-                      emoji: '🩻',
-                      title: QuestionSet.principais.label,
-                      description: 'As 10 perguntas essenciais de tomografia: 3 vidas, até 3 estrelas e combos.',
-                      tags: const ['10 fases', '3 vidas'],
-                      tone: Tone.brand,
-                      onTap: () => _play(context, GameMode.classic, QuestionSet.principais),
+                      emoji: '🎓',
+                      title: QuestionSet.teste.label,
+                      description: '10 casos clínicos para conhecer o jogo. Os pontos aparecem, mas não contam e as ajudas são grátis.',
+                      tags: const ['10 questões', 'Não conta pontos'],
+                      tone: Tone.mint,
+                      onTap: () => _play(context, GameMode.classic, QuestionSet.teste),
                     ),
                     _ModeCard(
-                      emoji: '🐾',
-                      title: QuestionSet.casos.label,
-                      description: '10 casos da rotina veterinária: leia o cenário e escolha a melhor conduta.',
-                      tags: const ['10 casos', '3 vidas'],
-                      tone: Tone.mint,
-                      onTap: () => _play(context, GameMode.classic, QuestionSet.casos),
+                      emoji: '🩻',
+                      title: 'Partida valendo',
+                      description:
+                          '10 questões sorteadas entre $_scoringCount. Vale pontos, XP, moedas e lugar no ranking.',
+                      tags: const ['10 fases', '3 vidas'],
+                      tone: Tone.brand,
+                      onTap: () => _play(context, GameMode.classic),
                     ),
                     _ModeCard(
                       emoji: '♾️',
                       title: 'Sobrevivência',
-                      description: 'Mistura as 20 questões sem fim. O tempo diminui a cada 5 respostas.',
+                      description:
+                          'As $_scoringCount questões que valem pontos, sem fim. O tempo diminui a cada 5 respostas.',
                       tags: ['Até errar 3', 'Recorde: ${store.bestSurvival}'],
                       tone: Tone.clay,
                       onTap: () => _play(context, GameMode.survival),
