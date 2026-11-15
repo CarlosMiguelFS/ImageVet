@@ -8,6 +8,7 @@ import '../data/game_backend.dart';
 import '../state/auth_service.dart';
 import '../state/player_store.dart';
 import '../theme/app_theme.dart';
+import '../widgets/emoji.dart';
 import '../widgets/ui.dart';
 import 'auth/auth_widgets.dart';
 import 'privacy_policy_screen.dart';
@@ -481,7 +482,7 @@ class _ProfileStat extends StatelessWidget {
     padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
     child: Column(
       children: [
-        Text(emoji, style: const TextStyle(fontSize: 22)),
+        Emoji(emoji, size: 25),
         const SizedBox(height: 6),
         FittedBox(
           child: Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600)),

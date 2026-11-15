@@ -5,6 +5,7 @@ import '../state/game_controller.dart';
 import '../state/player_store.dart';
 import '../theme/app_theme.dart';
 import '../widgets/confetti.dart';
+import '../widgets/emoji.dart';
 import '../widgets/ui.dart';
 import 'game_screen.dart';
 
@@ -204,7 +205,7 @@ class _Stars extends StatelessWidget {
             padding: EdgeInsets.only(left: 6, right: 6, bottom: i == 1 ? 18 : 0),
             child: Opacity(
               opacity: i < stars ? 1 : 0.22,
-              child: Text('⭐', style: TextStyle(fontSize: i == 1 ? 64 : 48)),
+              child: Emoji('⭐', size: i == 1 ? 76 : 58),
             ),
           ),
         ),
@@ -233,7 +234,7 @@ class _LevelUp extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Text('🚀', style: TextStyle(fontSize: 34)),
+          const Emoji('🚀', size: 40),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
@@ -271,7 +272,7 @@ class _Stat extends StatelessWidget {
     padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 8),
     child: Column(
       children: [
-        Text(emoji, style: const TextStyle(fontSize: 22)),
+        Emoji(emoji, size: 25),
         const SizedBox(height: 6),
         FittedBox(
           child: Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),

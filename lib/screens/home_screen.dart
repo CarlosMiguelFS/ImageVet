@@ -9,6 +9,7 @@ import '../state/game_controller.dart';
 import '../state/player_store.dart';
 import '../theme/app_theme.dart';
 import '../widgets/confetti.dart';
+import '../widgets/emoji.dart';
 import '../widgets/ui.dart';
 import 'game_screen.dart';
 import 'profile_screen.dart';
@@ -193,6 +194,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 13, color: AppColors.inkMuted),
+                ),
+                const SizedBox(height: 6),
+                // Crédito exigido pela licença dos emojis (CC BY-SA 4.0).
+                const Text(
+                  'Emojis por OpenMoji, o projeto aberto de emojis e ícones (openmoji.org) · '
+                  'Licença CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 11.5, color: AppColors.inkMuted),
                 ),
               ],
             ),
@@ -498,7 +507,7 @@ class _EmojiTile extends StatelessWidget {
     height: size,
     alignment: Alignment.center,
     decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(size * 0.32)),
-    child: Text(emoji, style: TextStyle(fontSize: size * 0.5)),
+    child: Emoji(emoji, size: size * 0.58),
   );
 }
 
@@ -574,13 +583,13 @@ class _ChestCard extends StatelessWidget {
       builder: (context) => Stack(
         children: [
           AlertDialog(
-            title: const Text('🎁', textAlign: TextAlign.center, style: TextStyle(fontSize: 56)),
+            title: const Center(child: Emoji('🎁', size: 72)),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Headline('Baú [amber:aberto]!', size: 28, textAlign: TextAlign.center),
                 const SizedBox(height: 10),
-                Text(
+                EmojiText(
                   'Você ganhou $won 💎. Volte amanhã para abrir outro.',
                   textAlign: TextAlign.center,
                   style: mutedText,
@@ -611,7 +620,7 @@ class _ChestCard extends StatelessWidget {
           const SizedBox(height: 18),
           const Text('Baú diário', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
           const SizedBox(height: 6),
-          Text(
+          EmojiText(
             available ? 'Tem ${PlayerStore.chestCoins} 💎 esperando por você hoje.' : 'Já abriu hoje. Volte amanhã!',
             style: mutedText.copyWith(fontSize: 14.5),
           ),
@@ -695,7 +704,7 @@ class _PowerUpsCard extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 8),
             child: Row(
               children: [
-                Text(p.emoji, style: const TextStyle(fontSize: 18)),
+                Emoji(p.emoji, size: 21),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(switch (p) {
@@ -704,7 +713,7 @@ class _PowerUpsCard extends StatelessWidget {
                     PowerUp.skip => 'Pular sem perder vida',
                   }, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
                 ),
-                Text(
+                EmojiText(
                   '💎${p.cost}',
                   style: const TextStyle(fontWeight: FontWeight.w600, color: AppColors.brand700),
                 ),
@@ -779,10 +788,7 @@ class _Achievements extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Opacity(
-                          opacity: a.unlocked ? 1 : 0.3,
-                          child: Text(a.emoji, style: const TextStyle(fontSize: 28)),
-                        ),
+                        Opacity(opacity: a.unlocked ? 1 : 0.3, child: Emoji(a.emoji, size: 32)),
                         const SizedBox(height: 8),
                         Text(
                           a.name,
@@ -842,7 +848,7 @@ class _Rule extends StatelessWidget {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(emoji, style: const TextStyle(fontSize: 22)),
+        Emoji(emoji, size: 25),
         const SizedBox(width: 12),
         Expanded(
           child: Text(text, style: const TextStyle(fontSize: 15.5, height: 1.5, fontWeight: FontWeight.w500)),

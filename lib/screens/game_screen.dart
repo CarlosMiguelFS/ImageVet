@@ -8,6 +8,7 @@ import '../models/question.dart';
 import '../state/game_controller.dart';
 import '../state/player_store.dart';
 import '../theme/app_theme.dart';
+import '../widgets/emoji.dart';
 import '../widgets/ui.dart';
 import 'result_screen.dart';
 
@@ -148,7 +149,9 @@ class _GameScreenState extends State<GameScreen> {
     if (!ok) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Faltam ${p.cost - store.coins} 💎 para usar ${p.label}. Acerte questões para ganhar!')),
+        SnackBar(
+          content: EmojiText('Faltam ${p.cost - store.coins} 💎 para usar ${p.label}. Acerte questões para ganhar!'),
+        ),
       );
       return;
     }
@@ -366,7 +369,7 @@ class _Hearts extends StatelessWidget {
               duration: const Duration(milliseconds: 300),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1.5),
-                child: Text(i < lives ? '❤️' : '🤍', style: const TextStyle(fontSize: 20)),
+                child: Emoji(i < lives ? '❤️' : '🤍', size: 23),
               ),
             ),
           ),
@@ -615,7 +618,7 @@ class _PowerUps extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(p.emoji, style: const TextStyle(fontSize: 16)),
+                      Emoji(p.emoji, size: 19),
                       const SizedBox(width: 6),
                       Text(p.label, style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14)),
                       const SizedBox(width: 8),
@@ -625,7 +628,7 @@ class _PowerUps extends StatelessWidget {
                           color: AppColors.brand100,
                           borderRadius: BorderRadius.circular(AppRadius.pill),
                         ),
-                        child: Text(
+                        child: EmojiText(
                           practice ? 'grátis' : '💎${p.cost}',
                           style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.brand700),
                         ),
@@ -742,7 +745,7 @@ class _ContinueBar extends StatelessWidget {
           maxWidth: 760,
           child: Row(
             children: [
-              Text(emoji, style: const TextStyle(fontSize: 30)),
+              Emoji(emoji, size: 36),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -753,7 +756,7 @@ class _ContinueBar extends StatelessWidget {
                       style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: tone.foreground),
                     ),
                     if (o.correct)
-                      Text(
+                      EmojiText(
                         '+${o.points} pontos · +${o.coins} 💎',
                         style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w500, color: tone.foreground),
                       ),

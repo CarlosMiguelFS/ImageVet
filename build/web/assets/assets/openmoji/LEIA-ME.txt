@@ -1,0 +1,5 @@
+Emojis: OpenMoji 17.0 (https://openmoji.org/), sem alterações.
+All emojis designed by OpenMoji – the open-source emoji and icon project.
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+Arquivos nomeados pelo código Unicode (ex.: 2B50.svg = ⭐), baixados de
+https://github.com/hfg-gmuend/openmoji/releases/tag/17.0.0 (openmoji-svg-color.zip).

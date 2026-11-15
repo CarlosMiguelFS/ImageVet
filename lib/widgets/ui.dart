@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
+import 'emoji.dart';
 
 extension Responsive on BuildContext {
   double get screenWidth => MediaQuery.sizeOf(this).width;
@@ -77,7 +78,10 @@ class Headline extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: fontSize * 0.05),
             padding: EdgeInsets.symmetric(horizontal: fontSize * 0.22, vertical: fontSize * 0.02),
             decoration: BoxDecoration(color: tone.background, borderRadius: BorderRadius.circular(fontSize * 0.4)),
-            child: Text(m[2]!, style: style.copyWith(color: tone.foreground, fontWeight: FontWeight.w500)),
+            child: Text(
+              m[2]!,
+              style: style.copyWith(color: tone.foreground, fontWeight: FontWeight.w500),
+            ),
           ),
         ),
       );
@@ -258,7 +262,7 @@ class StatPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(emoji, style: const TextStyle(fontSize: 16)),
+          Emoji(emoji, size: 19),
           const SizedBox(width: 6),
           Flexible(
             child: Text(
@@ -290,16 +294,15 @@ class BrandMark extends StatelessWidget {
   Widget build(BuildContext context) => Row(
     mainAxisSize: MainAxisSize.min,
     children: [
-      Container(
-        width: size,
-        height: size,
-        decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(colors: [AppColors.brand400, AppColors.brand600]),
-        ),
-        child: Icon(Icons.blur_circular, color: Colors.white, size: size * 0.62),
+      // Logo do ImagiVet (tomógrafo com cão e gato), sem fundo.
+      Image.asset(
+        'assets/icons/logo.png',
+        width: size * 1.6,
+        height: size * 1.6,
+        fit: BoxFit.contain,
+        semanticLabel: 'Logo do ImagiVet',
       ),
-      const SizedBox(width: 8),
+      const SizedBox(width: 6),
       Text.rich(
         const TextSpan(
           children: [
