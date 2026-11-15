@@ -46,7 +46,11 @@ class ResultScreen extends StatelessWidget {
     if (mode == GameMode.survival) {
       return 'Você acertou ${summary.correct} ${summary.correct == 1 ? 'questão' : 'questões'} antes de perder as 3 vidas.';
     }
-    if (livesLeft <= 0) return 'Revise as explicações e tente de novo: cada partida embaralha as alternativas.';
+    if (livesLeft <= 0) {
+      return practice
+          ? 'Revise as explicações e tente de novo.'
+          : 'Revise as explicações e tente de novo: cada partida embaralha as alternativas.';
+    }
     return 'Você acertou ${summary.correct} de ${summary.answered} questões de tomografia.';
   }
 

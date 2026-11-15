@@ -64,6 +64,27 @@ void main() {
     }
   });
 
+  test('"Jogar agora" sem embaralhar: questões de 1 a 10 e alternativas de A a E, como no material', () {
+    final teste = [
+      for (final q in _questions())
+        if (q.set == QuestionSet.teste) q,
+    ];
+    for (final seed in [1, 2, 3]) {
+      final g = GameController(mode: GameMode.classic, questions: teste, random: Random(seed), shuffle: false);
+      final ids = <int>[];
+      for (var i = 0; i < 10; i++) {
+        ids.add(g.item.question.id);
+        for (var k = 0; k < g.item.length; k++) {
+          expect(g.item.option(k), g.item.question.options[k], reason: 'alternativa ${'ABCDE'[k]} no lugar certo');
+        }
+        g.answer(g.item.originalIndex(g.item.question.answer));
+        if (i < 9) g.next();
+      }
+      expect(ids, [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+      g.dispose();
+    }
+  });
+
   test('alternativas embaralhadas mantêm texto, explicação e gabarito', () {
     final q = _questions().first;
     final item = QuizItem.shuffled(q, Random(7));

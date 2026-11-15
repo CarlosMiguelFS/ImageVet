@@ -58,6 +58,9 @@ class QuizItem {
   factory QuizItem.shuffled(Question q, Random rng) =>
       QuizItem._(q, List.generate(q.options.length, (i) => i)..shuffle(rng));
 
+  /// Alternativas na ordem original (A, B, C...), como no material.
+  factory QuizItem.inOrder(Question q) => QuizItem._(q, List.generate(q.options.length, (i) => i));
+
   final Question question;
 
   /// Posição original (no arquivo) de cada alternativa mostrada.

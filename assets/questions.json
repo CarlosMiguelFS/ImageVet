@@ -24,7 +24,7 @@
   {
     "id": 2,
     "set": "valendo",
-    "title": "Escala Hounsfield na prática",
+    "title": "Escala Hounsfield na Prática",
     "question": "Durante uma tomografia computadorizada do encéfalo de um cão, o radiologista identifica uma região mais escura que o tecido cerebral ao redor. Essa alteração é descrita como hipoatenuante.\n\nConsiderando a escala Hounsfield, qual interpretação é mais adequada?",
     "options": [
       "A região apresenta maior atenuação dos raios X, sendo característica de estruturas mineralizadas, como os ossos.",
@@ -68,7 +68,7 @@
   {
     "id": 4,
     "set": "valendo",
-    "title": "Rastreio de metástases pulmonares",
+    "title": "Rastreio de Metástases Pulmonares",
     "question": "Um cão diagnosticado com neoplasia será submetido a uma cirurgia para retirada do tumor. Antes do procedimento, o veterinário solicita uma tomografia do tórax para investigar possíveis metástases pulmonares.\n\nQual é a principal justificativa para essa escolha?",
     "options": [
       "A TC apresenta maior sensibilidade para identificar pequenos nódulos pulmonares, que podem não ser visualizados na radiografia convencional.",
@@ -90,7 +90,7 @@
   {
     "id": 5,
     "set": "valendo",
-    "title": "Angiotomografia na clínica e na perícia",
+    "title": "Angiotomografia na Clínica e na Perícia",
     "question": "Um cão apresenta suspeita de shunt portossistêmico. O veterinário solicita uma angiotomografia para investigar possíveis alterações vasculares. Em outro momento, um exame semelhante é realizado em um cadáver durante uma investigação pericial.\n\nQual alternativa descreve corretamente a utilização e a limitação desse exame?",
     "options": [
       "A angiotomografia utiliza contraste administrado por via oral e, em cadáveres, apresenta dificuldade pela ausência de movimentos respiratórios.",
@@ -112,7 +112,7 @@
   {
     "id": 6,
     "set": "valendo",
-    "title": "Janelamento para diagnóstico nasal",
+    "title": "Janelamento para Diagnóstico Nasal",
     "question": "Um cão apresenta secreção nasal persistente, espirros e dificuldade respiratória. Na tomografia, o veterinário deseja diferenciar um processo inflamatório de uma possível neoplasia na cavidade nasal.\n\nQual recurso da tomografia auxilia nessa investigação?",
     "options": [
       "A utilização exclusiva da janela pulmonar, que permite identificar alterações na mucosa nasal e confirmar tumores.",
@@ -134,7 +134,7 @@
   {
     "id": 7,
     "set": "valendo",
-    "title": "Necessidade de anestesia e radioproteção",
+    "title": "Necessidade de Anestesia e Radioproteção",
     "question": "Um cão muito agitado precisa realizar uma tomografia computadorizada. Durante a preparação do exame, o médico-veterinário explica a necessidade de manter o animal imóvel e os cuidados relacionados à exposição à radiação.\n\nQual alternativa apresenta a justificativa correta?",
     "options": [
       "A anestesia é utilizada principalmente para diminuir a densidade dos tecidos, enquanto o princípio ALARA determina o uso da maior dose de radiação possível.",
@@ -178,7 +178,7 @@
   {
     "id": 9,
     "set": "valendo",
-    "title": "Aplicações forenses e zoonoses (Virtopsia)",
+    "title": "Aplicações Forenses e Zoonoses (Virtopsia)",
     "question": "Em uma investigação veterinária, um cadáver de animal apresenta suspeita de ferimentos provocados por arma de fogo e possíveis fraturas. A equipe opta por realizar uma tomografia post mortem antes de iniciar a necropsia.\n\nQual é uma das principais vantagens dessa abordagem?",
     "options": [
       "Permite reconstruir em 3D o trajeto de projéteis e identificar fraturas, reduzindo a manipulação direta do cadáver e a exposição ocupacional a agentes infecciosos.",
@@ -222,7 +222,7 @@
   {
     "id": 11,
     "set": "teste",
-    "title": "Eliminação da sobreposição de imagens",
+    "title": "Eliminação da Superposição de Imagens",
     "question": "Qual é a principal vantagem da tomografia computadorizada sobre a radiografia convencional ao avaliar estruturas anatômicas profundas?",
     "options": [
       "A TC utiliza radiação em menor quantidade e, por isso, permite visualizar melhor todos os tecidos.",
@@ -243,7 +243,7 @@
   {
     "id": 12,
     "set": "teste",
-    "title": "Escala Hounsfield na prática",
+    "title": "Escala Hounsfield na Prática",
     "question": "O que é a Escala Hounsfield (HU) e o que significa uma lesão ser classificada como \"hipoatenuante\" no cérebro de um cão?",
     "options": [
       "É uma escala que mede a atenuação dos tecidos na TC. Uma lesão hipoatenuante apresenta menor atenuação que o tecido cerebral normal, aparecendo mais escura na imagem.",
@@ -264,7 +264,7 @@
   {
     "id": 13,
     "set": "teste",
-    "title": "Avaliação de obesidade em cães",
+    "title": "Avaliação de Obesidade em Cães",
     "question": "Por que a tomografia é considerada mais precisa do que a balança e a palpação para avaliar a gordura corporal em cães, e qual ponto anatômico é o principal marcador dessa análise?",
     "options": [
       "Porque a TC identifica apenas a gordura subcutânea, utilizando a região torácica como principal referência anatômica.",
@@ -285,7 +285,7 @@
   {
     "id": 14,
     "set": "teste",
-    "title": "Rastreio de metástases pulmonares",
+    "title": "Rastreio de Metástases Pulmonares",
     "question": "Por que a tomografia é o exame padrão-ouro para buscar metástases nos pulmões de pacientes oncológicos?",
     "options": [
       "Porque a radiografia apresenta maior resolução que a TC e identifica metástases em estágios mais iniciais.",
@@ -306,7 +306,7 @@
   {
     "id": 15,
     "set": "teste",
-    "title": "Angiotomografia na clínica e na perícia",
+    "title": "Angiotomografia na Clínica e na Perícia",
     "question": "Para que serve a angiotomografia e qual a sua limitação quando realizada em cadáveres (post mortem)?",
     "options": [
       "Serve para avaliar exclusivamente os ossos e, em cadáveres, apresenta dificuldade devido à rigidez muscular.",
@@ -327,7 +327,7 @@
   {
     "id": 16,
     "set": "teste",
-    "title": "Janelamento para diagnóstico nasal",
+    "title": "Janelamento para Diagnóstico Nasal",
     "question": "Como o ajuste de \"janelas\" na tomografia ajuda a diferenciar uma rinite inflamatória de um câncer na cavidade nasal?",
     "options": [
       "A janela óssea permite avaliar alterações como osteólise, enquanto a janela de tecidos moles auxilia na avaliação das estruturas e alterações dos tecidos. A destruição óssea pode sugerir um processo neoplásico agressivo.",
@@ -348,7 +348,7 @@
   {
     "id": 17,
     "set": "teste",
-    "title": "Necessidade de anestesia e radioproteção",
+    "title": "Necessidade de Anestesia e Radioproteção",
     "question": "Por que é obrigatório anestesiar o animal para fazer uma tomografia e qual é o princípio de segurança adotado para a radiação?",
     "options": [
       "Porque a anestesia aumenta a capacidade de absorção dos raios X, e o princípio de segurança é utilizar a maior dose possível.",
@@ -369,7 +369,7 @@
   {
     "id": 18,
     "set": "teste",
-    "title": "Artefatos de imagem (volume parcial)",
+    "title": "Artefatos de Imagem (Volume Parcial)",
     "question": "O que é o artefato de \"volume parcial\" na tomografia e como o técnico evita esse erro?",
     "options": [
       "É uma falha causada exclusivamente pela movimentação do animal, evitada aumentando o tempo de exposição.",
@@ -390,7 +390,7 @@
   {
     "id": 19,
     "set": "teste",
-    "title": "Aplicações forenses e zoonoses (Virtopsia)",
+    "title": "Aplicações Forenses e Zoonoses (Virtopsia)",
     "question": "Como a tomografia post mortem (Virtopsia) auxilia em casos periciais de maus-tratos ou balística, e qual sua vantagem de biossegurança?",
     "options": [
       "Permite identificar exclusivamente alterações nos órgãos internos, mas exige abertura completa do cadáver para reconstrução das imagens.",
@@ -411,7 +411,7 @@
   {
     "id": 20,
     "set": "teste",
-    "title": "Impacto na prática cirúrgica",
+    "title": "Impacto na Prática Cirúrgica e Diagnóstico Precoce",
     "question": "Como a precisão topográfica e a mensuração de massas tumorais fornecidas pela TC afetam a tomada de decisão do cirurgião antes mesmo de iniciar o procedimento?",
     "options": [
       "Permitem identificar somente o tamanho do tumor, sem contribuir para a escolha da abordagem cirúrgica.",

@@ -32,6 +32,8 @@ class _GameScreenState extends State<GameScreen> {
     mode: widget.mode,
     questions: widget.questions,
     random: widget.random,
+    // O "Jogar agora" segue a ordem do material: questões de 1 a 10 e alternativas de A a E.
+    shuffle: !widget.practice,
   )..addListener(_onGameChanged);
   final _scroll = ScrollController();
   final _focus = FocusNode();

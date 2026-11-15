@@ -47,9 +47,15 @@ class AnswerOutcome {
 
 /// Regras de uma partida. Não depende de tela, para poder ser testado.
 class GameController extends ChangeNotifier {
-  GameController({required this.mode, required List<Question> questions, Random? random, this.lives = 3})
-    : _pool = questions,
-      _rng = random ?? Random() {
+  /// Com [shuffle] falso, as questões e as alternativas seguem a ordem original.
+  GameController({
+    required this.mode,
+    required List<Question> questions,
+    Random? random,
+    this.lives = 3,
+    this.shuffle = true,
+  }) : _pool = questions,
+       _rng = random ?? Random() {
     _refill();
     _startQuestion();
   }
@@ -58,6 +64,7 @@ class GameController extends ChangeNotifier {
   static const coinsPerCorrect = 5;
 
   final GameMode mode;
+  final bool shuffle;
   final List<Question> _pool;
   final Random _rng;
   final List<QuizItem> _items = [];
@@ -101,13 +108,14 @@ class GameController extends ChangeNotifier {
   }
 
   void _refill() {
-    final batch = [..._pool]..shuffle(_rng);
+    final batch = [..._pool];
+    if (shuffle) batch.shuffle(_rng);
     // Evita repetir a mesma questão em seguida ao reembaralhar.
     if (_items.isNotEmpty && batch.length > 1 && batch.first.id == _items.last.question.id) {
       batch.add(batch.removeAt(0));
     }
     final take = mode == GameMode.classic ? batch.take(classicLength) : batch;
-    _items.addAll([for (final q in take) QuizItem.shuffled(q, _rng)]);
+    _items.addAll([for (final q in take) shuffle ? QuizItem.shuffled(q, _rng) : QuizItem.inOrder(q)]);
   }
 
   void _startQuestion() {
