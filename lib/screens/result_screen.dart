@@ -25,7 +25,7 @@ class ResultScreen extends StatelessWidget {
   final int livesLeft;
   final List<Question> questions;
 
-  /// Modo teste: os pontos aparecem, mas não entram no perfil nem no ranking.
+  /// Partida de teste: os pontos aparecem, mas não entram no perfil nem no ranking.
   final bool practice;
 
   String get _headline {
@@ -73,8 +73,8 @@ class ResultScreen extends StatelessWidget {
                       if (practice) ...[
                         const SizedBox(height: 14),
                         const Text(
-                          'Modo teste: estes pontos não contam para o seu perfil nem para o ranking. '
-                          'Jogue uma partida valendo pontos para subir de nível!',
+                          'Partida de teste: estes pontos não contam para o seu perfil nem para o ranking. '
+                          'Escolha um nível na tela inicial para valer pontos!',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: AppColors.mintInk, fontWeight: FontWeight.w600, fontSize: 14),
                         ),

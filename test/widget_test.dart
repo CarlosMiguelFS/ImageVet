@@ -95,36 +95,45 @@ void main() {
     expect(find.text('Jogar agora'), findsOneWidget);
   });
 
-  testWidgets('com conta: a partida é aberta e cada resposta vai para o servidor', (tester) async {
+  testWidgets('com conta: um nível abre a partida e cada resposta vai para o servidor', (tester) async {
     final backend = FakeBackend(profile: _accepted);
     await _openApp(tester, auth: FakeAuth(AuthStatus.signedIn), backend: backend);
     expect(find.text('Entrar'), findsNothing);
     expect(find.byTooltip('Meu perfil'), findsOneWidget);
 
-    await _answerFirst(tester);
-    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
-    expect(backend.modes, ['classic']);
-    expect(backend.answers, hasLength(1));
-    final (questionId, alternative) = backend.answers.single;
-    expect(questionId, greaterThan(10), reason: "'Jogar agora' abre as questões que valem pontos");
-    expect(alternative, inInclusiveRange(0, 4), reason: 'envia o índice original da alternativa');
-    await tester.pumpWidget(const SizedBox());
-  });
-
-  testWidgets('com conta: o modo teste mostra os pontos, mas não envia nada ao servidor', (tester) async {
-    final backend = FakeBackend(profile: _accepted);
-    await _openApp(tester, auth: FakeAuth(AuthStatus.signedIn), backend: backend);
-
-    // Os cartões dos modos ficam mais abaixo na tela inicial.
-    await tester.scrollUntilVisible(find.text('Modo teste'), 300, scrollable: find.byType(Scrollable).first);
-    await tester.ensureVisible(find.text('Não conta pontos'));
+    // Os cartões dos níveis ficam mais abaixo na tela inicial.
+    await tester.scrollUntilVisible(find.text('Nível 1 · Fundamentos'), 300, scrollable: find.byType(Scrollable).first);
     await tester.pump();
-    await tester.tap(find.text('Não conta pontos'));
+    await tester.tap(find.text('Nível 1 · Fundamentos'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 600));
     expect(find.text('Fase 1 de 10'), findsOneWidget);
-    expect(find.text('Modo teste · não conta pontos'), findsOneWidget);
-    expect(find.text('grátis'), findsNWidgets(3), reason: 'ajudas grátis no modo teste');
+    await tester.ensureVisible(find.text('A'));
+    await tester.pump();
+    await tester.tap(find.text('A'));
+    await tester.pump(const Duration(milliseconds: 1500));
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+
+    expect(backend.modes, ['classic']);
+    expect(backend.answers, hasLength(1));
+    final (questionId, alternative) = backend.answers.single;
+    expect(questionId, inInclusiveRange(21, 30), reason: 'nível 1 = questões 21 a 30');
+    expect(alternative, inInclusiveRange(0, 3), reason: 'envia o índice original da alternativa');
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('com conta: "Jogar agora" é um teste que mostra os pontos, mas não envia nada ao servidor', (
+    tester,
+  ) async {
+    final backend = FakeBackend(profile: _accepted);
+    await _openApp(tester, auth: FakeAuth(AuthStatus.signedIn), backend: backend);
+
+    await tester.tap(find.text('Jogar agora'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 600));
+    expect(find.text('Fase 1 de 10'), findsOneWidget);
+    expect(find.text('Teste · não conta pontos'), findsOneWidget);
+    expect(find.text('grátis'), findsNWidgets(3), reason: 'ajudas grátis no teste');
 
     await tester.ensureVisible(find.text('A'));
     await tester.pump();

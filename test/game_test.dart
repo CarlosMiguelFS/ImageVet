@@ -43,6 +43,18 @@ void main() {
       'ACDBCADBCA',
       reason: 'gabarito enviado pela equipe, bloco a bloco',
     );
+    // Níveis da tela inicial: 1 a 4 com 10 questões cada; o 5 junta os casos e as perguntas de 5 alternativas.
+    List<int> ids(int level) => [
+      for (final q in valendo)
+        if (q.level == level) q.id,
+    ];
+    expect(ids(1), [for (var i = 21; i <= 30; i++) i]);
+    expect(ids(2), [for (var i = 31; i <= 40; i++) i]);
+    expect(ids(3), [for (var i = 41; i <= 50; i++) i]);
+    expect(ids(4), [for (var i = 51; i <= 60; i++) i]);
+    expect(ids(5), [for (var i = 11; i <= 20; i++) i, for (var i = 61; i <= 70; i++) i]);
+    expect(teste.every((q) => q.level == null), isTrue, reason: 'o teste do "Jogar agora" não tem nível');
+
     for (final q in all) {
       expect(q.options.length, q.id <= 20 ? 5 : 4, reason: 'questão ${q.id}');
       expect(q.explanations, hasLength(q.options.length), reason: 'questão ${q.id}');

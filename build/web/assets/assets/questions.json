@@ -228,7 +228,8 @@
       "Os cortes seccionais permitem visualizar estruturas sem a sobreposição típica da radiografia. As reconstruções 3D também auxiliam no planejamento cirúrgico.",
       "A TC não aumenta fisicamente as estruturas; ela permite visualizar detalhes anatômicos com maior precisão.",
       "A TC é muito importante, mas não substitui todos os outros exames."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 12,
@@ -249,7 +250,8 @@
       "Não avalia exclusivamente cálcio, e uma região hipoatenuante não significa necessariamente fratura.",
       "Não mede diretamente a velocidade do fluxo sanguíneo.",
       "Uma lesão hipoatenuante tende a aparecer mais escura, não mais clara."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 13,
@@ -270,7 +272,8 @@
       "A TC não tem como principal objetivo medir o peso corporal.",
       "A TC permite avaliar os compartimentos de gordura e a referência anatômica indicada é L4.",
       "A TC permite quantificar e diferenciar os depósitos de gordura, sendo L4 um importante ponto anatômico de avaliação."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 14,
@@ -291,7 +294,8 @@
       "Ocorre o contrário: a TC consegue detectar nódulos menores que podem passar despercebidos na radiografia.",
       "A TC complementa a avaliação do paciente, mas não substitui a avaliação clínica.",
       "O contraste pode ser utilizado conforme a indicação, mas não é obrigatório em todos os exames para rastreio pulmonar."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 15,
@@ -312,7 +316,8 @@
       "A avaliação vascular não se limita à densidade dos órgãos.",
       "O contraste iodado permite mapear os vasos. No exame post mortem, coágulos e extravasamento do contraste podem prejudicar a interpretação.",
       "Não é um exame exclusivo do sistema urinário."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 16,
@@ -333,7 +338,8 @@
       "A janela óssea avalia melhor as estruturas ósseas, e a janela de tecidos moles permite analisar tecidos moles.",
       "O janelamento não mede temperatura.",
       "A osteólise não ocorre exclusivamente em tumores. Outras doenças também podem causar destruição óssea."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 17,
@@ -354,7 +360,8 @@
       "A anestesia não tem como objetivo melhorar a circulação sanguínea, e o contraste não é obrigatório em todos os exames.",
       "A anestesia não é realizada simplesmente para evitar desconforto com o contraste.",
       "A imobilidade evita borramentos e artefatos. O princípio ALARA busca reduzir a exposição à radiação sem comprometer a qualidade diagnóstica. A necessidade de anestesia ou sedação depende do paciente e do protocolo."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 18,
@@ -375,7 +382,8 @@
       "O contraste não é a causa específica do artefato de volume parcial.",
       "Não é uma falha exclusiva de identificação óssea.",
       "O ar nos pulmões não é a causa exclusiva desse artefato."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 19,
@@ -396,7 +404,8 @@
       "A reconstrução tridimensional auxilia na avaliação de fraturas e trajetórias de projéteis. Além disso, reduz a manipulação direta do cadáver e a exposição a agentes zoonóticos.",
       "Nem todos os casos podem ser solucionados somente pela TC. Exames complementares podem ser necessários.",
       "A TC permite visualizar estruturas internas, inclusive ossos e fraturas."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 20,
@@ -417,7 +426,8 @@
       "A TC permite avaliar estruturas em diferentes planos e reconstruções tridimensionais.",
       "A precisão topográfica permite que o cirurgião planeje melhor a abordagem, antecipe dificuldades e realize um procedimento mais seguro e assertivo.",
       "A TC também é muito importante antes da cirurgia, justamente para orientar o planejamento."
-    ]
+    ],
+    "nivel": 5
   },
   {
     "id": 21,
@@ -622,7 +632,7 @@
   {
     "id": 31,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Estrutura hipoatenuante",
     "options": [
       "Aparece mais clara que os tecidos ao redor",
@@ -642,7 +652,7 @@
   {
     "id": 32,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Ar na imagem",
     "options": [
       "Muito clara",
@@ -662,7 +672,7 @@
   {
     "id": 33,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Janela para os ossos",
     "options": [
       "Janela óssea",
@@ -682,7 +692,7 @@
   {
     "id": 34,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Janela para tecidos moles",
     "options": [
       "Janela óssea",
@@ -702,7 +712,7 @@
   {
     "id": 35,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Estrutura hipodensa",
     "options": [
       "Que apresenta maior densidade que o tecido de referência",
@@ -722,7 +732,7 @@
   {
     "id": 36,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Plano sagital",
     "options": [
       "Transversal",
@@ -742,7 +752,7 @@
   {
     "id": 37,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Plano transversal",
     "options": [
       "Dorsal",
@@ -762,7 +772,7 @@
   {
     "id": 38,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Estrutura anecoica",
     "options": [
       "Uma estrutura sem ecos, geralmente visualizada como preta na ultrassonografia",
@@ -782,7 +792,7 @@
   {
     "id": 39,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Região mais clara",
     "options": [
       "Hipoatenuante",
@@ -802,7 +812,7 @@
   {
     "id": 40,
     "set": "valendo",
-    "nivel": 1,
+    "nivel": 2,
     "title": "Escolha da janela",
     "options": [
       "Para diminuir o peso do animal",
@@ -822,7 +832,7 @@
   {
     "id": 41,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "TC e metástases pulmonares",
     "options": [
       "Porque permite avaliar apenas o coração",
@@ -842,7 +852,7 @@
   {
     "id": 42,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Vértebra de referência",
     "options": [
       "L4",
@@ -862,7 +872,7 @@
   {
     "id": 43,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Contraste na angiotomografia",
     "options": [
       "Diminuir a densidade dos ossos",
@@ -882,7 +892,7 @@
   {
     "id": 44,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Osteólise",
     "options": [
       "Aumento da produção de gordura",
@@ -902,7 +912,7 @@
   {
     "id": 45,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Sinal de processo agressivo",
     "options": [
       "Preservação completa das estruturas ósseas",
@@ -922,7 +932,7 @@
   {
     "id": 46,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Exame para o shunt",
     "options": [
       "Angiotomografia",
@@ -942,7 +952,7 @@
   {
     "id": 47,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Gordura visceral × subcutânea",
     "options": [
       "A gordura visceral fica apenas na pele",
@@ -962,7 +972,7 @@
   {
     "id": 48,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "3D na avaliação de tumores",
     "options": [
       "Impede o crescimento do tumor",
@@ -982,7 +992,7 @@
   {
     "id": 49,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "TC na hérnia de disco",
     "options": [
       "Porque permite avaliar a localização da alteração e possíveis alterações nas estruturas próximas",
@@ -1002,7 +1012,7 @@
   {
     "id": 50,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 3,
     "title": "Por que rastrear metástases",
     "options": [
       "Avaliar exclusivamente o peso corporal",
@@ -1022,7 +1032,7 @@
   {
     "id": 51,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Movimento durante o exame",
     "options": [
       "Aumenta a resolução da imagem",
@@ -1042,7 +1052,7 @@
   {
     "id": 52,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Artefato de volume parcial",
     "options": [
       "Uma alteração causada exclusivamente pelo contraste",
@@ -1062,7 +1072,7 @@
   {
     "id": 53,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Reduzindo o volume parcial",
     "options": [
       "Utilizando cortes mais finos",
@@ -1082,7 +1092,7 @@
   {
     "id": 54,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Princípio ALARA",
     "options": [
       "Utilizar a maior dose de radiação possível",
@@ -1102,7 +1112,7 @@
   {
     "id": 55,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Anestesia ou sedação",
     "options": [
       "Para aumentar a densidade dos tecidos",
@@ -1122,7 +1132,7 @@
   {
     "id": 56,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Angiotomografia post mortem",
     "options": [
       "A impossibilidade de visualizar qualquer estrutura óssea",
@@ -1142,7 +1152,7 @@
   {
     "id": 57,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Região hiperatenuante no encéfalo",
     "options": [
       "Maior atenuação que o tecido cerebral de referência, podendo estar relacionada a diferentes alterações, como hemorragia ou mineralização",
@@ -1162,7 +1172,7 @@
   {
     "id": 58,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Contraste intravenoso",
     "options": [
       "Diminuir a resolução da imagem",
@@ -1182,7 +1192,7 @@
   {
     "id": 59,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Janela óssea nos tumores nasais",
     "options": [
       "Porque permite medir a temperatura do tumor",
@@ -1202,7 +1212,7 @@
   {
     "id": 60,
     "set": "valendo",
-    "nivel": 2,
+    "nivel": 4,
     "title": "Cortes muito espessos",
     "options": [
       "Aumento obrigatório da resolução",
@@ -1222,7 +1232,7 @@
   {
     "id": 61,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Hérnia de disco e cirurgia",
     "options": [
       "Identificar a localização da alteração e auxiliar na avaliação da extensão do comprometimento",
@@ -1242,7 +1252,7 @@
   {
     "id": 62,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Região escura no encéfalo",
     "options": [
       "A região é obrigatoriamente uma hemorragia",
@@ -1262,7 +1272,7 @@
   {
     "id": 63,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Radiografia normal, TC pedida",
     "options": [
       "A TC não utiliza radiação",
@@ -1282,7 +1292,7 @@
   {
     "id": 64,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Massa nasal com destruição óssea",
     "options": [
       "O exame confirma obrigatoriamente uma rinite simples",
@@ -1302,7 +1312,7 @@
   {
     "id": 65,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Contraste fora dos vasos",
     "options": [
       "Aumento da temperatura do cadáver",
@@ -1322,7 +1332,7 @@
   {
     "id": 66,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Obesidade visceral",
     "options": [
       "Porque permite diferenciar e quantificar depósitos de gordura visceral e subcutânea",
@@ -1342,7 +1352,7 @@
   {
     "id": 67,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Osso e tecido mole no mesmo voxel",
     "options": [
       "Aumento da temperatura da região",
@@ -1362,7 +1372,7 @@
   {
     "id": 68,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Perícia de arma de fogo",
     "options": [
       "Determina sozinha a autoria do disparo",
@@ -1382,7 +1392,7 @@
   {
     "id": 69,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "Planejando a retirada da massa",
     "options": [
       "Garantindo que não haverá sangramento",
@@ -1402,7 +1412,7 @@
   {
     "id": 70,
     "set": "valendo",
-    "nivel": 3,
+    "nivel": 5,
     "title": "A TC na Medicina Veterinária",
     "options": [
       "É um exame complementar que fornece informações anatômicas detalhadas, mas seus achados devem ser correlacionados com a avaliação clínica e, quando necessário, outros exames",

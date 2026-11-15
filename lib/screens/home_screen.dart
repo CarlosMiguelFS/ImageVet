@@ -19,22 +19,64 @@ class HomeScreen extends StatelessWidget {
 
   final List<Question> questions;
 
-  /// Abre uma partida com as questões de [set]. O modo teste não conta pontos.
-  void _play(BuildContext context, GameMode mode, [QuestionSet set = QuestionSet.valendo]) =>
-      Navigator.of(context).push(
+  static const _levels = [
+    (
+      number: 1,
+      emoji: '🌱',
+      name: 'Fundamentos',
+      description: 'O que é a TC, raios X, cortes, reconstrução 3D e a escala Hounsfield.',
+      tone: Tone.mint,
+    ),
+    (
+      number: 2,
+      emoji: '🔎',
+      name: 'Densidades e janelas',
+      description: 'Hipo e hiperatenuação, janelas de visualização e planos de imagem.',
+      tone: Tone.stone,
+    ),
+    (
+      number: 3,
+      emoji: '🩺',
+      name: 'Aplicações clínicas',
+      description: 'Metástases, obesidade e L4, angiotomografia, tumores nasais e hérnia de disco.',
+      tone: Tone.brand,
+    ),
+    (
+      number: 4,
+      emoji: '⚙️',
+      name: 'Técnica e artefatos',
+      description: 'Movimento, volume parcial, ALARA, anestesia e contraste.',
+      tone: Tone.amber,
+    ),
+    (
+      number: 5,
+      emoji: '🧠',
+      name: 'Casos e desafios',
+      description: 'Casos clínicos para interpretar e perguntas de 5 alternativas. O nível mais difícil.',
+      tone: Tone.coral,
+    ),
+  ];
+
+  /// "Jogar agora": as 10 questões de teste, que não valem pontos.
+  void _playTest(BuildContext context) => _open(context, GameMode.classic, [
+    for (final q in questions)
+      if (q.set == QuestionSet.teste) q,
+  ], practice: true);
+
+  /// Partida valendo pontos: um nível (1 a 5) ou, sem nível, todas as questões.
+  void _playScoring(BuildContext context, GameMode mode, [int? level]) => _open(context, mode, _scoring(level));
+
+  void _open(BuildContext context, GameMode mode, List<Question> list, {bool practice = false}) => Navigator.of(context)
+      .push(
         MaterialPageRoute<void>(
-          builder: (_) => GameScreen(
-            mode: mode,
-            practice: set == QuestionSet.teste,
-            questions: [
-              for (final q in questions)
-                if (q.set == set) q,
-            ],
-          ),
+          builder: (_) => GameScreen(mode: mode, questions: list, practice: practice),
         ),
       );
 
-  int get _scoringCount => questions.where((q) => q.set == QuestionSet.valendo).length;
+  List<Question> _scoring([int? level]) => [
+    for (final q in questions)
+      if (q.set == QuestionSet.valendo && (level == null || q.level == level)) q,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                 ? Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Expanded(flex: 6, child: _Hero(onPlay: () => _play(context, GameMode.classic))),
+                      Expanded(flex: 6, child: _Hero(onPlay: () => _playTest(context))),
                       const SizedBox(width: 48),
                       const Expanded(flex: 4, child: _PlayerCard()),
                     ],
@@ -79,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      _Hero(onPlay: () => _play(context, GameMode.classic)),
+                      _Hero(onPlay: () => _playTest(context)),
                       const SizedBox(height: 28),
                       const _PlayerCard(),
                     ],
@@ -90,37 +132,39 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Eyebrow('Modos de jogo'),
+                const Eyebrow('Valendo pontos'),
                 const SizedBox(height: 10),
-                Headline('Escolha como [brand:jogar]', size: context.isPhone ? 30 : 40),
+                Headline('Escolha seu [brand:nível]', size: context.isPhone ? 30 : 40),
+                const SizedBox(height: 8),
+                const Text(
+                  'Cada nível vale pontos, XP, moedas e lugar no ranking. Comece pelo 1 e vá subindo.',
+                  style: mutedText,
+                ),
                 const SizedBox(height: 24),
                 _Grid(
                   children: [
-                    _ModeCard(
-                      emoji: '🎓',
-                      title: QuestionSet.teste.label,
-                      description: '10 casos clínicos para conhecer o jogo. Os pontos aparecem, mas não contam e as ajudas são grátis.',
-                      tags: const ['10 questões', 'Não conta pontos'],
-                      tone: Tone.mint,
-                      onTap: () => _play(context, GameMode.classic, QuestionSet.teste),
-                    ),
-                    _ModeCard(
-                      emoji: '🩻',
-                      title: 'Partida valendo',
-                      description:
-                          '10 questões sorteadas entre $_scoringCount. Vale pontos, XP, moedas e lugar no ranking.',
-                      tags: const ['10 fases', '3 vidas'],
-                      tone: Tone.brand,
-                      onTap: () => _play(context, GameMode.classic),
-                    ),
+                    for (final l in _levels)
+                      _ModeCard(
+                        emoji: l.emoji,
+                        title: 'Nível ${l.number} · ${l.name}',
+                        description: l.description,
+                        tags: [
+                          _scoring(l.number).length > 10
+                              ? '10 de ${_scoring(l.number).length} questões'
+                              : '${_scoring(l.number).length} questões',
+                          'Vale pontos',
+                        ],
+                        tone: l.tone,
+                        onTap: () => _playScoring(context, GameMode.classic, l.number),
+                      ),
                     _ModeCard(
                       emoji: '♾️',
                       title: 'Sobrevivência',
                       description:
-                          'As $_scoringCount questões que valem pontos, sem fim. O tempo diminui a cada 5 respostas.',
+                          'As ${_scoring().length} questões de todos os níveis, sem fim. O tempo diminui a cada 5 respostas.',
                       tags: ['Até errar 3', 'Recorde: ${store.bestSurvival}'],
                       tone: Tone.clay,
-                      onTap: () => _play(context, GameMode.survival),
+                      onTap: () => _playScoring(context, GameMode.survival),
                     ),
                   ],
                 ),
@@ -253,10 +297,10 @@ class _Hero extends StatelessWidget {
         TextSpan(
           children: [
             TextSpan(
-              text: 'Grátis. ',
+              text: 'Partida de teste. ',
               style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink),
             ),
-            TextSpan(text: 'Partidas de 5 minutos.'),
+            TextSpan(text: 'Não conta pontos: para valer, escolha um nível abaixo.'),
           ],
         ),
         style: TextStyle(fontSize: 13.5, color: AppColors.inkMuted),

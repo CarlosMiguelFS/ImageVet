@@ -1,5 +1,5 @@
 # Fonte das perguntas que valem pontos (ids 21 em diante), no formato:
-#   N|nivel          -> nível das próximas perguntas (1 fácil ... 3 avançado)
+#   N|nivel          -> nível das próximas perguntas (1 fácil ... 5 casos clínicos)
 #   Q|Título         -> começa uma pergunta
 #   (linhas do enunciado)
 #   A|... B|... C|... D|...  -> alternativas
@@ -128,7 +128,7 @@ E|Pode avaliar estruturas de diversas regiões do corpo, não somente o abdômen
 E|A TC permite avaliar diferentes estruturas anatômicas, incluindo ossos, pulmões, órgãos e tecidos moles.
 E|O sistema circulatório pode ser estudado com angiotomografia, mas não é a única aplicação.
 
-N|1
+N|2
 Q|Estrutura hipoatenuante
 O que significa uma estrutura hipoatenuante na tomografia?
 A|Aparece mais clara que os tecidos ao redor
@@ -249,7 +249,7 @@ E|Cada janela permite destacar melhor determinados tecidos, facilitando a identi
 E|A seleção da janela não elimina a necessidade de reconstruções quando elas são indicadas.
 E|A janela modifica a visualização dos dados adquiridos, mas não impede a emissão de raios X.
 
-N|2
+N|3
 Q|TC e metástases pulmonares
 Por que a TC é muito utilizada no rastreamento de metástases pulmonares?
 A|Porque permite avaliar apenas o coração
@@ -370,7 +370,7 @@ E|A investigação não se limita ao coração.
 E|O rastreamento procura identificar se células tumorais se disseminaram para outros órgãos ou tecidos.
 E|A TC não é utilizada para determinar a idade do animal.
 
-N|2
+N|4
 Q|Movimento durante o exame
 O que pode acontecer quando o animal se movimenta durante a aquisição das imagens?
 A|Aumenta a resolução da imagem
@@ -491,7 +491,7 @@ E|Cortes espessos não eliminam todos os artefatos.
 E|Estruturas pequenas podem ficar menos bem definidas.
 E|Cortes espessos podem misturar diferentes tecidos no mesmo voxel, causando perda de detalhes e aumento do efeito de volume parcial.
 
-N|3
+N|5
 Q|Hérnia de disco e cirurgia
 Um cão apresenta sinais neurológicos e suspeita de hérnia de disco. Qual é uma contribuição importante da TC para o planejamento cirúrgico?
 A|Identificar a localização da alteração e auxiliar na avaliação da extensão do comprometimento

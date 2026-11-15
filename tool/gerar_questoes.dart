@@ -13,7 +13,12 @@ void main() {
   final existing = (jsonDecode(file.readAsStringSync()) as List).cast<Map<String, dynamic>>();
   final kept = [
     for (final q in existing)
-      if ((q['id'] as int) <= 20) {...q, 'set': (q['id'] as int) <= 10 ? 'teste' : 'valendo'},
+      if ((q['id'] as int) <= 20)
+        (q['id'] as int) <= 10
+            // 1 a 10: as questões do "Jogar agora" (não valem pontos).
+            ? ({...q, 'set': 'teste'}..remove('nivel'))
+            // 11 a 20: perguntas diretas de 5 alternativas, junto com os casos do nível 5.
+            : {...q, 'set': 'valendo', 'nivel': 5},
   ];
 
   final parsed = _parse(File('tool/novas_questoes.txt').readAsLinesSync());

@@ -1,8 +1,8 @@
 import 'dart:math';
 
-/// Os dois bancos de questões: o modo teste (demonstração, não conta pontos) e o que vale pontos.
+/// Os dois bancos de questões: o teste do "Jogar agora" (não conta pontos) e o que vale pontos.
 enum QuestionSet {
-  teste('teste', 'Modo teste'),
+  teste('teste', 'Teste'),
   valendo('valendo', 'Valendo pontos');
 
   const QuestionSet(this.id, this.label);
@@ -16,6 +16,7 @@ class Question {
   const Question({
     required this.id,
     this.set = QuestionSet.valendo,
+    this.level,
     required this.title,
     required this.question,
     required this.options,
@@ -26,6 +27,7 @@ class Question {
   factory Question.fromJson(Map<String, dynamic> j) => Question(
     id: j['id'] as int,
     set: QuestionSet.fromId(j['set'] as String?),
+    level: j['nivel'] as int?,
     title: j['title'] as String,
     question: j['question'] as String,
     options: List<String>.from(j['options'] as List),
@@ -37,6 +39,9 @@ class Question {
 
   /// Banco da questão: modo teste (não conta pontos) ou valendo pontos.
   final QuestionSet set;
+
+  /// Nível de dificuldade (1 a 5) das questões que valem pontos.
+  final int? level;
   final String title;
   final String question;
   final List<String> options;

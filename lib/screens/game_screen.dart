@@ -18,7 +18,7 @@ class GameScreen extends StatefulWidget {
   final List<Question> questions;
   final Random? random;
 
-  /// Modo teste: mostra pontos e combos, mas nada vai para o perfil, o ranking
+  /// Partida de teste ("Jogar agora"): mostra pontos e combos, mas nada vai para o perfil, o ranking
   /// ou o servidor, e as ajudas são grátis.
   final bool practice;
 
@@ -164,7 +164,7 @@ class _GameScreenState extends State<GameScreen> {
         title: const Text('Sair da partida?', style: TextStyle(fontWeight: FontWeight.w800)),
         content: Text(
           widget.practice
-              ? 'É só o modo teste: nada desta partida é salvo.'
+              ? 'É só uma partida de teste: nada dela é salvo.'
               : 'Os pontos que você já fez nesta partida ficam salvos.',
           style: mutedText,
         ),
@@ -466,7 +466,7 @@ class _QuestionCard extends StatelessWidget {
             runSpacing: 8,
             children: [
               if (practice)
-                const StatPill(emoji: '🎓', value: 'Modo teste · não conta pontos', tone: Tone.mint)
+                const StatPill(emoji: '🎓', value: 'Teste · não conta pontos', tone: Tone.mint)
               else
                 const StatPill(emoji: '🩻', value: 'Tomografia', tone: Tone.brand),
               if (game.mode == GameMode.survival && game.totalTime < game.item.seconds)
