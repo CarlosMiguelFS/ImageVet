@@ -103,6 +103,9 @@ class PlayerStore extends ChangeNotifier {
       ? [for (var s = 1; s < finalStage; s++) s].every(passedStages.contains)
       : passedStages.contains(stage - 1);
 
+  /// A Sobrevivência abre junto com os casos clínicos, depois de concluir o nível 5.
+  bool get survivalUnlocked => passedStages.contains(finalStage - 1);
+
   // ---------------------------------------------------------------------------
   // Conta
   // ---------------------------------------------------------------------------

@@ -251,8 +251,10 @@ void main() {
       }
       expect(s.isStageUnlocked(5), isTrue);
       expect(s.isStageUnlocked(PlayerStore.finalStage), isFalse);
+      expect(s.survivalUnlocked, isFalse, reason: 'Sobrevivência só depois do nível 5');
       await s.recordMatch(match(1), stage: 5);
       expect(s.isStageUnlocked(PlayerStore.finalStage), isTrue);
+      expect(s.survivalUnlocked, isTrue);
 
       // Fica salvo no aparelho.
       final again = PlayerStore();

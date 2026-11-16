@@ -177,6 +177,7 @@ class HomeScreen extends StatelessWidget {
                           'As ${_scoring().length} questões de todos os níveis, sem fim. O tempo diminui a cada 5 respostas.',
                       tags: ['Até errar 3', 'Recorde: ${store.bestSurvival}'],
                       tone: Tone.clay,
+                      lockedHint: store.survivalUnlocked ? null : 'Passe no nível 5 para abrir',
                       onTap: () => _playScoring(context, GameMode.survival),
                     ),
                   ],

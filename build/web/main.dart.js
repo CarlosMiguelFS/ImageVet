@@ -98664,7 +98664,10 @@ else j.push("Vale pontos")
 g=l[4]
 if(d.aDb(l[3]))l=e
 else{l=l[3]
-l=l===6?"Passe nos 5 n\xedveis para abrir":"Passe no n\xedvel "+(l-1)+" para abrir"}p.push(new A.Kv(k,i,h,j,g,new A.afQ(f,a1,m),l,e))}p.push(A.b8S("As "+f.as0().length+" quest\xf5es de todos os n\xedveis, sem fim. O tempo diminui a cada 5 respostas.","\u267e\ufe0f",e,new A.afR(f,a1),A.b(["At\xe9 errar 3","Recorde: "+d.r],o),"Sobreviv\xeancia",B.fn))
+l=l===6?"Passe nos 5 n\xedveis para abrir":"Passe no n\xedvel "+(l-1)+" para abrir"}p.push(new A.Kv(k,i,h,j,g,new A.afQ(f,a1,m),l,e))}l=f.as0().length
+o=A.b(["At\xe9 errar 3","Recorde: "+d.r],o)
+k=d.ax.n(0,5)?e:"Passe no n\xedvel 5 para abrir"
+p.push(A.b8S("As "+l+" quest\xf5es de todos os n\xedveis, sem fim. O tempo diminui a cada 5 respostas.","\u267e\ufe0f",k,new A.afR(f,a1),o,"Sobreviv\xeancia",B.fn))
 o=A.el(e,A.aX(a1,B.a_,c).w.a.a<640?48:72,e)
 l=A.t2("Volte todo dia, ganhe [amber:mais]",A.aX(a1,B.a_,c).w.a.a<640?30:40,B.aq)
 k=A.el(e,A.aX(a1,B.a_,c).w.a.a<640?48:72,e)

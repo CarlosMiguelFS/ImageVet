@@ -663,7 +663,8 @@
 
   -- ---------------------------------------------------------------------------
   -- Ranking: geral (pontos acumulados) ou da semana (segunda a domingo).
-  -- Só dados públicos; o próprio jogador sempre vem, mesmo fora do top.
+  -- Mostra todos os cadastrados que aceitaram os termos (inclusive com 0 ponto), menos quem
+  -- saiu do ranking no perfil. Só dados públicos; o próprio jogador sempre vem.
   -- ---------------------------------------------------------------------------
   drop function if exists public.ranking(text, integer);
   create or replace function public.ranking(p_periodo text default 'geral', p_limite integer default 50)
@@ -699,7 +700,6 @@
     ordenado as (
       select row_number() over (order by b.pontos desc, b.xp desc, b.criado_em) as posicao, b.*
         from base b
-      where b.pontos > 0 or b.id = (select auth.uid())
     )
     select o.posicao, o.nome, o.turma, o.avatar_path, o.pontos, o.xp,
           o.id = (select auth.uid()) as eu
